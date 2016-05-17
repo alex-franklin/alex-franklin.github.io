@@ -1,1 +1,1 @@
-  <?php header("Location: default/"); die(); ?>
+<?php header("Location: default/"); die(); ?>
