@@ -111,16 +111,16 @@ strong  {	font-family: 'CabinBold', Verdana;		}
     height:0;
     font-size: 1px;
     line-height: 0px;
-}	
+}
 body {
 	font: 100% 'CabinRegular', Verdana, Arial, Helvetica, sans-serif;
 	background: #FFF;
-	text-align: left; 
+	text-align: left;
 	color: #000000;
 	background-image:url(../images/white_leather_texture.jpg);
 	background-repeat:repeat;
 }
-.header_dock	{	
+.header_dock	{
 	position:fixed;
 	top:0;
 	left:64px;
@@ -133,7 +133,7 @@ body {
 }
 .header_bend {
 	position:absolute;
-	width:11px; 
+	width:11px;
 	height:185px;
 	background: url(../images/sprite_source.png) no-repeat -240px -80px;
 }
@@ -196,7 +196,7 @@ header a:hover	{
 .content a:hover	{
 	color:#DD5928;
 }
-.footer_dock	{	
+.footer_dock	{
 	position:fixed;
 	top:0;
 	left:32px;
@@ -208,7 +208,7 @@ header a:hover	{
 }
 .footer_bend {
 	position:absolute;
-	width:11px; 
+	width:11px;
 	height:108px;
 	top:-9px;
 	background: url(../images/sprite_source.png) no-repeat -258px -80px;
@@ -227,7 +227,7 @@ footer	{
 	position:relative;
 	bottom:0px;
 	left:64px;
-	width:100%; 
+	width:100%;
 	background: url(../images/orange_texture.jpg) repeat;
 	height:110px; /*	temporary	*/
 	z-index:110;
@@ -244,7 +244,7 @@ footer	{
 }
 .icon_tray div	{
 	margin-right:18px; display:inline-block; position:relative; cursor:pointer; height:47px;
-} 
+}
 #tele		{ width:33px; background: url(../images/sprite_source.png) no-repeat 0 -119px      ; }
 #email		{ width:50px; background: url(../images/sprite_source.png) no-repeat -79px -119px  ; top: 5px; }
 #facebook	{ width:45px; background: url(../images/sprite_source.png) no-repeat -177px -119px ; }
@@ -262,7 +262,7 @@ footer	{
 	width:32px;
 	height:100%;
 	background-image:url(../images/nav_bg.png);
-	background-repeat:no-repeat;	
+	background-repeat:no-repeat;
 	z-index:120;
 }
 .nav_options		{
@@ -295,14 +295,16 @@ footer	{
 }
 .nav_links		{
 	position:relative;
-	top:22px;
-	left:100px;
-	width:800px;
+	top:20px;
+	left:125px;
+	width:750px;
 }
 .nav_links a		{
 	color:#DD5928;
-	font-weight:bold;
-	margin-right:5%;
+	font-family:impact;
+	font-size: 1.25em;
+	margin-right:95px;
+	text-transform:uppercase;
 	text-decoration:none;
 }
 .nav_links a:hover	{
@@ -423,20 +425,20 @@ article	{
 /*-----------------------PORTFOLIO STYLES-------------------------*/
 
 .portfolio>section div>div			{	width:280px; height:340px; float:left; margin-right:10px; margin-left:10px;			}
-.portfolio>section div>div>h3		{	text-align:center; font: 'Cabin', Verdana, sans-serif; font-size:1.4em;				}															
+.portfolio>section div>div>h3		{	text-align:center; font: 'Cabin', Verdana, sans-serif; font-size:1.4em;				}
 .sample_image					{	width:280px; height:221px;															}
 .portfolio_page article			{	margin:85px 0 40px 114px; color:#4C618B; max-width:1440px;							}
 .portfolio>section a>h2			{	display:inline;	margin-top:100px; margin-right:45px;								}
 .portfolio .copy_separator		{	margin-top:20px; margin-bottom:20px;												}
 .portfolio>section				{	clear:both;																			}
-.twirl_down						{	background: url(../images/sprite_source.png) no-repeat -20px -98px;	
+.twirl_down						{	background: url(../images/sprite_source.png) no-repeat -20px -98px;
 									display:inline-block; width:20px; height:21px;	}
-.twirl_down:hover					{	background: url(../images/sprite_source.png) no-repeat -61px -98px;	
-									display:inline-block; width:20px; height:21px;	}	
-.twirled						{	background: url(../images/sprite_source.png) no-repeat 0 -98px;	
+.twirl_down:hover					{	background: url(../images/sprite_source.png) no-repeat -61px -98px;
 									display:inline-block; width:20px; height:21px;	}
-.twirled:hover				{	background: url(../images/sprite_source.png) no-repeat -41px -98px;	
-									display:inline-block; width:20px; height:21px;	}	
+.twirled						{	background: url(../images/sprite_source.png) no-repeat 0 -98px;
+									display:inline-block; width:20px; height:21px;	}
+.twirled:hover				{	background: url(../images/sprite_source.png) no-repeat -41px -98px;
+									display:inline-block; width:20px; height:21px;	}
 /*-----------------------LIGHTBOX STYLES----------------------------*/
 
 #lightbox{
@@ -509,7 +511,7 @@ article	{
     border-radius: 0 0 12px 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 	margin: 0 auto;
 	line-height: 1.4em;
-	padding:0 20px;	
+	padding:0 20px;
 	}
 
 #imageDataContainer h3	{	font: 3.0em 'Impact', Verdana, sans-serif;	}
@@ -518,11 +520,11 @@ article	{
 	padding:0 10px;
 	color:#fff;
 	}
-#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }
 #imageData #caption{ font-weight: bold;	}
-#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
-#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; margin-top:20px;	}	
-		
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; margin-top:20px;	}
+
 #overlay{
 	position: absolute;
 	top: 0;
@@ -535,17 +537,17 @@ article	{
 	-moz-opacity: 0.6;
 	opacity: 0.6;
 	}
-	
+
 .clearfix:after {
-	content: "."; 
-	display: block; 
-	height: 0; 
-	clear: both; 
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
 	visibility: hidden;
 	}
 
 * html>body .clearfix {
-	display: inline-block; 
+	display: inline-block;
 	width: 100%;
 	}
 
@@ -553,10 +555,10 @@ article	{
 	/* Hides from IE-mac \*/
 	height: 1%;
 	/* End hide from IE-mac */
-	}	
-	
-	
-/*  Gradient to be applied as an overlay	*/ 
+	}
+
+
+/*  Gradient to be applied as an overlay	*/
 #imageDataContainer_gradient	{
 	background: -moz-linear-gradient(top,  rgba(40,40,40,0.5) 0%, rgba(255,255,255,0.01) 50%, rgba(251,251,251,0) 51%, rgba(58,58,58,0.5) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(40,40,40,0.5)), color-stop(50%,rgba(255,255,255,0.01)), color-stop(51%,rgba(251,251,251,0)), color-stop(100%,rgba(58,58,58,0.5))); /* Chrome,Safari4+ */
