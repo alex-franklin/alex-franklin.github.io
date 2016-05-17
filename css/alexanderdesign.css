@@ -99,7 +99,7 @@ div, p, h1, h2, h3, ul, li, img, hr	 { margin:0; padding:0; border:0;	}
 a:hover	{	text-decoration: underline; cursor:pointer;	}
 h1		{	font-size:1.8em; margin:0 0 20px 20px;	}
 h2		{	font-family: 'CabinBold', Verdana; font-size: 1.4em; margin:0 30px 15px; clear: left;	}
-h3		{	font-family: 'CabinBold', Verdana; margin:20px 10px;	}
+h3		{	font-family: 'CabinBold', Verdana; margin:20px 40px;	}
 p		{	font-size: 1em; margin:0 20px 20px 40px; line-height:1.6em;				}
 ul		{	font: 1em 'CabinRegular', Verdana, Arial, Helvetica, sans-serif; margin-left:60px; margin-bottom:20px; line-height:1.2em;	}
 strong  {	font-family: 'CabinBold', Verdana;		}
@@ -245,8 +245,8 @@ footer	{
 .icon_tray div	{
 	margin-right:18px; display:inline-block; position:relative; cursor:pointer; height:47px;
 }
-#tele		{ width:33px; background: url(../images/sprite_source.png) no-repeat 0 -119px      ; }
-#email		{ width:50px; background: url(../images/sprite_source.png) no-repeat -79px -119px  ; top: 5px; }
+#tele		{ width:33px; height:46px; display: inline-block; vertical-align: middle; margin-right:15px; background: url(../images/sprite_source.png) no-repeat 0 -119px      ; }
+#email		{ width:50px; height:37px; display: inline-block; vertical-align: middle; margin: 0 15px 0 30px;background: url(../images/sprite_source.png) no-repeat -79px -119px  ; top: 5px; }
 #facebook	{ width:45px; background: url(../images/sprite_source.png) no-repeat -177px -119px ; }
 #twitter	{ width:47px; background: url(../images/sprite_source.png) no-repeat -33px -119px  ; }
 #linkedin	{ width:48px; background: url(../images/sprite_source.png) no-repeat -129px -119px ; }
