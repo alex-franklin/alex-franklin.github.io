@@ -448,7 +448,7 @@ button {
 }
 
 #bmw-landing-page .form-container {
-	background:#28363B url('img/BMW-logo.png') no-repeat 120% -350%;
+	background:#28363B url('img/BMW-logo.png') no-repeat -20% -5%;
 }
 
 #bmw-landing-page .tabular-backdrop,
