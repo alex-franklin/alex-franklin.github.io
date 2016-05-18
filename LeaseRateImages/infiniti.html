@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en" id="infiniti-landing-page">
+<head>
+  <meta charset="utf-8">
+
+  <title>LeaseRates.com Landing Page Mockup</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-6 image-container">&nbsp;</div>
+    <div class="col-6 form-container">
+        <h1><span>INFINITI <span style="white-space:nowrap">Q50</span></span>
+        </h1>
+        <p>LeaseRates.com makes your decision to lease easier than ever before, thanks to custom lease terms and transparent pricing.</p>
+
+        <form class="lease-calculator">
+        	<div class="tabular-backdrop">
+	            <label class="">Down Payment:
+	                <select name="down-payment">
+	                    <option value="1000">$1,000</option>
+	                    <option value="1500">$1,500</option>
+	                    <option value="2000">$2,000</option>
+	                    <option value="2500">$2,500</option>
+	                    <option value="3000">$3,000</option>
+	                    <option value="3500">$3,500</option>
+	                    <option value="4000">$4,000</option>
+	                    <option value="4500">$4,500</option>
+	                    <option value="5000">$5,000</option>
+	                </select>
+	            </label>
+
+	            <label class="">Lease Length:
+	                <select name="lease-length">
+	                    <option value="6 months">6 months</option>
+	                    <option value="1 year">1 year</option>
+	                    <option value="18 months">18 months</option>
+	                    <option value="2 years">2 years</option>
+	                    <option value="30 months">30 months</option>
+	                    <option value="3 years">3 years</option>
+	                </select>
+	            </label>
+
+	            <label class="">Annual Mileage:
+	                <select name="lease-length">
+	                    <option value="2500">2,500</option>
+	                    <option value="5000">5.000</option>
+	                    <option value="7500">7,500</option>
+	                    <option value="10000">10,000</option>
+	                    <option value="12000">12,000</option>
+	                    <option value="15000">15,000</option>
+	                    <option value="18000">18,000</option>
+	                    <option value="20000">20,000</option>
+	                </select>
+	            </label>
+
+	            <label class="monthly-payment">Monthly Payment:
+	                <input disabled placeholder="$$$" id="monthly-payment" />
+	            </label>
+	        </div>
+
+        <p class="peace-of-mind">After you tell LeaseRates.com what type of vehicle/equipment you want to lease, leave the legwork to them. Avoid showroom pressure, price haggling, and empty promises. You deserve to get <i>exactly</i> what you want.</p>
+
+        <div class="personal-info">
+        	<label class="input-stack" for="zip">Zip Code
+            <input pattern="(\d{5}([\-]\d{4})?)" placeholder="5 or 9 digit zip" class="zip-code" id="zip"/></label>
+        	<label class="input-stack" for="email">Email/Phone Number
+            <input type="text" placeholder="Email/Phone Number" class="email-phone" id="email" /></label>
+            <button type="submit">Submit</button>
+        </div>
+
+        </form>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
