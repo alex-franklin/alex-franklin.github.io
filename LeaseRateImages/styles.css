@@ -403,7 +403,7 @@ button {
 }
 
 #infiniti-landing-page .image-container {
-	background:url('img/infinitiQ50.jpg') no-repeat center center;
+	background:url('img/InfinitiQ50.jpg') no-repeat center center;
 }
 
 #infiniti-landing-page .form-container {
@@ -444,7 +444,7 @@ button {
 }
 
 #bmw-landing-page .image-container {
-	background:url('img/bmw_3-series.jpg') no-repeat center right;
+	background:url('img/BMW_3-series.jpg') no-repeat center right;
 }
 
 #bmw-landing-page .form-container {
@@ -498,11 +498,11 @@ button {
 }
 
 .panel-4 {
-	background:url('img/infinitiQ50.jpg') no-repeat center center;
+	background:url('img/InfinitiQ50.jpg') no-repeat center center;
 	animation: image-fade 3s .75s 1;
 }
 
 .panel-5 {
-	background:url('img/bmw_3-series.jpg') no-repeat center right;
+	background:url('img/BMW_3-series.jpg') no-repeat center right;
 	animation: image-fade 3s 1s 1;
 }
