@@ -1,0 +1,102 @@
+
+/* ==========================================================================
+   case-nav
+   ========================================================================== */
+
+.case-nav *, .case-nav *:after { transition:.5s all }
+.step {
+    transition:.3s background,
+               .3s border-radius,
+               .3s width;
+}
+.top-bar {
+    background:none;
+}
+.case-nav {
+    font-weight:bold;
+    text-align:center;
+    color:white;
+    .row {
+        height: 2.5em;
+        line-height:2.5em;
+        clear:both;
+    }
+    .small-12 {
+        background:$secondary_color;
+        white-space: nowrap;
+        .step {
+            width:10%;
+            text-align:center;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            border-left:1px solid;
+            background:$secondary_color;
+            &:hover {
+                width:40%;
+                background:$bg_base;
+                border-radius:.4em .4em 0 0;
+                color:gray;
+                cursor:pointer;
+                +.columns { // returns border to cells when non-active cell is being hovered
+                    border:none;
+                }
+            }
+            &:first-child {
+                border:none;
+            }
+            &:after {
+                content:attr(alt);
+            }
+            &:hover:after {
+                content:attr(alt) " - " attr(title)
+            }
+            &.complete:after {
+                content:attr(alt) " \2713";
+            }
+            &.complete:hover:after {
+                content:attr(alt) " - " attr(title) " \2713";
+            }
+        }
+        .active {
+            color:gray;
+            background:$bg_base;
+            border:none;
+            border-radius:.4em .4em 0 0;
+            width:40%;
+            +.columns { // following container drops border-left 1px
+                border:none;
+            }
+            &:after { // displays when .case-nav is not being hovered
+                content:attr(alt) " - " attr(title);
+            }
+        }
+        &:hover {
+            .active { // revert active class to regular class while other steps are hovered
+                width:10%;
+                background:$secondary_color;
+                color:$bg_base;
+                border-left:1px solid;
+                border-radius:0;
+                +.columns { // returns border to cells when non-active cell is being hovered
+                    border-left:1px solid;
+                }
+                &:after { // displays when non-active steps are being hovered
+                    content:attr(alt);
+                }
+                &:hover {
+                    color:gray;
+                    background:$bg_base;
+                    border:none;
+                    border-radius:.4em .4em 0 0;
+                    width:40%;
+                    +.columns {
+                        border-left:none;
+                    }
+                }
+                &:hover:after { // displays when active step is being hovered, overwrites
+                    content:attr(alt) " - " attr(title);
+                }
+            }
+        }
+    }
+}

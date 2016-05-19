@@ -1,0 +1,207 @@
+<h3>The Difference we are Making</h3>
+
+<div class="row">
+	<div class="small-6 columns unpad">
+		<fieldset class="dash-field">
+			<legend>Trending Data</legend>
+			<table>
+			<tr>
+				<td>
+					<label>Completed Reports / Recordable Injuries and Significant Near Misses</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">48 / 57</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Cases involving new hires (under 1 year)</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">4%</h4>
+				</td>
+			</tr>
+		</table>
+		<label class="collapsed" onclick="toggleView(false)"><i class="fi-play center"></i></label>
+		<table>
+			<tr>
+				<td>
+					<label>Most Injured Body Part</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">Hand</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Most Common Type of Injury</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">Contusion, Crushing, Bruise</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Safest Shift</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">2nd Shift</h4>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	</div>
+	<div class="small-6 columns unpad">
+		<img src="../img/word-cloud.png" alt="word-cloud" />
+	</div>
+</div>
+
+<div class="row">
+	<fieldset class="personnel dash-field">
+		<legend onclick>Corrective Actions Dashboard</legend>
+		<div class="small-6 columns unpad">
+			<table>
+				<tr>
+					<td>
+						<label>Implemented to System</label>
+					</td>
+					<td>
+						<output class="">6</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Piloted at Local Level</label>
+					</td>
+					<td>
+						<output class="">8</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+		 				<label>Approved by ______</label>
+					</td>
+					<td>
+						<output class="">12</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Recommended by Team</label>
+					</td>
+					<td>
+						<output class="">21</output>
+					</td>
+				</tr>
+			</table>
+			<fieldset class="injury">
+				<label>Check out this Innovative Corrective Action</label>
+				<div class="row">
+					<div class="c-factor">
+						<h4><i class="fi-play"></i> Supervisory</h4>
+						<ul>
+							<li>Have the crew inspect the worksite prior to job to clearly identify all potential hazards</li>
+						</ul>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="small-6 columns unpad">
+			<fieldset class="injury">
+				<label>Corrective Actions currently being Piloted</label>
+				<div class="row">
+					<div class="c-factor">
+						<h4 class="collapsed" onclick="toggleView()"><i class="fi-play"></i> Operator/Individual</h4>
+						<ul>
+							<li>Have the crew inspect the worksite prior to job to clearly identify all potential hazards</li>
+						</ul>
+					</div>
+					<div class="c-factor">
+						<h4 class="collapsed" onclick="toggleView()"><i class="fi-play"></i> Supervisory</h4>
+						<ul>
+							<li>Discuss proper uses of bladed devices at toolbox meeting with crew</li>
+						</ul>
+					</div>
+					<div class="c-factor">
+						<h4 class="collapsed" onclick="toggleView()"><i class="fi-play"></i> Equipment/Tools/Materials</h4>
+						<ul>
+							<li>Order and provide safety goggles for increased eye protection while performing grinding work</li>
+						</ul>
+					</div>
+					<div class="c-factor">
+						<h4 class="collapsed" onclick="toggleView()"><i class="fi-play"></i> Work Space/Environment</h4>
+						<ul>
+							<li>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</li>
+						</ul>
+					</div>
+					<div class="c-factor">
+						<h4 class="collapsed" onclick="toggleView()"><i class="fi-play"></i> Organizational/Association</h4>
+						<ul>
+							<li>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</li>
+						</ul>
+					</div>
+					<div class="c-factor">
+						<h4 class="collapsed" onclick="toggleView()"><i class="fi-play"></i> Outside Influences</h4>
+						<ul>
+							<li>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</li>
+						</ul>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<div class="small-6 columns unpad">
+		<fieldset class="dash-field">
+			<legend onclick="toggleView()"><i class="fi-play"></i> Open Cases</legend>
+			<ul data-bind="foreach: {data:$root.cases.items, as:'c'}">
+			    <li class="open-case">
+			        <a  data-bind="attr:{href:'#case/'+c.key()}">Case #GLDD-5001564</a>
+			    </li>
+			</ul>
+		</fieldset>
+	</div>
+	<div class="small-6 columns unpad">
+		<fieldset class="personnel dash-field">
+			<legend onclick>The Danger Zone:<br> Who’s at Risk, and How?</legend>
+			<table>
+			<tr>
+				<td>
+					<label>Bodily Reaction</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">21</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Caught in, under</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">17</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Fall from elevation or overboard</label>
+				</td>
+				<td>
+					<h4 class="trend-stat">12</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Foreign object in </label>
+				</td>
+				<td>
+					<h4 class="trend-stat">11</h4>
+				</td>
+			</tr>
+		</table>
+		</fieldset>
+	</div>
+</div>
+<div class="row">
+	<button type="submit"  data-bind="click:function(){$root.router.go('new')}">Begin New Case</button>
+</div>

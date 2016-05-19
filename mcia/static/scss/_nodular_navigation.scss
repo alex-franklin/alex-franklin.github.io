@@ -1,0 +1,247 @@
+.case-nav, .case-nav *, :not(.connection) {
+    transition:all .5s;
+}
+.case-nav, .center-margin, .node-container {
+    height:8vh;
+    min-height:40px;
+}
+
+.case-nav {
+    width:100%;
+    background:lightgray;
+    border-bottom:1px solid gray;
+    clear:both;
+    .center-margin { // centered container holding three .node-container's
+        width:80%;
+        min-width:400px;
+        margin:0 auto;
+    }
+    &:hover {
+        height:16vh;
+        .center-margin, .node-container {
+            height:16vh;
+        }
+        .node {
+            bottom:40%;
+            &.sub {
+                bottom:45%;
+            }
+        }
+        .connection {
+            bottom:48%;
+        }
+    }
+    .node-container {
+        position:relative;
+        width:33%;
+        height:8vh;
+        display:inline-block;
+        margin:0 -1px;
+        overflow:visible;
+        &.first {
+            z-index:3;
+        }
+        &.second {
+            z-index:2;
+        }
+        &.third {
+            z-index:1;
+        }
+        [class^=node]:before { // category label (1 of 3)
+            transition:.5s all;
+            position:absolute;
+            bottom:120%;
+            left:-3.5vw;
+            content: attr(alt);
+            opacity:1;
+            white-space:nowrap;
+            font-weight:bold;
+            padding:.5rem .75rem;
+            border-radius:.5rem;
+            background:darken(gray, 15%);
+            color:white;
+        }
+    }
+    .node {
+        position:absolute;
+        bottom:30%;
+        left:50%;
+        height:1.5rem;
+        width:1.5rem;
+        border-radius:50%;
+        background:#f16529;
+        //z-index:1;
+        &:hover { // temporary, until linking functionality is supported //
+            cursor:pointer;
+        }
+        &.active:not(.sub) { // indicator ring
+            box-shadow:0 0 0 4px lightgray,
+                       0 0 0 6px #f16529;
+        }
+        &.sub {   
+            height:.65rem;
+            width:.65rem;
+            bottom:35%;
+            left:50.5%; 
+            background:#f16529;
+            z-index:initial; //cannot inherit z-index or psuedo elements won't fall behind red circle
+            &:hover {
+                box-shadow:0 0 0 4px lightgray, 0 0 0 5px red; 
+            }
+            &:after {
+                position:absolute;
+                content: attr(alt);
+                opacity:0;
+                z-index: -1;
+                bottom:-115%;
+                white-space: nowrap;
+                padding: .25em .5rem;
+                border-radius: .5rem;
+                background: gray;
+                color: white;
+            }
+            &:hover:after {
+                background:darken(gray, 15%);
+                border:2px dashed #f16529;
+                text-decoration:underline;
+            }
+        }
+        
+    }
+    .connection {
+        position:absolute;
+        bottom:45%;
+        right:14.5vw;
+        height:.15rem;
+        width:85%;
+        background:darkgray;
+        overflow:hidden;
+    }
+    .node-container:hover { // VVV    where all the l0c0-motion happens    VVV //
+        [class^=node] {
+            height:2rem;
+            width:2rem;
+            bottom:35%;
+            left:49%;
+            z-index:-1;
+            border:.5rem dotted lightgray;
+            box-shadow:0 0 0 16px lightgray, 
+                       0 0 0 19px darkgray;
+            clip:rect(-1.75rem, 4rem, 4rem, -0.4rem);
+            &:before { // fade out category label when interest (:hover) is applied
+                opacity:0;
+            }
+            &:after { // cycle arrowhead
+                position:absolute;
+                content:"";
+                width:0;
+                height:0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid darkgray;
+                left:-130%;
+                bottom:-150%;
+                transform:rotate(-45deg);
+            }
+            &.active {
+                box-shadow:0 0 0 3px lightgray,
+                           0 0 0 5px #f16529,
+                           0 0 0 16px lightgray, 
+                           0 0 0 19px darkgray;
+            }
+        }
+        > .sub.node {
+            background:red;
+            &.active:before {
+                position:absolute;
+                top:-50%;
+                left:-50%;
+                content: "";
+                opacity:1;
+                border-radius:50%;
+                border:1px solid #f16529;
+                height:1.25rem;
+                width:1.25rem;
+                background:none;
+                box-shadow:0 0 0 4px lightgray inset;
+            }
+            &:after {
+                opacity:1;
+            }
+            &.two-oclock {
+                bottom:80%;
+                left:67%;
+                &:after {
+                    left: -200%;
+                    padding-left:3.25rem;
+                }
+            }
+            &.four-oclock {
+                bottom:10%;
+                left:67%;
+                &:after {
+                    left: -200%;
+                    padding-left:3.25rem;
+                }
+            }
+            &.eight-oclock {
+                bottom:10%;
+                left:37%;
+                &:after {
+                    right: -200%;
+                    padding-right:3.25rem;
+                }
+            }
+            &.ten-oclock {
+                bottom:80%;
+                left:37%;
+                &:after {
+                    right: -200%;
+                    padding-right:3.25rem;
+                }
+            }
+            &.twelve-oclock {
+                bottom:86%;
+                left:50%;
+                &:after {
+                    left: -200%;
+                    padding-left:3.25rem;
+                }
+            }
+        }
+    }
+}
+
+@-moz-document url-prefix() {  // because Firefox does not render dotted border on radiused elements
+  .node-container:hover {
+        [class^=node]:not(.active) {
+            border: .5rem double lightgray;
+        }
+    }
+}
+
+.ie {
+    .sub.node {
+        background:#f16529;
+    }
+    .node-container:hover {
+        [class^=node].active {
+            border: none;
+            height:1.5rem;
+            width:1.5rem;
+            bottom:40%;
+            left:50%;
+            //clip:rect(-1.75rem, 4rem, 4rem, -0.4rem);
+            &:after { // cycle arrowhead
+                left:-52%;
+                bottom:-70%;
+            }
+            .sub.node {
+                background:red;
+            }
+        }
+        [class^=node]:not(.active) {
+            border: .5rem double lightgray;
+        }
+    }
+}

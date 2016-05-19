@@ -1,0 +1,88 @@
+
+/* ==========================================================================
+   Contributing Factors
+   ========================================================================== */
+
+legend .help-text {
+    font-size: 0.5em;
+    font-weight: normal;
+    text-shadow: none;
+    margin-top: 1em;
+}
+
+#content fieldset {
+    .c-factor {
+        >span {
+            padding-left:1em;
+            &:first-child:hover {
+                cursor:pointer;
+            }
+        }
+        >h4 {
+            padding-left:2.5em;
+        }
+        button {
+            margin-bottom:2em;
+        }
+        .collapsed {
+            >label {
+                margin-bottom:1.5em;
+            }
+        }
+        i.fi-play {
+            font-size:1rem;
+            vertical-align:top;
+            + label, + h4 {
+                display:inline-block;
+                padding-right:.5em;
+                &:hover {
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}
+
+.bottom-drawer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:$light_accent;
+    color:$dark_accent;
+    width:100vw;
+    z-index:1;
+    span:first-child {
+        display:block;
+        background:$theme_color;
+        *, *:hover {
+            color:$bg_base;
+        }
+    }
+    .draft-drawer>span:first-child {
+        margin-right:-110%;
+    }
+    .note-drawer>span:first-child {
+        margin-left:-2em;
+    }
+    .draft-drawer.hide + .note-drawer {
+        float: none;
+        margin-left: 1em;
+        width: 100%;
+    }
+    i.fi-play {
+        margin:.25rem 0;
+        font-size:2em;
+    }
+    label {
+        display:inline-block;
+        vertical-align:text-top;
+    }
+    .draft-list {
+        display:block;
+        padding:0 3em;
+    }
+    .note-text {
+        margin-top:1.5em;
+        margin-bottom:1.5em;
+    }
+}

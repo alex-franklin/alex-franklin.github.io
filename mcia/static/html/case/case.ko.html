@@ -1,0 +1,32 @@
+<h2>Case #
+	<!-- <span data-bind="text:id"></span> -->
+	<span>GLDD-5001564</span>
+</h2>
+
+<!-- // show the general view of the whole case -->
+<!-- ko if: !(viewing.step() && viewing.group())  -->
+
+<!-- /ko -->
+
+<!-- // show the group-level view of the case -->
+<!-- ko if: !viewing.step() && viewing.group()  -->
+
+<!-- /ko -->
+
+
+<!-- // show a step-level view -->
+<!-- ko if: viewing.step()  -->
+    <h3 data-bind="with:steps()[viewing.step()-1]">
+        Step <span data-bind="text:index"></span>.  <span data-bind="text:desc"></span>
+    </h3>
+    <div id="content" data-bind="template: { name: 'step'+viewing.step(), data: steps()[viewing.step()-1]}"></div>
+<!-- /ko -->
+
+
+
+
+
+
+
+
+

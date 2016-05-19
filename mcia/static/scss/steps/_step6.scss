@@ -1,0 +1,87 @@
+
+/* ==========================================================================
+   Check for gaps
+   ========================================================================== */
+.gap-wrap {
+    border-radius:1.1em;
+    border:1px solid $secondary_color;
+    margin-bottom:2em;
+}
+#content .gaps-table { // #content included for specificity. Do not remove
+    border-radius:1em;
+    background:$secondary_light_accent;
+    thead {
+        background:$secondary_dark_accent;
+        color:$bg_base;
+        th:first-child {
+            border-top-left-radius: 1em;
+        }
+        th:last-child {
+            border-top-right-radius: 1em;
+        }
+
+    }
+    tbody {
+        font-size:.85em;
+    }
+    tr.filled {
+        background:$light_accent;
+    }
+    tr:nth-child(-n+5   ) {
+        border-bottom:1px solid $secondary_color;
+    }
+    td:nth-child(1) {
+        width:40%;
+        padding:.75em 1.5em;
+        line-height:1.5em;
+    }
+    td:nth-child(2) {
+        width:10%;
+        text-align:center;
+        input {
+          zoom: 1.5;
+          height: 50%;
+          width: 100%;
+          max-height:25px;
+          margin:0 auto;
+        }
+    }
+    td:nth-child(3) {
+        width:50%;
+        padding:.75em 1.5em;
+        select {
+            width:70%;
+        }
+        i {
+            font-size:2.5em;
+            line-height: 50px;
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+            vertical-align:middle;
+            &.fi-plus {
+                color:$secondary_color;
+                &:hover {
+                    cursor:pointer;
+                    color:$secondary_dark_accent;
+                }
+            }
+            &.fi-minus {
+                color:$dark_accent;
+                &:hover {
+                    cursor:pointer;
+                    color:$theme_color;
+                }
+            }
+        }
+    }
+    td.checked + td .row { // js sets 'checked' class //
+        display:none;
+    }
+    span {
+        color:$secondary_color;
+    }
+    select {
+        margin-bottom:.5em;
+    }
+}

@@ -1,0 +1,37 @@
+
+/* ==========================================================================
+   Prioritize Corrective Actions 
+   ========================================================================== */
+.sort-controls {
+    position:absolute;
+    i.fi-play {
+        font-size:2em;
+        padding:0;
+        line-height:1.75em;
+        display:block;
+    }
+    .move-up {
+        transform:rotate(270deg);
+    }
+    .move-down {
+        transform:rotate(90deg);
+    }
+}
+.row:nth-of-type(2) .sort-controls .move-up {
+    visibility:hidden;
+}
+.row:nth-last-child(2) .sort-controls .move-down {
+    visibility:hidden;
+}
+
+#content .ca-priority {
+    .factors-covered {
+        text-align:center;
+        background:$light_accent;
+        margin: 0.75em auto;
+        width: 25%;
+        padding: 0.5em 0em;
+        border-radius: 0.75em;
+        border: 3px ridge $theme_color;
+    }
+}

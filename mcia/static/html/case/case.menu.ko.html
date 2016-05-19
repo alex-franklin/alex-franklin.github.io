@@ -1,0 +1,6 @@
+<section class="case-nav row">
+           <div class="small-12 row" data-bind="foreach: {data:$data, as:'step'}">
+               <div data-bind="css:{active:step.active}, attr:{alt:step.index,title:step.desc},  click:step.view" class="step columns"></div>
+        </div>
+</section>
+

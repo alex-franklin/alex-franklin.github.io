@@ -1,0 +1,66 @@
+{
+"org":[
+	{
+	"mcia":{
+		"Incident_Types":[""],
+		"Batch_Number":"increments sequientially???",
+		"PRT_Members":["", "", ""],
+		"PRT_Leads":["", "", ""], // perhaps a smaller subset of PRT Members, this is a multiple choice on the interface
+		"Stakeholders":[
+			"Engineering",
+			"Dispatchers",
+			"Yardmasters",
+			"Control Operators",
+			"Utilities",
+			"Labor Organizations",
+			"FRA",
+			"City Municipalities",
+			"PRT Members",
+			"Safety and Health Committee",
+			"Mechanical",
+			"Field Ops"
+		], 
+		"Time_of_Day":[
+			"Morning", 
+			"Midday", 
+			"Afternoon", 
+			"Evening", 
+			"Dusk", 
+			"Overnight", 
+			"Dawn"
+		], 
+		"Weather_Conditions":[
+			"Clear",
+			"Cloudy",
+			"Fog",
+			"Slight Rain",
+			"Intense Rain",
+			"Snow and Ice",
+			"High Winds",
+			"Lightning",
+			"Hail Storm",
+			"High Heat",
+			"Severe Weather",
+			"Conditions in Transition",
+			"Quality of Light"
+		],
+		"Barriers_that_Worked":[
+			"Verbal Communication", 
+			"Signals", 
+			"Job Safety Briefing", 
+			"Crew Report to Dispatcher", 
+			"Brake System", 
+			"PPE"
+		], 
+		"Contributing_Factors":[""],
+		"Corrective_Actions":[""],
+		"Key_Performance_Requirements":[
+			"Performance Expectations: Sets or clarifies what the job requires people to do",
+			"Necessary Support: Provides relationships, resources, and authority people need in order to get the job done right",
+			"Appropriate Consequences: Reinforces the job done correctly and/or discourages the job not don correctly",
+			"Performance Feedback: Tells people how effectively they are doing their job in relation to performance expectations",
+			"Capability: Makes sure people have the physical, mental, and/or emotional ability to do the job",
+			"Knowledge/Skill: Gives people the knowledge, skill, and/or ability to do the job"
+		]}
+	}]
+}

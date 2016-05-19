@@ -1,0 +1,113 @@
+<div class="row">
+	<h4>This Step...</h4>
+	<p class="directions" data-bind="click:console.log($data.fields)">Use the fields below to input organization, project, and conditions information. Please consult the grey labels or hover over elements for assistance in filling out individual form fields.</p>
+</div>
+<div class="row">
+	<fieldset>
+		<legend>Report Details</legend>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[0].prompt"></label>
+			</div>
+			<div class="small-6 columns">
+				<input type="text" class="small-12" placeholder="Date will autofill this field" disabled>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[1].prompt"></label>
+				<span></span>
+			</div>
+			<div class="small-6 columns">
+				<input type="text" class="small-12 sibling-cloner" tabindex="" placeholder="Name, Email, and Phone Number" data-bind="value:$data.fields[1].response">
+				<button type="button" onclick="cloneField()">&#10010; Additional Contact</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[2].prompt"></label>
+				<span class="help-text">Insert/Select names of reporting team members<br><br>
+				Use Ctrl/Shift/Cmd to select multiple personnel</span>
+
+				<label class="hide dev-label">Selected Personnel:</label>
+				<span class="help-text dev-list"></span>
+
+			</div>
+			<div class="small-6 columns">
+				<select class="personnel" tabindex="" onchange="displaySelection('dev')" data-bind="selectedOptions:$data.fields[2].response" multiple>
+					<option value="Eddie Murphy">Eddie Murphy</option>
+					<option value="Dan Akroyd">Dan Akroyd</option>
+					<option value="Cheri Oteri">Cheri Oteri</option>
+					<option value="David Spade">David Spade</option>
+					<option value="Chris Farley">Chris Farley</option>
+					<option value="Jay Pharoah">Jay Pharoah</option>
+					<option value="Bill Hader">Bill Hader</option>
+					<option value="Andy Samberg">Andy Samberg</option>
+					<option value="Bill Murray">Bill Murray</option>
+					<option value="Steve Martin">Steve Martin</option>
+					<option value="Jim Belucci">Jim Belucci</option>
+					<option value="Norm McDonald">Norm McDonald</option>
+					<option value="Fred Armisen">Fred Armisen</option>
+				</select>
+				<button type="button">&#10010; Add Personnel</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[3].prompt"></label>
+				<span class="help-text">Insert/select names of people whose technical knowledge or experience will be used to conduct this MCIA<br><br>
+				Use Ctrl/Shift/Cmd to select multiple personnel</span>
+
+				<label class="sme-label">Selected Personnel:</label>
+				<!-- ko foreach: {data:$data.fields[3].response, as:'name'} -->
+				<span class="help-text sme-list" data-bind="text:name"></span>
+				<!-- /ko -->
+			</div>
+			<div class="small-6 columns">
+				<select class="personnel" tabindex="" data-bind="selectedOptions:$data.fields[3].response" multiple>
+					<option value="Eddie Murphy">Eddie Murphy</option>
+					<option value="Dan Akroyd">Dan Akroyd</option>
+					<option value="Cheri Oteri">Cheri Oteri</option>
+					<option value="David Spade">David Spade</option>
+					<option value="Chris Farley">Chris Farley</option>
+					<option value="Jay Pharoah">Jay Pharoah</option>
+					<option value="Bill Hader">Bill Hader</option>
+					<option value="Andy Samberg">Andy Samberg</option>
+					<option value="Bill Murray">Bill Murray</option>
+					<option value="Steve Martin">Steve Martin</option>
+					<option value="Jim Belucci">Jim Belucci</option>
+					<option value="Norm McDonald">Norm McDonald</option>
+					<option value="Fred Armisen">Fred Armisen</option>
+				</select>
+				<button type="button" title="(Subject Matter Expert)">&#10010; Add SME</button>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<fieldset>
+		<legend>Project Details</legend>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[4].prompt"></label>
+				<span class="help-text" data-bind="text:$data.fields[4].response"></span>
+			</div>
+			<div class="small-6 columns">
+				<input type="text" class="small-12" tabindex="" placeholder="Customer Contract Number" data-bind="value:$data.fields[4].response">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[5].prompt"></label>
+			</div>
+			<div class="small-6 columns">
+				<input type="text" class="small-12" tabindex="" placeholder="Project Identification" data-bind="value:$data.fields[5].response">
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<div class="small-12">
+		<button type="submit" tabindex="9" data-bind="click:$data.go.next">Save and Continue</button>
+	</div>
+</div>

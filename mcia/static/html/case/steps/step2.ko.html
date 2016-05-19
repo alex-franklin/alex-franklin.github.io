@@ -1,0 +1,776 @@
+<div class="row">
+	<h4>This Step...</h4>
+	<p class="directions" data-bind="click:console.log($data.fields)">Record the details of this incident as accurately as possible.</p>
+
+	<p class="directions">Complete this section for each injured or at risk individual. When more than one person is injured, use the “Add Affected Personnel” button at the bottom of the section. </p>
+
+	<p class="directions">When reporting injured personnel, please use the 'This Personnel Has More Injuries' button for personnel who have incurred more than one injury, as opposed to beginning a new injury report for the same individual.</p>
+</div>
+<div class="row">
+	<fieldset>
+	<legend>Conditions</legend>
+		<div class="small-6 columns">
+			<div class="row">
+				<div class="small-6 columns unpad">
+					<label data-bind="text:$data.fields[0].prompt"></label>
+					<span class="help-text">MM/DD/YYYY | e.g. 01/08/2014</span>
+				</div>
+				<div class="small-6 columns">
+					<input type="date" placeholder="MM/DD/YYYY | e.g. 01/08/2014" class="small-12" tabindex="" data-bind="value:$data.fields[0].response">
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-6 columns unpad">
+					<label data-bind="text:$data.fields[1].prompt"></label>
+					<span class="help-text"></span>
+				</div>
+				<div class="small-6 columns">
+					<select class="small-12" data-bind="value:$data.fields[1].response">
+						<option value="Clear">Clear</option>
+						<option value="Cloudy">Cloudy</option>
+						<option value="Fog">Fog</option>
+						<option value="Slight Rain">Slight Rain</option>
+						<option value="Intense Rain">Intense Rain</option>
+						<option value="Snow and Ice">Snow and Ice</option>
+						<option value="High Winds">High Winds</option>
+						<option value="Lightning">Lightning</option>
+						<option value="Hail Storm">Hail Storm</option>
+						<option value="High Heat">High Heat</option>
+						<option value="Severe Weather">Severe Weather</option>
+						<option value="Conditions in Transition">Conditions in Transition</option>
+						<option value="Quality of Light">Quality of Light</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="small-6 columns">
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[2].prompt"></label>
+					<span class="help-text">Input the closest approximation of the time of the incident</span>
+				</div>
+				<div class="small-6 columns">
+					<input type="text" list="times" tabindex="" class="small-12" data-bind="value:$data.fields[2].response">
+					<datalist id="times">
+						<option value="0000 - 0059 hours">0000 - 0059 hours</option>
+						<option value="0100 - 0159 hours">0100 - 0159 hours</option>
+						<option value="0200 - 0259 hours">0200 - 0259 hours</option>
+						<option value="0300 - 0359 hours">0300 - 0359 hours</option>
+						<option value="0400 - 0459 hours">0400 - 0459 hours</option>
+						<option value="0500 - 0559 hours">0500 - 0559 hours</option>
+						<option value="0600 - 0659 hours">0600 - 0659 hours</option>
+						<option value="0700 - 0759 hours">0700 - 0759 hours</option>
+						<option value="0800 - 0859 hours">0800 - 0859 hours</option>
+						<option value="0900 - 0959 hours">0900 - 0959 hours</option>
+						<option value="1000 - 1059 hours">1000 - 1059 hours</option>
+						<option value="1100 - 1159 hours">1100 - 1159 hours</option>
+						<option value="1200 - 1259 hours">1200 - 1259 hours</option>
+						<option value="1300 - 1359 hours">1300 - 1359 hours</option>
+						<option value="1400 - 1459 hours">1400 - 1459 hours</option>
+						<option value="1500 - 1559 hours">1500 - 1559 hours</option>
+						<option value="1600 - 1659 hours">1600 - 1659 hours</option>
+						<option value="1700 - 1759 hours">1700 - 1759 hours</option>
+						<option value="1800 - 1859 hours">1800 - 1859 hours</option>
+						<option value="1900 - 1959 hours">1900 - 1959 hours</option>
+						<option value="2000 - 2059 hours">2000 - 2059 hours</option>
+						<option value="2100 - 2159 hours">2100 - 2159 hours</option>
+						<option value="2200 - 2259 hours">2200 - 2259 hours</option>
+						<option value="2300 - 2359 hours">2300 - 2359 hours</option>
+					</datalist>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[3].prompt"></label>
+					<span class="help-text">Describe the specific location of where the event occurred</span>
+				</div>
+				<div class="small-6 columns">
+					<select class="small-12" tabindex="" data-bind="value:$data.fields[3].response">
+						<option value="Airboat">Airboat</option>
+						<option value="Anchor Barge">Anchor Barge</option>
+						<option value="Berm">Berm</option>
+						<option value="Booster">Booster</option>
+						<option value="Crewboat/Survey Boat">Crewboat/Survey Boat</option>
+						<option value="Deck Barge">Deck Barge</option>
+						<option value="Derrick">Derrick</option>
+						<option value="Dredge">Dredge</option>
+						<option value="Float Hose">Float Hose</option>
+						<option value="Idler/Power Barge">Idler/Power Barge</option>
+						<option value="Land">Land</option>
+						<option value="Launch">Launch</option>
+						<option value="Office">Office</option>
+						<option value="Pipe Raft">Pipe Raft</option>
+						<option value="Pontoon Tank/Pipeline">Pontoon Tank/Pipeline</option>
+						<option value="Quarters Barge">Quarters Barge</option>
+						<option value="Ramp Barge">Ramp Barge</option>
+						<option value="Tug">Tug</option>
+						<option value="Yard">Yard</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[4].prompt"></label>
+				<input type="file">
+				<a href="../img/gldd-jsa-review-lg.png" data-lightbox="image-1" data-title="GLDD JSA Review 5001564">
+					<img src="../img/gldd-jsa-review-lg.png" class="uploaded">
+				</a>
+			</div>
+			<div class="small-6 columns">
+				<label class="input-label inline-label"><input type="radio" name="jsa_review" tabindex="" data-bind="checked:$data.fields[4].response" value="Yes">Yes</label>
+				<label class="input-label inline-label"><input type="radio" name="jsa_review" tabindex="" data-bind="checked:$data.fields[4].response" value="No">No</label>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<fieldset>
+		<legend>Injury / Hazard Exposure Details</legend>
+		<fieldset class="personnel">
+			<div class="row">
+				<div class="small-12 columns">
+						<label data-bind="text:$data.fields[5].prompt"></label>
+						<span class="help-text">Choose from a list of personnel (line 1) and enter the title of that individual (line 2).</span>
+				</div>
+				<div class="small-6 columns">
+					<datalist id="personnel_list">
+					    <option value="Agent Apple"></option>
+					    <option value="Agent Orange"></option>
+					    <option value="Agent Peach"></option>
+					    <option value="Agent Melon"></option>
+					    <option value="Agent Strawberry"></option>
+					</datalist>
+					<input type="text" list="personnel_list" tabindex="2" class="small-12 columns" placeholder="Personnel name" data-bind="value:$data.fields[5].response">
+
+				</div>
+				<div class="small-6 columns">
+					<datalist id="title_list">
+					    <option value="AB">AB</option>
+					    <option value="Boatsman">Boatsman</option>
+					    <option value="Cook">Cook</option>
+					    <option value="Deckhand">Deckhand</option>
+					    <option value="Deck Captain">Deck Captain</option>
+					    <option value="Derrick Operator">Derrick Operator</option>
+					    <option value="Dragtender">Dragtender</option>
+					    <option value="Dredge Operator">Dredge Operator</option>
+					    <option value="Driller">Driller</option>
+					    <option value="Drill Helper">Drill Helper</option>
+					    <option value="Dump Foreman">Dump Foreman</option>
+					    <option value="Electrician">Electrician</option>
+					    <option value="Equipment Operator">Equipment Operator</option>
+					    <option value="Field Engineer">Field Engineer</option>
+					    <option value="Laborer/Handyman">Laborer/Handyman</option>
+					    <option value="Mate - CSD/Bucket">Mate - CSD/Bucket</option>
+					    <option value="Mechanic">Mechanic</option>
+					    <option value="Oiler">Oiler</option>
+					    <option value="Ordinary Seaman">Ordinary Seaman</option>
+					    <option value="QMED">QMED</option>
+					    <option value="Rigger">Rigger</option>
+					    <option value="Rodman">Rodman</option>
+					    <option value="Runner">Runner</option>
+					    <option value="Shoreman">Shoreman</option>
+					    <option value="Site Administrator/Clerk">Site Administrator/Clerk</option>
+					    <option value="Tug Captain">Tug Captain</option>
+					    <option value="Watch Engineer">Watch Engineer</option>
+					    <option value="Welder">Welder</option>
+					    <option value="Whistleblower">Whistleblower</option>
+					    <option value="Wiper">Wiper</option>
+					    <option value="Yard Foreman">Yard Foreman</option>
+					</datalist>
+					<input type="text" list="title_list" tabindex="3" class="small-12" placeholder="Personnel title" data-bind="value:$data.fields[6].response">
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[7].prompt"></label>
+					<span class="help-text"></span>
+					<select class="small-12" tabindex="5" data-bind="value:$data.fields[7].response">
+						<option value="< 21 Years">&lt; 21 Years</option>
+						<option value="21-25 Years">21-25 Years</option>
+						<option value="26-30 Years">26-30 Years</option>
+						<option value="31-35 Years">31-35 Years</option>
+						<option value="36-40 Years">36-40 Years</option>
+						<option value="41-45 Years">41-45 Years</option>
+						<option value="46-50 Years">46-50 Years</option>
+						<option value="51-55 Years">51-55 Years</option>
+						<option value="56-60 Years">56-60 Years</option>
+						<option value="61-65 Years">61-65 Years</option>
+						<option value="> 65 Years">&gt; 65 Years</option>
+					</select>
+				</div>
+				<div class="small-6 columns">
+					<div class="small-12">
+							<label data-bind="text:$data.fields[8].prompt"></label>
+						</div>
+						<div class="small-12 input-center">
+							<label class="input-label" style="display:inline-block"><input type="radio" name="working_alone" tabindex="10" value="Yes" data-bind="checked:$data.fields[8].response">Yes</label>
+							<label class="input-label" style="display:inline-block"><input type="radio" name="working_alone" tabindex="11" value="No" data-bind="checked:$data.fields[8].response">No</label>
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[9].prompt"></label>
+					<span class="help-text"></span>
+					<select class="small-12" tabindex="5" data-bind="value:$data.fields[9].response">
+						<option value="3-6 Months">3-6 Months</option>
+						<option value="6-12 Months">6-12 Months</option>
+						<option value="1-2 Years">1-2 Years</option>
+						<option value="2-3 Years">2-3 Years</option>
+						<option value="3-4 Years">3-4 Years</option>
+						<option value="4-5 Years">4-5 Years</option>
+						<option value="5-10 Years">5-10 Years</option>
+						<option value="10+ Years">10+ Years</option>
+						<option value="<3 Months">Less than 3 Months</option>
+						<option value="Unknown">Unknown</option>
+					</select>
+				</div>
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[10].prompt"></label>
+					<span class="help-text"></span>
+					<select class="small-12" tabindex="5" data-bind="value:$data.fields[10].response">
+						<option value="3-6 Months">3-6 Months</option>
+						<option value="6-12 Months">6-12 Months</option>
+						<option value="1-2 Years">1-2 Years</option>
+						<option value="2-3 Years">2-3 Years</option>
+						<option value="3-4 Years">3-4 Years</option>
+						<option value="4-5 Years">4-5 Years</option>
+						<option value="5-10 Years">5-10 Years</option>
+						<option value="10+ Years">10+ Years</option>
+						<option value="<3 Months">Less than 3 Months</option>
+						<option value="Unknown">Unknown</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[11].prompt"></label>
+					<span class="help-text">List any training programs or classes the injured personnel completed relating to their task at the time of the incident.</span>
+					<label class="hide training-label">Selected Training:</label>
+					<span class="help-text training-list"></span>
+				</div>
+				<div class="small-6 columns">
+					<select multiple class="small-12" onchange="displaySelection('training')" data-bind="selectedOptions:$data.fields[11].response">
+						<option value="">General Dredging Course</option>
+						<option value="">Project Staff Training</option>
+						<option value="">Radio Active Concentration Meter Course</option>
+						<option value="">Advanced Pump and Slurry Course</option>
+						<option value="">IHC Beaver Engineer Training</option>
+						<option value="">USA Cutter Suction Dredger Simulator Training</option>
+					</select>
+				</div>
+			</div>
+			<fieldset class="injury">
+				<div class="row">
+					<div class="small-6 columns">
+						<div class="small-12">
+							<label data-bind="text:$data.fields[12].prompt"></label>
+						</div>
+						<div class="small-12 input-center">
+							<label class="input-label" style="display:inline-block"><input type="radio" name="shift_schedule" tabindex="10" value="1st Shift" data-bind="checked:$data.fields[12].response">1st Shift</label>
+							<label class="input-label" style="display:inline-block"><input type="radio" name="shift_schedule" tabindex="11" value="2nd Shift" data-bind="checked:$data.fields[12].response">2nd Shift</label>
+							<label class="input-label" style="display:inline-block"><input type="radio" name="shift_schedule" tabindex="12" value="3rd Shift" data-bind="checked:$data.fields[12].response">3rd Shift</label>
+						</div>
+					</div>
+					<div class="small-6 columns">
+						<div class="small-12">
+							<label data-bind="text:$data.fields[13].prompt"></label>
+						</div>
+						<div class="small-12 input-center">
+							<label class="input-label" style="display:inline-block"><input type="radio" name="usual_shift" tabindex="10" value="Yes" data-bind="checked:$data.fields[13].response">Yes</label>
+							<label class="input-label" style="display:inline-block"><input type="radio" name="usual_shift" tabindex="11" value="No" data-bind="checked:$data.fields[13].response">No</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label data-bind="text:$data.fields[14].prompt"></label>
+						<span class="help-text">Select the number of days after the incident this personnel or crew will recieve a day of leave.</span>
+					</div>
+					<div class="small-12 columns range ie-cant">
+						<input type='range' name='days_until_time_off' id="days_until_time_off" min='0' max='30' step='1' value='5' list='day-values' class="small-12" onchange="display_days.value=this.value" data-bind="value:$data.fields[14].response">
+					</div>
+					<div class="small-12 columns ie-cant range-ticks">
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+						<div class="thirty">|</div>
+					</div>
+					<div class="small-12 ie-cant range-ticks">
+						<div class="seven">0</div>
+						<div class="seven">5</div>
+						<div class="seven">10</div>
+						<div class="seven">15</div>
+						<div class="seven">20</div>
+						<div class="seven">25</div>
+						<div class="seven">30</div>
+					</div>
+					<div class="small-12 ie-cant">
+						<output name="display_days" id="display_days" for="days_until_time_off" class="small-offset-4">5</output> days from date of incident
+					</div>
+
+	<!-- set to display only in IE as a fallback to input type range -->
+					<select class="ie-fallback" tabindex="13">
+						<option value="1 day">in 1 day</option>
+						<option value="2 days">in 2 days</option>
+						<option value="3 days">in 3 days</option>
+						<option value="4 days">in 4 days</option>
+						<option value="5 days">in 5 days</option>
+						<option value="6 days">in 6 days</option>
+						<option value="7 days">in 7 days</option>
+						<option value="8 days">in 8 days</option>
+						<option value="9 days">in 9 days</option>
+						<option value="10 days">in 10 days</option>
+					</select>
+	<!-- set to display only in IE as a fallback to input type range -->
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label data-bind="text:$data.fields[15].prompt"></label>
+						<span class="help-text">Select the number of hours after the incident this personnel would end their shift.</span>
+					</div>
+					<div class="small-12 columns range ie-cant">
+						<input type='range' name='hours_until_time_off' id="hours_until_time_off" min='0' max='8' step='1' value='4' list='hour-values' class="small-12" onchange="display_hours.value=this.value" data-bind="value:$data.fields[15].response">
+					</div>
+					<div class="small-12 columns ie-cant range-ticks">
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+						<div class="nine">|</div>
+					</div>
+					<div class="small-12 ie-cant range-ticks">
+						<div class="nine">0</div>
+						<div class="nine">1</div>
+						<div class="nine">2</div>
+						<div class="nine">3</div>
+						<div class="nine">4</div>
+						<div class="nine">5</div>
+						<div class="nine">6</div>
+						<div class="nine">7</div>
+						<div class="nine">8</div>
+					</div>
+					<div class="small-12 ie-cant">
+						<output name="display_hours" id="display_hours" for="hours_until_time_off" class="small-offset-4">4</output> hours until end the of shift
+					</div>
+
+	<!-- set to display only in IE as a fallback to input type range -->
+					<select class="ie-fallback" tabindex="13">
+						<option value="1 day">in 1 day</option>
+						<option value="2 days">in 2 days</option>
+						<option value="3 days">in 3 days</option>
+						<option value="4 days">in 4 days</option>
+						<option value="5 days">in 5 days</option>
+						<option value="6 days">in 6 days</option>
+						<option value="7 days">in 7 days</option>
+						<option value="8 days">in 8 days</option>
+						<option value="9 days">in 9 days</option>
+						<option value="10 days">in 10 days</option>
+					</select>
+	<!-- set to display only in IE as a fallback to input type range -->
+				</div>
+			</fieldset>
+			<fieldset class="injury">
+				<div class="row">
+					<div class="small-6 columns">
+							<label data-bind="text:$data.fields[16].prompt"></label>
+							<span class="help-text">You may begin typing the incident type or use the dropdown arrow to choose from a list of incident types.</span>
+					</div>
+					<div class="small-6 columns">
+							<datalist id="incident_type">
+								<option>Bodily Reaction</option>
+								<option>Caught in, under</option>
+								<option>Fall from elevation or overboard</option>
+								<option>Fall, slip or trip on same level</option>
+								<option>Foreign object in </option>
+								<option>Highway motor vehicle accident</option>
+								<option>Overexertion or strain</option>
+								<option>Struck against object</option>
+								<option>Struck by object</option>
+							</datalist>
+							<input type="text" list="incident_type" tabindex="1" class="small-12" placeholder="Begin typing incident type" data-bind="value:$data.fields[16].response">
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-6 columns">
+							<label data-bind="text:$data.fields[17].prompt"></label>
+							<span class="help-text">Begin typing the name of the affected area or choose the affected body area from the list.</span>
+							<datalist id="body_parts">
+							    <option value="Ankle">Ankle</option>
+							    <option value="Arm (Lower)">Arm (Lower)</option>
+							    <option value="Arm (Upper)">Arm (Upper)</option>
+							    <option value="Back (Lower)">Back (Lower)</option>
+							    <option value="Back (Upper)">Back (Upper)</option>
+							    <option value="Body System / Inhaled Fumes">Body System / Inhaled Fumes</option>
+							    <option value="Buttocks">Buttocks</option>
+							    <option value="Chest">Chest</option>
+							    <option value="Ear">Ear</option>
+							    <option value="Elbow">Elbow</option>
+							    <option value="Eye">Eye</option>
+							    <option value="Finger">Finger</option>
+							    <option value="Foot">Foot</option>
+							    <option value="Groin">Groin</option>
+							    <option value="Hand">Hand</option>
+							    <option value="Head (Gen. or Multiple)">Head (Gen. or Multiple)</option>
+							    <option value="Hip">Hip</option>
+							    <option value="Jaw">Jaw</option>
+							    <option value="Knee">Knee</option>
+							    <option value="Leg (Lower)">Leg (Lower)</option>
+							    <option value="Leg (Upper)">Leg (Upper)</option>
+							    <option value="Lower Extremity (Gen. or Mult.)">Lower Extremity (Gen. or Mult.)</option>
+							    <option value="Mouth (including teeth)">Mouth (including teeth)</option>
+							    <option value="Multiple">Multiple</option>
+							    <option value="Neck (including throat)">Neck (including throat)</option>
+							    <option value="Non-classifiable">Non-classifiable</option>
+							    <option value="Nose">Nose</option>
+							    <option value="Ribs">Ribs</option>
+							    <option value="Shoulder">Shoulder</option>
+							    <option value="Stomach">Stomach</option>
+							    <option value="Toe">Toe</option>
+							    <option value="Torso (Gen. or Mult)">Torso (Gen. or Mult)</option>
+							    <option value="Upper Extremity (Gen. or Multiple)">Upper Extremity (Gen. or Multiple)</option>
+							    <option value="Wrist">Wrist</option>
+							</datalist>
+
+							<input type="text" list="body_parts" class="small-12" tabindex="6" placeholder="Begin typing the injured/exposed area here" data-bind="value:$data.fields[17].response">
+					</div>
+					<div class="small-6 columns">
+							<label data-bind="text:$data.fields[18].prompt"></label>
+							<span class="help-text">Begin typing the nature of the injured area/type of exposure or choose a description from the list.</span>
+							<datalist id="injury_nature">
+								<option value="Abrasions, Scratches">Abrasions, Scratches</option>
+								<option value="Amputation or Enucleation">Amputation or Enucleation</option>
+								<option value="Asphyxiations, Drowning">Asphyxiations, Drowning</option>
+								<option value="Burn (Chemical)">Burn (Chemical)</option>
+								<option value="Burn (Heat)">Burn (Heat)</option>
+								<option value="Cerebrovascular &amp; other Circulatory  Conditions ">Cerebrovascular &amp; other Circulatory  Conditions </option>
+								<option value="Concussion">Concussion</option>
+								<option value="Conditions of Nervous System">Conditions of Nervous System</option>
+								<option value="Contusion, Crushing, Bruise">Contusion, Crushing, Bruise</option>
+								<option value="Cut, Laceration, Puncture">Cut, Laceration, Puncture</option>
+								<option value="Dislocation">Dislocation</option>
+								<option value="Disorders associated with Repeated Trauma">Disorders associated with Repeated Trauma</option>
+								<option value="Disorders due to Physical Agents">Disorders due to Physical Agents</option>
+								<option value="Dust Diseases of the Lungs">Dust Diseases of the Lungs</option>
+								<option value="Electric Shock, Electrocution">Electric Shock, Electrocution</option>
+								<option value="Eye diseases (Other)">Eye diseases (Other)</option>
+								<option value="Fracture">Fracture</option>
+								<option value="Heart Conditions (including heart attack)">Heart Conditions (including heart attack)</option>
+								<option value="Hernia, Rupture">Hernia, Rupture</option>
+								<option value="Inflamed/Irritated Joints, Tendons, etc.">Inflamed/Irritated Joints, Tendons, etc.</option>
+								<option value="Insect/Spider Bite/Fish Fin/Stingray/Shark">Insect/Spider Bite/Fish Fin/Stingray/Shark</option>
+								<option value="Mental Disorders">Mental Disorders</option>
+								<option value="Multiple Injuries">Multiple Injuries</option>
+								<option value="Neoplasm, Tumor">Neoplasm, Tumor</option>
+								<option value="Sprains, Strains, Pulls">Sprains, Strains, Pulls</option>
+								<option value="Symptoms &amp; Ill-Defined Conditions">Symptoms &amp; Ill-Defined Conditions</option>
+								<option value="Non-Classifiable">Non-Classifiable</option>
+								<option value="Occupational Skin Diseases &amp; Disorders">Occupational Skin Diseases &amp; Disorders</option>
+								<option value="Poisoning-Systemic Effects of Toxic Materials">Poisoning-Systemic Effects of Toxic Materials</option>
+								<option value="Respiratory Conditions due to Toxic Agents">Respiratory Conditions due to Toxic Agents</option>
+								<option value="All Other Occ. Illnesses">All Other Occ. Illnesses</option>
+							</datalist>
+							<input type="text" placeholder="Begin typing the nature of the injury/type of exposure here." class="small-12 sibling-cloner" list="injury_nature" tabindex="7" data-bind="value:$data.fields[18].response">
+
+					</div>
+				</div>
+			</fieldset>
+			<button type="button" class="add-injury" onclick="cloneField()">&#10010; This personnel has more injuries</button>
+			</fieldset>
+			<button type="button" class="add-injured-personnel" onclick="cloneField()">&#10010; Add affected personnel</button>
+		</fieldset>
+	</div>
+</div>
+<div class="row">
+	<fieldset>
+	<legend>Configuration</legend>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[19].prompt"></label>
+				<span class="help-text"></span>
+			</div>
+			<div class="small-6 columns">
+				<select class="small-12" tabindex="8" data-bind="value:$data.fields[19].response">
+					<option value="Administrative">Administrative</option>
+					<option value="Hopper">Hopper</option>
+					<option value="Hydraulic">Hydraulic</option>
+					<option value="International">International</option>
+					<option value="Mechanical">Mechanical</option>
+					<option value="Yard">Yard</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[20].prompt"></label>
+				<span class="help-text">Select the appropriate Project Name from the list to the right.</span>
+			</div>
+			<div class="small-6 columns">
+				<select class="small-12" tabindex="9" data-bind="value:$data.fields[20].response">
+					<option value="Project - Attn.Plant">Project - Attn.Plant</option>
+					<option value="Project - Dredge">Project - Dredge</option>
+					<option value="Project - Land">Project - Land</option>
+					<option value="Project - Pipeline">Project - Pipeline</option>
+					<option value="Investigate New Work">Investigate New Work</option>
+					<option value="Layup/Shipyard">Layup/Shipyard</option>
+					<option value="Mob/Demob">Mob/Demob</option>
+					<option value="Office">Office</option>
+					<option value="Yard">Yard</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+					<label data-bind="text:$data.fields[21].prompt"></label>
+					<span class="help-text">Describe the desired goal and the means planned by which to accomplish it.</span>
+			</div>
+			<div class="small-6 columns">
+					<input type="text" tabindex="25" class="small-12" placeholder="Type ongoing operation here" data-bind="value:$data.fields[21].response">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+					<label data-bind="text:$data.fields[22].prompt"></label>
+					<span class="help-text"></span>
+			</div>
+			<div class="small-6 columns">
+					<input type="text" tabindex="26" class="small-12" placeholder="Type here" data-bind="value:$data.fields[22].response">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[23].prompt"></label>
+				<span class="help-text">List all PPE that was in use at the time of the incident. Multiple selections may be made using Ctrl/Cmd/Shift.</span>
+
+				<label class="hide multi-label">Selected PPE:</label>
+				<span class="help-text multi-list"></span>
+			</div>
+			<div class="small-6 columns">
+				<select multiple class="small-12" tabindex="10" onchange="displaySelection('multi')" data-bind="selectedOptions:$data.fields[23].response">
+					<option value="Boots">Boots</option>
+					<option value="Face Mask">Face Mask</option>
+					<option value="Flashlight">Flashlight</option>
+					<option value="Gloves">Gloves</option>
+					<option value="Goggles">Goggles</option>
+					<option value="Hard Hat">Hard Hat</option>
+					<option value="PFD">PFD</option>
+					<option value="Relflective vest">Reflective vest</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[24].prompt"></label>
+				<span class="help-text">For each Crew Member that was involved in the situation, record the member's title and experience using the fields below.</span>
+				<input type="file">
+				<a href="../img/construction-3-lg.jpg" data-lightbox="image-1">
+					<img src="../img/construction-3.jpg" class="uploaded" target="_blank">
+				</a>
+				<a href="../img/construction-5-lg.jpg" data-lightbox="image-2">
+					<img src="../img/construction-5.jpg" target="_blank" class="uploaded">
+				</a>
+			</div>
+			<div class="small-6 columns">
+				<textarea placeholder="Positions, locations on job site, and experience" class="small-12" tabindex="11" data-bind="value:$data.fields[24].response"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[25].prompt"></label>
+			</div>
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[26].prompt"></label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<input type="text" class="small-12 sibling-cloner" tabindex="" placeholder="Title" data-bind="value:$data.fields[25].response">
+			</div>
+			<div class="small-6 columns">
+				<input type="text" class="small-12 sibling-cloner" tabindex="" placeholder="Experience" data-bind="value:$data.fields[26].response">
+			</div>
+		</div>
+		<button type="button" onclick="cloneField()">&#10010; Additional Crew Member</button>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[27].prompt"></label>
+				<span class="help-text">Describe (in detail) the configuration of all involved equipment.</span>
+				<input type="file">
+				<a href="../img/construction-2-lg.jpg" data-lightbox="image-3">
+					<img src="../img/construction-2.jpg" class="uploaded">
+				</a>
+				<a href="../img/construction-4-lg.jpg" data-lightbox="image-4">
+					<img src="../img/construction-4.jpg" class="uploaded">
+				</a>
+			</div>
+			<div class="small-6 columns">
+				<textarea placeholder="Type involved, how arranged or set up, direction of movement at the time of incident" class="small-12" tabindex="12" data-bind="value:$data.fields[27].response"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<label data-bind="text:$data.fields[28].prompt"></label>
+				<span class="help-text">Describe (in detail) the configuration of all involved tools/materials.</span>
+				<input type="file">
+				<a href="../img/construction-2-lg.jpg" data-lightbox="image-3">
+					<img src="../img/construction-2.jpg" class="uploaded">
+				</a>
+				<a href="../img/construction-4-lg.jpg" data-lightbox="image-4">
+					<img src="../img/construction-4.jpg" class="uploaded">
+				</a>
+			</div>
+			<div class="small-6 columns">
+				<textarea placeholder="Type involved, how arranged or set up, direction of movement at the time of incident" class="small-12" tabindex="12" data-bind="value:$data.fields[28].response"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<fieldset>
+		<legend>Recovery Factors</legend>
+		<div class="small-6 columns unpad">
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[29].prompt"></label>
+					<span class="help-text">A barrier is a measure put in place (such as a policy, program, tool, etc.) that can either prevent an incident from happening or protect against its consequences.</span>
+					<span class="help-text">Multiple selections may be made using Ctrl/Cmd/Shift.</span>
+					<label class="hide barrier-label">Selected Barriers:</label>
+				<span class="help-text barrier-list"></span>
+				</div>
+				<div class="small-6 columns">
+					<select multiple class="small-12" onchange="displaySelection('barrier')" data-bind="selectedOptions:$data.fields[29].response">
+						<option value="SALT Book">SALT Book</option>
+						<option value="Job Safety Analysis">Job Safety Analysis</option>
+						<option value="Step Back for Safety / Stop Card">Step Back for Safety / Stop Card</option>
+						<option value="Safety Training">Safety Training</option>
+						<option value="New Hire / Onboarding Process">New Hire / Onboarding Process</option>
+						<option value="Co-worker tap on the shoulder">Co-worker tap on the shoulder</option>
+						<option value="Emergency Drills">Emergency Drills</option>
+						<option value="PPE">PPE</option>
+						<option value="Equipment / Tools Inspection">Equipment / Tools Inspection</option>
+						<option value="Reliability Assured Maintenance (RAM)">Reliability Assured Maintenance (RAM)</option>
+						<option value="Radio Communications">Radio Communications</option>
+						<option value="Prior MCIA Corrective Actions">Prior Corrective Actions</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="small-6 columns unpad">
+
+			<div class="row">
+				<div class="small-6 columns">
+					<label data-bind="text:$data.fields[30].prompt"></label>
+					<span class="help-text">List barriers that failed to prevent a worse outcome.</span>
+				</div>
+				<div class="small-6 columns">
+					<select class="small-12" multiple data-bind="selectedOptions:$data.fields[30].response">
+						<option value="SALT Book">SALT Book</option>
+						<option value="Job Safety Analysis">Job Safety Analysis</option>
+						<option value="Step Back for Safety / Stop Card">Step Back for Safety / Stop Card</option>
+						<option value="Safety Training">Safety Training</option>
+						<option value="New Hire / Onboarding Process">New Hire / Onboarding Process</option>
+						<option value="Co-worker tap on the shoulder">Co-worker tap on the shoulder</option>
+						<option value="Emergency Drills">Emergency Drills</option>
+						<option value="PPE">PPE</option>
+						<option value="Equipment / Tools Inspection">Equipment / Tools Inspection</option>
+						<option value="Reliability Assured Maintenance (RAM)">Reliability Assured Maintenance (RAM)</option>
+						<option value="Radio Communications">Radio Communications</option>
+						<option value="Prior MCIA Corrective Actions">Prior Corrective Actions</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<fieldset>
+		<legend>Incident Summary</legend>
+		<div class="small-12">
+			<label data-bind="text:$data.fields[31].prompt"></label>
+			<span class="help-text">You may attach photos, audio files or video to supplement your summary of the incident. Begin by restating important facets from previous questions and expound upon important factors and insights.</span>
+		</div>
+		<div class="small-12">
+				<textarea placeholder="You may attach photos, audio files or video to supplement your summary of the incident. Begin by restating important facets from previous questions and expound upon important factors and insights." class="small-12" tabindex="21" data-bind="value:$data.fields[31].response"></textarea>
+		</div>
+		<div class="small-12">
+			<input type="file">
+				<a href="../img/construction-2-lg.jpg" data-lightbox="image-5">
+					<img src="../img/construction-2.jpg" class="uploaded">
+				</a>
+				<a href="../img/construction-4-lg.jpg" data-lightbox="image-6">
+					<img src="../img/construction-4.jpg" class="uploaded">
+				</a>
+				<a href="../img/construction-6-lg.jpg" data-lightbox="image-7">
+					<img src="../img/construction-6.jpg" class="uploaded">
+				</a>
+		</div>
+		<!-- <div class="small-12">
+			<label data-bind="text:$data.fields[28].prompt"></label>
+			<input type="text" placeholder="Copy unique or descriptive words from the incident summary to populate this field." class="small-12" data-bind="value:$data.fields[28].response">
+		</div> -->
+
+	</fieldset>
+</div>
+<div class="row">
+	<div class="small-12">
+		<button type="submit" tabindex="22" onclick="modal()" data-reveal-id="alertModal">Save and Continue</button>
+	</div>
+</div>
+<div class="reveal-modal-bg" onclick="modal()"></div>
+<div id="alertModal" class="reveal-modal" data-reveal>
+  <h4>Before continuing....</h4>
+  <p>Consult with your team. Consider the answers to the following questions:</p>
+  <ul>
+  	<li>Do you have all the facts regarding the circumstances surrounding this incident?</li>
+  	<li>Are there unanswered questions you have that may influence information in this report?</li>
+  	<li>Have you spoken to all relevant Subject Matter Experts (SME) about the incident?</li>
+  </ul>
+  <p>Use the box below to record answers to these and any other questions you may have. These notes will be available to you throughout the execution of this incident analysis.</p>
+  <textarea id="notes" class="small-12" onchange="addNote()" placeholder="Look to the bottom of your screen for access to your notes in upcoming steps" ></textarea>
+  <a class="close-reveal-modal" onclick="modal()">&#215;</a>
+  <button type="submit" tabindex="22" data-bind="click:$data.go.next">Save and Continue</button>
+</div>
+<div class="bottom-drawer">
+	<div class="draft-drawer small-12 large-6 columns unpad hide">
+	</div>
+	<div class="note-drawer small-12 large-6 columns unpad hide">
+		<span onclick="toggleView()">
+			<i class="fi-play"></i><label>Notes</label>
+		</span>
+		<textarea class="small-11 small-offset-1 large-offset-0 note-text" onchange="addNote()"></textarea>
+	</div>
+</div>

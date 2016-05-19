@@ -1,0 +1,184 @@
+<div class="row">
+	<p class="directions">Add Corrective Actions into the table below using the dropdown menus to make sure you have closed gaps that may have contributed to the incident. Note that you may place the Corrective Actions into as many rows as applicable, and you may place multiple Corrective Actions into any of the rows.</p>
+	<p class=-"directions"><b>Steps to Follow:</b></p>
+		<ul class="directions">
+			<li>Figure out which row(s) best describe(s) what the Corrective Action will do. Select the appropriate Corrective Action from the dropdown menu.</li>
+			<li>If the system had effective barriers in place before the incident occurred and there is no gap in the performance category, place a check in the “Barrier already in place...” column.</li>
+			<li><b>Review your analysis.</b> Note that any performance category without a check or a Corrective Action is opening the incident to recurrence. Satisfying this criterion will highlight respective performance categories' rows green. Additionally, any Corrective Action which is not closing any gaps will open the incident to recurrence as well.</li>
+		</ul>
+</div>
+<!-- <div class="row">
+	<fieldset>
+		<legend>Corrective Actions</legend>
+		<div class="small-6 columns">
+			<label>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+</label>
+			<label>Corrective Action 2</label>
+			<label>Corrective Action 3</label>
+		</div>
+		<div class="small-6 columns">
+			<label>Corrective Action 4</label>
+			<label>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</label>
+			<label>Corrective Action 6</label>	
+		</div>	
+	</fieldset>
+</div> -->
+<div class="row gap-wrap">
+	<table class="gaps-table">
+		<thead>
+			<tr>
+				<th>What the Corrective Action accomplishes...</th>
+				<th>Barrier already in place and worked.</th>
+				<th>GAP. Our Corrective Action is...<br>
+					<span>(Multiple selections allowed)</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><b>Clear Performance Specifications:</b><br>
+					Did the person know what s/he was supposed to do? How?</td>
+				<td><input type="checkbox" onchange="registerGap()"></td>
+				<td>
+					<div class="row ca-gap">
+						<i class="fi-plus" onclick="registerGap(), addRemove('.ca-gap')"></i>
+						<i class="fi-minus" onclick="registerGap(), addRemove('.ca-gap')"></i>
+						<select onchange="registerGap();">
+							<option value="">No Corrective Action needed</option>
+							<option>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+	</option>
+							<option>Discuss proper uses of bladed devices at toolbox meeting with crew
+	</option>
+							<option>Order and provide safety goggles for increased eye protection while performing grinding work</option>
+							<option>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</option>
+							<option>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</option>
+							<option>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Necessary Support:</b><br>
+					Did the person have what s/he needed to do what s/he was supposed to do?</td>
+				<td><input type="checkbox" onchange="registerGap()"></td>
+				<td>
+					<div class="row ca-gap">
+						<i class="fi-plus" onclick="addRemove('.ca-gap')"></i>
+						<i class="fi-minus" onclick="addRemove('.ca-gap')"></i>
+						<select onchange="registerGap();">
+							<option value="">No Corrective Action needed</option>
+							<option>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+	</option>
+							<option>Discuss proper uses of bladed devices at toolbox meeting with crew
+	</option>
+							<option>Order and provide safety goggles for increased eye protection while performing grinding work</option>
+							<option>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</option>
+							<option>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</option>
+							<option>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Clear Consequences:</b><br>
+					What happened when the person did what s/he was supposed to do? On the flip side, what happened when the person did not do what s/he was supposed to do?</td>
+				<td><input type="checkbox" onchange="registerGap()"></td>
+				<td>
+					<div class="row ca-gap">
+						<i class="fi-plus" onclick="addRemove('.ca-gap')"></i>
+						<i class="fi-minus" onclick="addRemove('.ca-gap')"></i>
+						<select onchange="registerGap();">
+							<option value="">No Corrective Action needed</option>
+							<option>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+	</option>
+							<option>Discuss proper uses of bladed devices at toolbox meeting with crew
+	</option>
+							<option>Order and provide safety goggles for increased eye protection while performing grinding work</option>
+							<option>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</option>
+							<option>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</option>
+							<option>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Prompt Feedback:</b><br>
+					How did the person know whether what s/he was doing was what s/he was supposed to be doing?</td>
+				<td><input type="checkbox" onchange="registerGap()"></td>
+				<td>
+					<div class="row ca-gap">
+						<i class="fi-plus" onclick="addRemove('.ca-gap')"></i>
+						<i class="fi-minus" onclick="addRemove('.ca-gap')"></i>
+						<select onchange="registerGap();">
+							<option value="">No Corrective Action needed</option>
+							<option>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+	</option>
+							<option>Discuss proper uses of bladed devices at toolbox meeting with crew
+	</option>
+							<option>Order and provide safety goggles for increased eye protection while performing grinding work</option>
+							<option>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</option>
+							<option>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</option>
+							<option>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Individual Capability:</b><br>
+					Could the person do [physically, mentally, emotionally] what s/he was supposed to do?</td>
+				<td><input type="checkbox" onchange="registerGap()"></td>
+				<td>
+					<div class="row ca-gap">
+						<i class="fi-plus" onclick="addRemove('.ca-gap')"></i>
+						<i class="fi-minus" onclick="addRemove('.ca-gap')"></i>
+						<select onchange="registerGap();">
+							<option value="">No Corrective Action needed</option>
+							<option>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+	</option>
+							<option>Discuss proper uses of bladed devices at toolbox meeting with crew
+	</option>
+							<option>Order and provide safety goggles for increased eye protection while performing grinding work</option>
+							<option>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</option>
+							<option>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</option>
+							<option>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Necessary Skills and Knowledge:</b><br>
+					Did the person know what s/he needed to know to do what s/he was supposed to do? How?</td>
+				<td><input type="checkbox" onchange="registerGap()"></td>
+				<td>
+					<div class="row ca-gap">
+						<i class="fi-plus" onclick="addRemove('.ca-gap')"></i>
+						<i class="fi-minus" onclick="addRemove('.ca-gap')"></i>
+						<select onchange="registerGap();">
+							<option value="">No Corrective Action needed</option>
+							<option>Have the crew inspect the worksite prior to job to clearly identify all potential hazards
+	</option>
+							<option>Discuss proper uses of bladed devices at toolbox meeting with crew
+	</option>
+							<option>Order and provide safety goggles for increased eye protection while performing grinding work</option>
+							<option>Install enough lights on the rear bulkhead to provide light to the entire run of the pathway</option>
+							<option>Revise the policy requiring the use of safety goggles in place of safety glasses while performing grinding work</option>
+							<option>Discuss further with manufacturer about either getting original internally cased boosers or getting caps removed prior to onsite delivery</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="bottom-drawer">
+		<div class="note-drawer small-12 large-6 columns unpad hide">
+			<span onclick="toggleView()">
+				<i class="fi-play"></i><label>Notes</label>
+			</span>
+			<textarea class="small-11 small-offset-1 large-offset-0 note-text"></textarea>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12">
+		<button type="submit" data-bind="click:$data.go.next">Save and Continue</button>	
+	</div>
+</div>

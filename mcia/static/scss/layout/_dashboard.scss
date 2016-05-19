@@ -1,0 +1,55 @@
+.dash-field {
+	margin-top:2em;
+	table {
+		margin:0 auto;
+		width:100%;
+		td {
+			padding-bottom:1.5em;
+		}
+		td:nth-child(1) {
+			width:50%;
+		}
+		td:nth-child(2) {
+			width:20%;
+			text-align: right;
+		}
+		&.incident-types {
+			width:100%;
+			td {
+				text-align:left;
+				padding-bottom:0;
+				width:33%;
+				vertical-align: top;
+			}
+		}
+		output.trend-stat {
+			font-weight:normal;
+			font-size:1em;
+		}
+
+	}
+	h4 {
+		margin:.5em 0 1em 0;
+		&.collapsed {
+			margin:.5em 0;
+		}
+	}
+}
+.open-case {
+	font-size:1em;
+	font-weight:bold;
+	text-decoration: none;
+	list-style: none;
+	margin-left:6%;
+	a {
+		color:$theme_color;
+		&:hover {
+			color:$dark_accent;
+			text-decoration:underline;
+		}
+	}
+}
+fieldset fieldset.compress {
+	padding-top:0;
+	padding-bottom:0;
+}

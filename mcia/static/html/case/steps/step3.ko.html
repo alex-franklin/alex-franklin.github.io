@@ -1,0 +1,47 @@
+<div class="row">
+	<p class="directions">Use the following categories to draft Contributing Factors. Select the categories, decisions, and questions that were involved in contributing to the incident to assist you in determining Contributing Factors.</p>
+</div>
+<div class="row" data-bind="foreach:$data.categories">
+	<fieldset class="compress">
+		<legend onclick="toggleView()" class="collapsed"><i class="fi-play"></i>
+			<span data-bind="text:name"></span>
+			<span data-bind="text:helpText" class="help-text"></span>
+		</legend>
+		<div class="row" data-bind="foreach : subCategories">
+			<div class="small-12 large-6 columns c-factor">
+				<span class="collapsed" onclick="toggleView()">
+					<i class="fi-play"></i><label data-bind="text:name"></label>
+				</span>
+				<span class="help-text" data-bind="click:$parents[1].addCF">Things to consider:</span>
+					<!-- ko foreach: {data:helpQuery, as:'query'} -->
+					<label class="input-label"><input type="checkbox"><span data-bind="text:query"></span></label>
+					<!-- /ko -->
+				<textarea placeholder="Identify a related Contributing Factor" class="small-12 sibling-cloner" onfocus="hideUnchecked()" onblur="showAll()"  data-bind="event: {keypress: $parents[1].addCF}"></textarea>
+				<button type="button" onclick="cloneField()">&#10010; Additional Factor</button>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<div class="bottom-drawer">
+		<div class="draft-drawer small-12 large-6 columns unpad">
+			<span onclick="toggleView()">
+				<i class="fi-play"></i><label>Currently drafted Contributing Factors</label>
+			</span>
+			<!-- ko foreach:$data.contributing_factors -->
+			<span class="draft-list" data-bind="text:$data"></span>
+			<!-- /ko -->
+		</div>
+		<div class="note-drawer small-12 large-6 columns unpad hide">
+			<span onclick="toggleView()">
+				<i class="fi-play"></i><label>Notes</label>
+			</span>
+			<textarea class="small-11 small-offset-1 large-offset-0 note-text"></textarea>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12">
+		<button type="submit"  data-bind="click:$data.go.next">Save and Continue</button>	
+	</div>
+</div>

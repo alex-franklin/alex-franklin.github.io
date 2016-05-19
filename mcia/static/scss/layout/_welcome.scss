@@ -1,0 +1,46 @@
+figure.lg-graphic {
+    background:url('/static/img/construction_12.jpg') no-repeat 0 30%;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position:absolute;
+    z-index:-1;
+}
+
+fieldset {
+    &.login-panel {
+        //background:url('/static/img/construction_11.jpg') no-repeat 35% 35%;
+        border:none;
+        .login-fields {
+            background:transparentize($bg_base, .25);
+            padding:3em 1.5em;
+            border-radius:1em;
+            min-width:300px;
+            input, button, a {
+                margin-bottom:3em;
+                box-shadow:none !important;
+            }
+            a {
+                margin-top:-3em;
+                display:block;
+            }
+        }
+    }
+    &.dos {
+        //background:url('/static/img/construction_11.jpg') no-repeat 35% 35%;
+        .login-fields {
+            min-width:none;
+        }
+        + .lg-graphic {
+            display:none;
+        }
+    }
+}
+
+.style-switch {
+    position:absolute;
+    top:25%;
+    right:3%;
+}

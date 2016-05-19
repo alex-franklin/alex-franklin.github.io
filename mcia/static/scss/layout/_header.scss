@@ -1,0 +1,98 @@
+
+/* ==========================================================================
+    header styles
+   ========================================================================== */
+
+header *, header *:after, header *:before, header *:hover, header *:focus {
+    transition:.5s all;
+}
+
+header {
+    color:white;
+    border-bottom:3px solid $secondary_color;
+    background-color:$theme_color;
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    .logo-copy {
+        text-transform: uppercase;
+        text-align: center;
+    }
+    h1 {
+        margin:0 !important; // normalize override
+    }
+    .subtitle {
+        display:block;
+        font-weight:normal;
+        font-size:.8em;
+        &.alt {
+            display:inline;
+            font-weight:normal;
+            font-size:1em;
+        }
+    }
+    .tagline {
+        font-family: $copy_fallback_font;
+        font-weight: bold;
+        font-size: .72em;
+        letter-spacing: 1.25px;
+        &.alt {
+            font-size:1.25em;
+            letter-spacing: 3.75px;
+        }
+        span {
+            font-weight:normal;
+        }
+    }
+    a {
+        font-size: .8em;
+        font-weight:bold;
+        color:white;
+    }
+    img.logo-img {
+        //width: 8.75%;
+        width:50px;
+        height:50px;
+        float: left;
+        margin: -0.15em 1em 0 0 !important;
+    }
+    >.row {
+        max-width:none;
+        padding:1.25em 1.25em 1em;
+        >.columns {
+            &:nth-child(2) {
+                text-align:right;
+                padding-top:.5em;
+                a {
+                    margin-left:1.25em;
+                }
+            }
+        }
+        input {
+            width:100%;
+            padding:.775em;
+            border-radius:.75em 0 0 .75em;
+            &:focus {
+                outline:0;
+                box-shadow:-4px 4px 2em $secondary_dark_accent,
+                           -4px -4px 2em $secondary_dark_accent;
+            }
+        }
+        [type=button] {
+            color:inherit;
+            border-radius:0 .75em .75em 0;
+            box-shadow:0 -4px 4px $secondary_dark_accent inset;
+            padding:.875em 1.5em;
+            font-weight:bold;
+            font-size:1em;
+            // _padding:8px 0;
+            margin-bottom:0;
+            background:$secondary_color;
+            &:hover, &:focus {
+                background:$secondary_dark_accent;
+                // box-shadow:0 -4px 4px $dark_accent inset;
+                // _outline: 2px;
+            }
+        }
+
+    }
+}

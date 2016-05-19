@@ -1,0 +1,37 @@
+
+/* ==========================================================================
+    colors
+   ========================================================================== */
+$burgundy: rgb(134,42,79);
+$deep_burgundy: #521E2E;
+$plum_burgundy: #7E074E;
+$ivory: rgb(255,255,245);
+$sage_green: #A8C098;
+$leaf_green: #A6C591;
+$forest_green: #35693F;
+
+/* MICU COLORS */
+
+$bright_red: #A9191D;
+$medium_red: #95171A;
+$dark_red: #821316;
+$light_sandstone: #F8F6ED;
+$medium_sandstone: #E0DABA;
+$dark_sandstone: #CCC8B5;
+$red_gray: #675C5A;
+
+// ---------  ------------   -------------  ---------- //
+
+$medium_blue_gray: 		#8CA5A9;
+$medium_dark_blue_gray: #5d8187;
+$dark_blue_gray: 		#2a535a;
+$tangerine: 			#f16529;
+$dark_orange: 			#b34f00;
+
+$theme_color: $medium_red;
+$dark_accent: $red_gray;
+$light_accent: $light_sandstone;
+$secondary_color: $red_gray;
+$secondary_dark_accent: darken($red_gray, 15%);
+$secondary_light_accent: $dark_sandstone;
+$bg_base: #FFF;

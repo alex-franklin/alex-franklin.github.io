@@ -1,0 +1,208 @@
+{
+"case":[
+	{
+	"0001":{
+		"Step1":"Name the Incident"{  
+			"Type_of_Incident":"",  // from setttings.list, 64-128 char
+			"Incident_Description":"", // textarea field, 512+ char
+			"Batch_Number":"", // idk given to scribe beforehand, prefilled etc., <32 char
+			"PRT_Entry_Date":"" // could be set as today's date, or backdated. <16 char
+		},
+		"Step2":"Confirm the Story of the Incident"{  
+			"Report_Details":"",  // textarea field, 512+ char
+			"PRT_SME_Data":"", // textarea field, 256+ char
+			"Gaps_in_Data":"" // virtual whiteboard for notes, may need a diff place in data structure
+		},
+		"Step3":"List Your Team"{  
+			"PRT_Members":["",""],  // from setttings.list, multi-select array
+			"Additional_SMEs":"" // textarea field, 128+ char; could be array if names could be sorted from text input
+		},
+		"Step4":"List Incident Stakeholders"{  
+			"Stakeholders":["",""],  // from setttings.list, multi-select array
+			"Additional_Stakeholders":"" // textarea field, 128+ char; could be array if names could be sorted from text input
+		},
+		"Step5":"Close Call Incident Description"{  
+			"Task_Description":"",  // textarea field, 256-512 char
+			"Date":"", // need for backdating, 16 char
+			"Time_of_Day":"", // candidate for combination into date, 16 char
+			"Weather_Conditions":["",""], // from setttings.list, multi-select array
+			"Crew_Configuration":"", // textarea field, 256 char
+			"Equipment_Involved":"", // textarea field, 256 char. Multi-select list from org.settings would be better, though likely unfeasible
+			"Equipment_Configuration":"", // textarea field, 256 char
+			"Direction_of_Movement":"", // textarea field, 256 char
+			"Other_Details":"", // textarea field, 256 char
+			"Barriers_that_Worked":[""], // multi-select array from settings.list
+			"Other_Barriers_that_Worked":"", // textarea field, 256 char
+			"Failed_Barriers":"" // 256 textarea, potential for multi-select array import from org.settings
+		},
+		"Step6":"Identify Contributing Factors"{  
+			"Contributing_Factors":{
+				"On-site_Work_Group":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"On-site_Work_Group_KSA":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"Rules_Regulations_Procedures":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"Planning_and_Flexibility":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"Exchanged_Information-Job_Assignment-Job_Safety_Briefing":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"Attention_Alertness_Fatigue":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"Recall":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+				"Workplace_Stress":[
+					{"Additional_Contributing_Factors":""}, // textarea field <256char, tied to each CF for ease of reporting
+					""],
+			}  // from setttings.list, multi-select dictionary with subarray
+		},
+		"Step7":"Identify Root Causes"{
+			"Contributing_Factors":{
+				"Example_CF_1":[
+					{"Why_1":""},
+					[
+						{"Sub_Why_1":""},
+						[
+							{"Root_Cause":""}
+							],
+						{"Sub_Why_2":""}, 
+						{"Root_Cause":""}
+					],
+					
+				],
+				"Example_CF_2":[
+					{"Why_1":""},
+					[
+						{"Sub_Why_1":""},
+						[
+							{"Sub_Sub_Why_1":""},
+							[
+								{"Root_Cause":""}
+							],
+							{"Root_Cause":""}
+						],
+						{"Sub_Why_2":""}, 
+						{"Root_Cause":""},
+						{"Sub_Why_4"}
+					],
+					{"Why_2":""},
+					[
+						{"Sub_Why_1":""},
+						[
+							{"Root_Cause":""}
+						],
+						{"Sub_Why_2":""}, 
+						{"Root_Cause":""}
+					]
+				]
+			}
+		},
+		"Step8":"Draft Corrective Actions"{  
+			"Root_Cause_1":{
+				"Preloaded_Corrective_Actions":["","",""],
+				"Corrective_Action_A":[
+					{"Title":"CA_TITLE"},
+					{"USE":"#"},
+					{"Priority":"#"},
+					{"Lead":"(NAME)"},
+					{"Enacted":"(DATE)"},
+					{"Due":"DATE"}
+				]
+			}, 
+			"Root_Cause_2":{
+				"Preloaded_Corrective_Actions":["","",""],
+				"Corrective_Action_B":[
+					{"Title":"CA_TITLE"},
+					{"USE":"#"},
+					{"Priority":"#"},
+					{"Lead":"(NAME)"},
+					{"Enacted":"(DATE)"},
+					{"Due":"DATE"}
+				]
+			}, 
+			"Root_Cause_3":{
+				"Preloaded_Corrective_Actions":["","",""],
+				"Corrective_Action_C":[
+					{"Title":"CA_TITLE"},
+					{"USE":"#"},
+					{"Priority":"#"},
+					{"Lead":"(NAME)"},
+					{"Enacted":"(DATE)"},
+					{"Due":"DATE"}
+				]
+			}, 
+			"Root_Cause_X":{
+				"Preloaded_Corrective_Actions":["","",""],
+				"Corrective_Action_D":[
+					{"Title":"CA_TITLE"},
+					{"USE":"#"},
+					{"Priority":"#"},
+					{"Lead":"(NAME)"},
+					{"Enacted":"(DATE)"},
+					{"Due":"DATE"}
+				]
+			}, 
+			"Root_Cause_Y":{
+				"Preloaded_Corrective_Actions":["","",""],
+				"Corrective_Action_E":[
+					{"Title":"CA_TITLE"},
+					{"USE":"#"},
+					{"Priority":"#"},
+					{"Lead":"(NAME)"},
+					{"Enacted":"(DATE)"},
+					{"Due":"DATE"}
+				]
+			}, 
+			"Root_Cause_Z":{
+				"Preloaded_Corrective_Actions":["","",""],
+				"Corrective_Action_F":[
+					{"Title":"CA_TITLE"},
+					{"Use":"#"},
+					{"Priority":"#"},
+					{"Lead":"(NAME)"},
+					{"Enacted":"(DATE)"},
+					{"Due":"DATE"}
+				]
+			}
+
+		},
+		"Step9":"Check for Gaps in Thinking"{ // loads "Corrective_Actions" from previous step
+			"Key_Performance_Requirement_1":{
+				"Barrier_in_place_that_worked":"", // true or false
+				"Corrective_Actions_to_fill_GAP":["",""] // many CAs can be used here, increments "Use" in CA's
+			},
+			"Key_Performance_Requirement_2":{
+				"Barrier_in_place_that_worked":"", // true or false
+				"Corrective_Actions_to_fill_GAP":["",""] // many CAs can be used here, increments "Use" in CA's
+			},
+			"Key_Performance_Requirement_3":{
+				"Barrier_in_place_that_worked":"", // true or false
+				"Corrective_Actions_to_fill_GAP":["",""] // many CAs can be used here, increments "Use" in CA's
+			},
+			"Key_Performance_Requirement_4":{
+				"Barrier_in_place_that_worked":"", // true or false
+				"Corrective_Actions_to_fill_GAP":["",""] // many CAs can be used here, increments "Use" in CA's
+			},
+			"Key_Performance_Requirement_5":{
+				"Barrier_in_place_that_worked":"", // true or false
+				"Corrective_Actions_to_fill_GAP":["",""] // many CAs can be used here, increments "Use" in CA's
+			},
+			"Key_Performance_Requirement_6":{
+				"Barrier_in_place_that_worked":"", // true or false
+				"Corrective_Actions_to_fill_GAP":["",""] // many CAs can be used here, increments "Use" in CA's
+			},
+		},
+		"Step10":"Recommend Priority of Corrective Actions, Implement Corrective Actions"{ 
+		// this is broken out into two steps in documentation and could be combined into one 
+		// modifies "Corrective_Actions" from Step8 by adding values to "Priority", "Lead", "Enacted", and "Due"
+		}
+	}
+}
+]}

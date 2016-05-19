@@ -1,0 +1,53 @@
+<div class="row">
+	<p class="directions">Using the Contributing Factors you identified in the previous step, proceed through the Five Whys to uncover the Root Causes of the Incident. Turn off the screen and brainstorm as a team before recording your Five Whys analysis in the system.</p>
+	<p class="directions">If your analysis creates additional factors you feel should be addressed and worked to Root Cause, select the "Additional Thread" link to generate a new Five Whys thread.</p>
+	<p class="directions">As you identify what feel to you like Root Causes&mdash;those at the base, the bottom, the beginning of the incident error chain&mdash;check the box(es) in the corresponding line(s). These Root Causes will be gathered and used to develop Corrective Actions.</p>
+</div>
+<div class="row root-wrap" data-bind="foreach:$parent.steps()[2].contributing_factors">
+	<fieldset>
+		<legend class="why" onclick="toggleView()"><i class="fi-play"></i><span data-bind="text:$data"></legend>
+		<div class="thread row">
+			<div class="why-lvl1 parent th-lvl1">
+				<i class="fi-play" onclick="toggleChildThreads(), treeBranch()"></i>
+				<div class="row">
+					<div class="small-4 columns">
+						<h4>Why did this happen?</h4>
+					</div>
+					<div class="small-8 columns options">
+						<h4><label><input type="checkbox" onclick="trackRC()">Root Cause</label>
+							<a onclick="newCause()">&#10010; New Cause</a>
+							<a onclick="newThread()">&#10010; New Thread</a>
+							<a onclick="deleteCause()"><i class="fi-x"></i></a>
+						</h4>
+					</div>
+				</div>
+				<div class="row ug-text">
+					<div class="small-12 columns">
+						<textarea class="rc-text" placeholder="Why did the reasons the incident occurred...happen as they did?"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<div class="row">
+	<div class="bottom-drawer">
+		<div class="draft-drawer small-12 large-6 columns unpad hide">
+			<span onclick="toggleView()">
+				<i class="fi-play"></i><label>Currently drafted Root Causes</label>
+			</span>
+			<span class="draft-list"></span>
+		</div>
+		<div class="note-drawer small-12 large-6 columns unpad hide">
+			<span onclick="toggleView()">
+				<i class="fi-play"></i><label>Notes</label>
+			</span>
+			<textarea class="small-11 small-offset-1 large-offset-0 note-text"></textarea>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12">
+		<button type="submit" data-bind="click:$data.go.next">Save and Continue</button>
+	</div>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="ie6 ie"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7 ie"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8 ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ie8>         <!--<![endif]-->
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/stylesheets/app.css" />
+
+    <script type="text/javascript">var require = {urlArgs : "cb="+new Date().getTime()};</script>
+    <script type="text/javascript" src="/static/js/libs/modernizr.min.js"></script>
+    <script type="text/javascript" data-main="/static/js/app/config" src="/static/js/libs/require.js/requirejs.min.js"></script>
+
+    <title>MCIA</title>
+</head>
+<body>
+	<div class="header-container">
+            <header class="wrapper clearfix">
+                <div class="row">
+                    <div class="small-6 columns">
+                        <h1 class="title">MCIA</h1>
+                    </div>
+                    <div class="small-3 columns">
+                        <a href="#">Home</a>
+                        <a href="#">Logout</a>
+                    </div>
+                    <div class="small-3 columns">
+                        <div class="row collapse search"> 
+                            <div class="large-8 small-9 columns"> 
+                                <input type="text" placeholder="Find Stuff"> 
+                            </div> 
+                            <div class="large-4 small-3 columns"> 
+                                <a href="#" class="alert button expand">Search</a> 
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+
+                <nav class="top-bar" data-topbar> 
+                    <section class="case-nav row">
+                        <div class="row collapse stages">
+                            <div class="small-4 columns" id="stage1">Who was Involved?
+                            </div>
+                            <div class="small-4 columns" id="stage2">What Happened?
+                            </div>
+                            <div class="small-4 columns" id="stage3">Corrective Actions
+                            </div>
+                        </div>
+                        <div class="row collapse steps">
+                            <div class="small-4 columns" id="steps_of_stage1">
+                                <div class="small-3 columns" alt="1" title="Name of Incident"></div>
+                                <div class="small-3 columns" alt="2" title="Confirm Story"></div>
+                                <div class="small-3 columns" alt="3" title="List Your Team"></div>
+                                <div class="small-3 columns" alt="4" title="List Incident Stakeholders"></div>
+                            </div>
+                            <div class="small-4 columns" id="steps_of_stage2">
+                                <div class="small-4 columns" alt="5" title="Close Call Incident Description"></div>
+                                <div class="small-4 columns" alt="6" title="Identify Contributing Factors"></div>
+                                <div class="small-4 columns" alt="7" title="Identify Root Causes"></div>
+                            </div>
+                            <div class="small-4 columns active" id="steps_of_stage3">
+                                <div class="small-3 columns active" alt="8" title="Draft Corrective Actions"></div>
+                                <div class="small-3 columns" alt="9" title="Check for Gaps in Thinking"></div>
+                                <div class="small-3 columns" alt="10" title="Recommend Priority of Corrective Actions"></div>
+                                <div class="small-3 columns" alt="11" title="Implement Corrective Actions"></div>
+                            </div>
+                        </div>
+                            <!-- <div class="node-container first">
+
+                                <span class="node first " alt="Who was involved?"></span>
+                                <span class="sub node ten-oclock" alt="Name of Incident"></span>
+                                <span class="sub node two-oclock" alt="Confirm Story"></span>
+                                <span class="sub node four-oclock" alt="List Your Team"></span>
+                                <span class="sub node eight-oclock" alt="List Incident Stakeholders"></span>
+
+                            </div>
+                            <div class="node-container second">
+                                <span class="connection"></span>
+
+                                <span class="node second active" alt="What Happened?"></span>
+                                <span class="sub node twelve-oclock active" alt="Close Call Incident Description"></span>
+                                <span class="sub node four-oclock" alt="Identify Contributing Factors"></span>
+                                <span class="sub node eight-oclock" alt="Identify Root Causes"></span>
+
+                            </div>
+                            <div class="node-container third">
+                                <span class="connection"></span>
+
+                                <span class="node third" alt="Corrective Actions"></span>
+                                <span class="sub node ten-oclock" alt="Draft Corrective Actions"></span>
+                                <span class="sub node two-oclock" alt="Check for Gaps in Thinking"></span>
+                                <span class="sub node four-oclock" alt="Recommend Priority of Corrective Actions"></span>
+                                <span class="sub node eight-oclock" alt="Implement Corrective Actions"></span>
+
+                            </div> -->
+                    </section>
+                </nav>
+            </header>
+        </div>
+    <!-- ko if: content.current-->
+        <!-- ko template: {name:content.current().template, data:content.current().vm || $root} --><!-- /ko -->
+    <!-- /ko -->
+
+</body>
+</html>

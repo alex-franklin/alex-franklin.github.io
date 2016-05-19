@@ -1,0 +1,44 @@
+$display_custom_font: '';
+$display_fallback_font: garamond, 'book antiqua', 'lucida bright';
+
+$copy_custom_font: 'Optima', 'Calibri';
+$copy_fallback_font: Helvetica, Arial, sans-serif;
+
+
+h1 {
+    font-family: $display_fallback_font;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: $copy_custom_font, $copy_fallback_font;
+}
+
+legend {
+    color: $theme_color;
+}
+label, legend {
+    display:block;
+    font-weight:bold;
+    font-size:1.25em;
+}
+
+h3 {
+    font-size: 1.75em;
+    background: $theme_color;
+    padding: 0 2.75em;
+    line-height: 2.5em;
+    text-shadow: 2px 2px 1px $dark_accent;
+    color: white;
+    margin-left: -24px;
+    width:750px;
+    &:after {
+        position:absolute;
+        content:'';
+        left:750px;
+        width:0;
+        height:0;
+        border-top:35px solid transparent;
+        border-bottom:35px solid transparent;
+        border-left:35px solid $theme_color;
+    }
+}

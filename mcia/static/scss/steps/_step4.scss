@@ -1,0 +1,122 @@
+
+/* ==========================================================================
+    Five Whys
+   ========================================================================== */
+
+
+// investigate removal of this declaration, _global line ~74 covers it I believe
+
+.thread [class*=th-lvl]:first-child:before,
+.why-lvl1 + .why-lvl1:before,
+.why-lvl2 + .why-lvl2:before,
+.why-lvl3 + .why-lvl3:before,
+.why-lvl4 + .why-lvl4:before,
+.why-lvl5 + .why-lvl5:before,
+.why-lvl6 + .why-lvl6:before       {
+    margin-left:-22px;
+}
+[class*=th-lvl] {
+    border: 2px solid $theme_color;
+    background:$bg_base;
+    border-radius: 0.5em;
+    padding: .75em 1em 0 3em;
+    margin-bottom:1.5em;
+    &:before {
+        position:absolute;
+        content:'';
+        margin-left:-70px;
+        margin-top:-53px;
+        width:25%;
+        height:5.75em;
+        z-index:-1;
+        border-left: 3px solid $theme_color;
+        border-bottom: 3px solid $theme_color;
+        background:none;
+    }
+    i.fi-play {
+        position: absolute;
+        font-size: 1.25em;
+        padding:20px; // padding enables touch target of a finger //
+        margin: .1em 0 0 -2.25em;
+        display:none; // displays when child of .parent class element //
+    }
+    >.row:first-of-type {
+        white-space:nowrap;
+    }
+    .options {
+        text-align:right;
+        h4 {
+            font-size:.85em;
+            *:hover {
+                cursor:pointer;
+                text-decoration:underline;
+            }
+        }
+        label {
+            color:$secondary_dark_accent;
+            display:inline-block;
+            font-size:1em;
+            margin-right:1vw;
+        }
+        input {
+            margin:0;
+        }
+        a {
+            color:$secondary_dark_accent;
+            text-decoration:none;
+            margin-right:1vw;
+        }
+    }
+    h4 {
+        margin:0 .5em;
+    }
+}
+
+// alternating thread backgrounds for visual distinction - 'vistinction' //
+.thread:nth-child(odd) [class*=th-lvl]{
+    background:$light_accent;
+}
+.thread:nth-child(even) [class*=th-lvl]{
+    background:$secondary_light_accent;
+}
+.thread:first-of-type [class*=why]:first-child i.fi-x{
+    display:none;
+}
+.why-lvl1 {
+    width:95%;
+    margin-left:5%;
+}
+.why-lvl2 {
+    width:90%;
+    margin-left:10%;
+}
+.why-lvl3 {
+    width:85%;
+    margin-left:15%;
+}
+.why-lvl4 {
+    width:80%;
+    margin-left:20%;
+}
+.why-lvl5 {
+    width:75%;
+    margin-left:25%;
+}
+.why-lvl6 {
+    width:70%;
+    margin-left:30%;
+}
+
+
+.ug-text textarea {
+    border-top: 2px solid $theme_color;
+    margin: .5em 1em 1em .5em;
+    padding-top: .5em;
+    width:97%;
+}
+
+.parent {
+    i.fi-play {
+        display:inline-block;
+    }
+}
