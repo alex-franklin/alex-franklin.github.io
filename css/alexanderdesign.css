@@ -411,7 +411,7 @@ article	{
 .location								{	font-weight:bold; font-size:.8em;											}
 .dates									{	font-style:italic; font-size:.8em;											}
 #education, #skills, #ft_experience, #fl_experience		{	margin-left:100px;											}
-#ft_experience>h3, #fl_experience>h3	{   text-indent:-2.4em;															}
+#ft_experience>h3, #fl_experience>h3	{   text-indent:-4em;															}
 .education, .highlights					{	text-indent:-4.25em;			 											}
 .experience								{	text-indent:-4.6em;															}
 .skills									{	text-indent:-6em;															}
