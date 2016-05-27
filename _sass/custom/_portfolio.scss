@@ -1,0 +1,27 @@
+.portfolio_samples	{
+	position:fixed;
+	top:0;
+	left:96;
+	width:206px;
+	height:1200px;
+	background-image:url(../images/a-roll_rough.jpg);
+	background-repeat:repeat-y;
+	margin:0 25px 0 96px;
+	z-index:1;
+}
+
+.portfolio>section div>div			{	width:280px; height:340px; float:left; margin-right:10px; margin-left:10px;			}
+.portfolio>section div>div>h3		{	text-align:center; font: 'Cabin', Verdana, sans-serif; font-size:1.4em;				}
+.sample_image					{	width:280px; height:221px;															}
+.portfolio_page article			{	margin:85px 0 40px 114px; color:#4C618B; max-width:1440px;							}
+.portfolio>section a>h2			{	display:inline;	margin-top:100px; margin-right:45px;								}
+.portfolio .copy_separator		{	margin-top:20px; margin-bottom:20px;												}
+.portfolio>section				{	clear:both;																			}
+.twirl_down						{	background: url(../images/sprite_source.png) no-repeat -20px -98px;
+									display:inline-block; width:20px; height:21px;	}
+.twirl_down:hover					{	background: url(../images/sprite_source.png) no-repeat -61px -98px;
+									display:inline-block; width:20px; height:21px;	}
+.twirled						{	background: url(../images/sprite_source.png) no-repeat 0 -98px;
+									display:inline-block; width:20px; height:21px;	}
+.twirled:hover				{	background: url(../images/sprite_source.png) no-repeat -41px -98px;
+									display:inline-block; width:20px; height:21px;	}

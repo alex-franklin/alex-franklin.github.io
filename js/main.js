@@ -25,8 +25,8 @@
 function window_onload() {
   window.addEventListener("scroll",navbar_reset_top,false);
 }
-   
-// var navbar_top=parseInt(document.getElementById("header").height);
+
+// var navbar_top=parseInt(document.getElementById("header").height); //
 
 function navbar_reset_top() {
   var $j = jQuery.noConflict();
@@ -52,12 +52,12 @@ function navbar_reset_top() {
 jQuery(function () {
 	var $j = jQuery.noConflict();
 	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-	$j(".fadeOut").click(function() {
+	$j(".fade_out").click(function() {
 		$j(this).children(".twirl_down").toggleClass("twirled");
 		$j(this).nextAll().eq(1).toggle(900);
 //		  document.body.style.height -= 'e.style.height';
 	});
-	
+
 	$j(".header_options").click(function() {
 		$j("#header").toggle("slow");
 		if ($j("#header").css("opacity") != "1") {
@@ -69,7 +69,7 @@ jQuery(function () {
 					else {
 					}
 				});
-		} 
+		}
 		else {
 			$j("#navbar").animate({
 				top: "-=185px",
@@ -82,17 +82,17 @@ jQuery(function () {
 				});
 		}
 	});
-	
+
 	$j(".nav_options").click(function() {
 		$j("#navbar").toggle("slow");
 		if ($j("#header").css("opacity") != "1") {
 			$j("#navbar").removeClass("navbar_absolute").addClass("navbar_fixed");
-		} 
+		}
 		else {
 			$j("#navbar").removeClass("navbar_fixed").addClass("navbar_absolute");
 		}
 	});
-	
+
 	$j(".footer_options").click(function() {
 		$j("#footer").toggle("slow");
 	});
