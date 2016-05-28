@@ -1,20 +1,23 @@
 .footer_dock	{
-	position:fixed;
-	top:0;
-	left:32px;
-	width:32px;
-	height:100%;
-	background-color:#DD5928;
-	background: url(../images/orange_texture.jpg) repeat-y ;
-	z-index:110;
+	display:none;
+	// position:fixed;
+	// top:0;
+	// left:32px;
+	// width:32px;
+	// height:100%;
+	// background-color:#DD5928;
+	// background: url(../images/orange_texture.jpg) repeat-y ;
+	// z-index:110;
 }
 .footer_bend {
-	position:absolute;
-	width:11px;
-	height:108px;
-	top:-9px;
-	background: url(../images/sprite_source.png) no-repeat -258px -80px;
+	display:none;
+	// position:absolute;
+	// width:11px;
+	// height:108px;
+	// top:-9px;
+	// background: url(../images/sprite_source.png) no-repeat -258px -80px;
 }
+
 .footer_options		{
 	position:relative;
 	top:94%;
@@ -25,12 +28,20 @@
 	background: url(../images/sprite_source.png) no-repeat -82px -91px;
 	cursor:pointer;
 }
+
 footer	{
 	position:relative;
-	bottom:0px;
-	left:64px;
-	width:100%;
 	background: url(../images/orange_texture.jpg) repeat;
 	height:110px; /*	temporary	*/
 	z-index:110;
+}
+
+.copyright	{
+	position:relative;
+	top:20%;
+	left:50%;
+	width:400px;
+	height:24px;
+	z-index:111;
+	text-align:right;
 }

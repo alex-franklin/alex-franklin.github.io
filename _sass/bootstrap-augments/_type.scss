@@ -1,24 +1,67 @@
-div, p, h1, h2, h3, ul, li, img, hr	 { margin:0; padding:0; border:0;	}
-a:hover	{	text-decoration: underline; cursor:pointer;	}
-h1		{	font-size:1.8em; margin:0 0 20px 20px;	}
-h2		{	font-family: 'CabinBold', Verdana; font-size: 1.4em; margin:0 30px 15px; clear: left;	}
-h3		{	font-family: 'CabinBold', Verdana; margin:20px 40px;	}
-p		{	font-size: 1em; margin:0 20px 20px 40px; line-height:1.6em;				}
-ul		{	font: 1em 'CabinRegular', Verdana, Arial, Helvetica, sans-serif; margin-left:60px; margin-bottom:20px; line-height:1.2em;	}
-strong  {	font-family: 'CabinBold', Verdana;		}
+// div,
+// p,
+// h1,
+// h2,
+// h3,
+// ul,
+// li,
+// img,
+// hr {
+// 	margin:0;
+// 	padding:0;
+// 	border:0;
+// }
+
+
+// h1 {
+// 	font-size:1.8em;
+// 	margin:0 0 20px 20px;
+// }
+
+// h2 {
+// 	font-family: 'CabinBold', Verdana;
+// 	font-size: 1.4em;
+// 	margin:0 30px 15px;
+// 	clear: left;
+// }
+
+// h3 {
+// 	font-family: 'CabinBold', Verdana;
+// 	margin:20px 40px;
+// }
+
+// p {
+// 	font-size: 1em;
+// 	margin:0 20px 20px 40px;
+// 	line-height:1.6em;
+// }
+
+// ul {
+// 	font: 1em 'CabinRegular', Verdana, Arial, Helvetica, sans-serif;
+// 	margin-left:60px;
+// 	margin-bottom:20px;
+// 	line-height:1.2em;
+// }
+
+// strong  {
+// 	font-family: 'CabinBold', Verdana;
+// }
 
 .dark_blue	{
-	color:#4C618B;
+	color:$brand-primary;
 	font-size:.9em;
 }
+
 .dust_blue	{
-	color:#9DABAF;
+	color:$brand-secondary;
 	font-size:.9em;
 }
+
 .orange	{
-	color:#DD5928;
+	color:$brand-accent;
 	font-size:.9em;
 }
+
 .white	{
 	color:#FFF;
 }

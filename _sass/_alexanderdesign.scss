@@ -4,41 +4,57 @@ body {
 	background-repeat:repeat;
 }
 
-.content a	{
-	color:#4C618B;
-	text-decoration:none;
-}
-.content a:hover	{
-	color:#DD5928;
+// .content {
+// 	a	{
+// 		color:$brand-primary;
+// 		text-decoration:none;
+// 		&:hover	{
+// 			color:$brand-accent;
+// 		}
+// 	}
+// 	p {
+// 		a {
+// 			color:$brand-accent;
+// 			text-decoration:none;
+// 			&:hover	{
+// 				text-decoration:underline;
+// 			}
+// 		}
+// 	}
+// }
+
+
+// a:hover	{
+// 	text-decoration: underline;
+// 	cursor:pointer;
+// }
+
+.portfolio_samples	{
+	position:fixed;
+	top:0;
+	left:0;
+	width:206px;
+	height:1200px;
+	background-image:url(../images/a-roll_rough.jpg);
+	background-repeat:repeat-y;
+	z-index:1;
+	@media screen and (max-width: $screen-sm-max) {
+		display:none;
+	}
 }
 
-.content p a 	{
-	color:#DD5928;
-	text-decoration:none;
-}
-.content p a:hover	{
-	text-decoration:underline;
-}
 article	{
-	margin:85px 0 40px 315px;
-	color:#4C618B;
-	/*max-width:800px;*/
+	margin:40px 0 0 235px;
+	color:$brand-primary;
+	@media screen and (max-width: $screen-sm-max) {
+		margin:40px;
+	}
 }
 
 .copy_separator		{
 	width:97%;
 	height:10px;
-	margin:0 auto 15px auto;
+	margin:0 auto;
 	background-image:url(../images/copy_separator.png);
-}
 
-
-.copyright	{
-	position:relative;
-	top:20%;
-	left:50%;
-	width:400px;
-	height:24px;
-	z-index:111;
-	text-align:right;
 }

@@ -1,17 +1,82 @@
-.resume p								{	min-width:600px; max-width:700px; 											}
-.employer								{	font-weight:bold; 															}
-.position								{	font-weight:bold; font-size:.8em; 											}
-.align_right							{	position:absolute; left:850px; right:200px; width:225px; text-align:right;	}
-.location								{	font-weight:bold; font-size:.8em;											}
-.dates									{	font-style:italic; font-size:.8em;											}
-#education, #skills, #ft_experience, #fl_experience		{	margin-left:100px;											}
-#ft_experience>h3, #fl_experience>h3	{   text-indent:-4em;															}
-.education, .highlights					{	text-indent:-4.25em;			 											}
-.experience								{	text-indent:-4.6em;															}
-.skills									{	text-indent:-6em;															}
-.text									{	font-size:.8em;																}
-.ft_experience>.experience>.text br		{	margin-bottom:.5em;															}
-.mw_clients								{	color:#DD5928; font-size:.8em; font-weight:bold;							}
-.content .contact_media a				{	color:#4C618B; text-decoration:none;										}
-.content .contact_media a:hover			{	color:#DD5928; text-decoration:underline;									}
-.content .contact_media a:visited		{	color:#4C618B; text-decoration:none;										}
+.resume p {
+	min-width:600px;
+	max-width:700px;
+}
+
+.employer {
+	font-weight:bold;
+}
+
+.position {
+	font-weight:bold;
+	font-size:.8em;
+}
+
+.align_right {
+	position:absolute;
+	left:850px;
+	right:200px;
+	width:225px;
+	text-align:right;
+}
+
+.location {
+	font-weight:bold;
+	font-size:.8em;
+}
+
+.dates {
+	font-style:italic;
+	font-size:.8em;
+}
+
+#education,
+#skills,
+#ft_experience,
+#fl_experience {
+	margin-left:100px;
+}
+
+#ft_experience>h3,
+#fl_experience>h3 {
+	text-indent:-4em;
+}
+
+.education,
+.highlights {
+	text-indent:-4.25em;
+}
+
+.experience {
+	text-indent:-4.6em;
+}
+.skills{
+	text-indent:-6em;
+}
+
+.text {
+	font-size:.8em;
+}
+
+.ft_experience>.experience>.text br {
+	margin-bottom:.5em;
+}
+
+.mw_clients {
+	color:$brand-accent;
+	font-size:.8em;
+	font-weight:bold;
+}
+
+.content .contact_media a {
+	color:$brand-primary;
+	text-decoration:none;
+	&:hover {
+		color:$brand-accent;
+		text-decoration:underline;
+	}
+	&:visited {
+		color:$brand-primary;
+		text-decoration:none;
+	}
+}
