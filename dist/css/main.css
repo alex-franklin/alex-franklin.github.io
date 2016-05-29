@@ -9049,20 +9049,19 @@ body.lb-disable-scrolling {
   /* line 38, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-collapse {
     position: absolute;
-    width: 103.7vw;
+    width: 99.8vw;
     top: 100%;
-    padding-left: 0;
-    margin-left: -62.5%;
+    margin-left: -64.5%;
     margin-top: 6px;
     background: #dce2e4;
     box-shadow: 6px 6px 24px -4px #4C618B;
   }
-  /* line 48, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 47, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav {
     margin-top: 0;
     margin-bottom: 0;
   }
-  /* line 51, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 50, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav > li {
     display: inline-block;
     float: left;
@@ -9071,11 +9070,11 @@ body.lb-disable-scrolling {
     border: 1px solid #a2b2b8;
     border-right: none;
   }
-  /* line 58, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 57, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav > li > a {
     color: #a2b2b8;
   }
-  /* line 60, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 59, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav > li > a:hover {
     background: #a2b2b8;
     color: #dce2e4;
