@@ -51,5 +51,9 @@
 // -------------------------
 
 .affix {
-  position: fixed;
+  @media screen and (max-width:$screen-xs-max) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 }

@@ -8437,9 +8437,13 @@ button.close {
   display: none !important;
 }
 
-/* line 53, ../../_sass/bootstrap/_utilities.scss */
-.affix {
-  position: fixed;
+@media screen and (max-width: 767px) {
+  /* line 53, ../../_sass/bootstrap/_utilities.scss */
+  .affix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 }
 
 @-ms-viewport {
@@ -9180,16 +9184,6 @@ footer {
   height: 110px;
   /*	temporary	*/
   z-index: 110;
-}
-
-/* line 39, ../../_sass/custom/_footer.scss */
-.copyright {
-  top: 20%;
-  left: 50%;
-  width: 400px;
-  height: 24px;
-  z-index: 111;
-  text-align: right;
 }
 
 /* line 1, ../../_sass/custom/_navbar.scss */
