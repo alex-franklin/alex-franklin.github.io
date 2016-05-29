@@ -9045,6 +9045,41 @@ body.lb-disable-scrolling {
   box-shadow: none;
   clear: both;
 }
+@media screen and (max-width: 767px) {
+  /* line 38, ../../_sass/bootstrap-augments/_navbar.scss */
+  .navbar-default .navbar-collapse {
+    position: absolute;
+    background: #dce2e4;
+    top: 100%;
+    margin-top: 6px;
+    margin-left: -62.5%;
+    width: 103.7vw;
+    box-shadow: 6px 6px 24px -4px #4C618B;
+  }
+  /* line 48, ../../_sass/bootstrap-augments/_navbar.scss */
+  .navbar-default .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* line 51, ../../_sass/bootstrap-augments/_navbar.scss */
+  .navbar-default .navbar-nav > li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+    border: 1px solid #a2b2b8;
+    border-right: none;
+  }
+  /* line 58, ../../_sass/bootstrap-augments/_navbar.scss */
+  .navbar-default .navbar-nav > li > a {
+    color: #a2b2b8;
+  }
+  /* line 60, ../../_sass/bootstrap-augments/_navbar.scss */
+  .navbar-default .navbar-nav > li > a:hover {
+    background: #a2b2b8;
+    color: #dce2e4;
+  }
+}
 
 @font-face {
   font-family: 'CabinRegular';
@@ -9128,20 +9163,19 @@ body.lb-disable-scrolling {
 header {
   position: relative;
   background-image: url(../images/dark_blue_texture.jpg);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   z-index: 2;
-  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   box-shadow: 6px 6px 24px -4px #4C618B;
 }
-/* line 41, ../../_sass/custom/_header.scss */
+/* line 40, ../../_sass/custom/_header.scss */
 header > .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 53, ../../_sass/custom/_header.scss */
+/* line 52, ../../_sass/custom/_header.scss */
 .nav-wrap {
   display: -webkit-box;
   display: -ms-flexbox;

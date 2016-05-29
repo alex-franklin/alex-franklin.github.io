@@ -34,4 +34,35 @@
 		box-shadow: none;
 		clear:		both;
 	}
+	@media screen and (max-width:$screen-xs-max) {
+		.navbar-collapse {
+			position:absolute;
+			background: lighten($brand-secondary, 10%);
+			// background: url(../images/orange_texture.jpg) repeat;
+			top: 100%;
+			margin-top: $padding-base-vertical;
+			margin-left:-62.5%;
+			width:103.7vw;
+			box-shadow: 6px 6px 24px -4px $brand-primary;
+		}
+		.navbar-nav {
+			margin-top:		0;
+			margin-bottom:	0;
+			> li {
+				display:inline-block;
+				float:left;
+				text-align:center;
+				width: 50%;
+				border:1px solid darken($brand-secondary, 10%);
+				border-right: none;
+				> a {
+					color: darken($brand-secondary, 10%);
+					&:hover {
+						background:  darken($brand-secondary, 10%);
+						color:		lighten($brand-secondary, 10%);
+					}
+				}
+			}
+		}
+	}
 }

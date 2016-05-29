@@ -33,11 +33,10 @@
 header	{
 	position:relative;
 	background-image:url(../images/dark_blue_texture.jpg);
-	padding-top:	10px;
-	padding-bottom:	10px;
+	padding-top:	$padding-base-vertical;
+	padding-bottom:	$padding-base-vertical;
 	z-index:2;
-	-webkit-box-shadow: 6px 6px 24px -4px $brand-primary; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-            box-shadow: 6px 6px 24px -4px $brand-primary;
+    box-shadow: 6px 6px 24px -4px $brand-primary;
     >.row {
     	display:flex;
     }
