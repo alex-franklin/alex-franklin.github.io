@@ -37,12 +37,12 @@
 	@media screen and (max-width:$screen-xs-max) {
 		.navbar-collapse {
 			position:absolute;
-			background: lighten($brand-secondary, 10%);
-			// background: url(../images/orange_texture.jpg) repeat;
-			top: 100%;
-			margin-top: $padding-base-vertical;
-			margin-left:-62.5%;
 			width:103.7vw;
+			top: 100%;
+			padding-left:0;
+			margin-left:-62.5%;
+			margin-top: $padding-base-vertical;
+			background: lighten($brand-secondary, 10%);
 			box-shadow: 6px 6px 24px -4px $brand-primary;
 		}
 		.navbar-nav {

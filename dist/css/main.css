@@ -9049,11 +9049,12 @@ body.lb-disable-scrolling {
   /* line 38, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-collapse {
     position: absolute;
-    background: #dce2e4;
-    top: 100%;
-    margin-top: 6px;
-    margin-left: -62.5%;
     width: 103.7vw;
+    top: 100%;
+    padding-left: 0;
+    margin-left: -62.5%;
+    margin-top: 6px;
+    background: #dce2e4;
     box-shadow: 6px 6px 24px -4px #4C618B;
   }
   /* line 48, ../../_sass/bootstrap-augments/_navbar.scss */
