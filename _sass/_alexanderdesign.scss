@@ -4,31 +4,6 @@ body {
 	background-repeat:repeat;
 }
 
-// .content {
-// 	a	{
-// 		color:$brand-primary;
-// 		text-decoration:none;
-// 		&:hover	{
-// 			color:$brand-accent;
-// 		}
-// 	}
-// 	p {
-// 		a {
-// 			color:$brand-accent;
-// 			text-decoration:none;
-// 			&:hover	{
-// 				text-decoration:underline;
-// 			}
-// 		}
-// 	}
-// }
-
-
-// a:hover	{
-// 	text-decoration: underline;
-// 	cursor:pointer;
-// }
-
 .portfolio_samples	{
 	position:fixed;
 	top:0;
@@ -44,17 +19,16 @@ body {
 }
 
 article	{
-	margin:40px 0 0 235px;
+	margin-left: 235px;
 	color:$brand-primary;
 	@media screen and (max-width: $screen-sm-max) {
-		margin:40px;
+		margin:20px;
 	}
 }
 
 .copy_separator		{
 	width:97%;
 	height:10px;
-	margin:0 auto;
+	margin:20px auto;
 	background-image:url(../images/copy_separator.png);
-
 }

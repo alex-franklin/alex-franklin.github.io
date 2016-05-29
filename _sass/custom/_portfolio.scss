@@ -1,20 +1,20 @@
 .portfolio {
-	>section {
-		div>div {
-			width:280px;
-			height:340px;
-			float:left;
-			margin-right:10px;
-			margin-left:10px;
-			>h3 {
-				@extend .text-center;
-				// font: 'Cabin', Verdana, sans-serif;
-				// font-size:1.4em;
-			}
-		}
-		a>h2 {
-			display:inline-block;
-			margin-right:45px;
+	h3 {
+		@extend .text-center;
+	}
+	img {
+		@extend .center-block;
+	}
+	.row>div {
+		@extend .col-xs-12;
+		@extend .col-sm-6;
+		@extend .col-md-4;
+	}
+	// this rule makes wrapping columns clear the previous row;
+	// remember: only columns are direct descendants of rows;
+	@media screen and (max-width:$screen-sm-max) and (min-width:$screen-sm-min) {
+		.row>div:nth-child(2n+3) {
+			clear:left;
 		}
 	}
 }
@@ -23,6 +23,7 @@
 	background: url(../images/sprite_source.png) no-repeat -20px -98px;
 	display:inline-block;
 	width:20px; height:21px;
+	margin-left:45px;
 	&:hover {
 		background: url(../images/sprite_source.png) no-repeat -61px -98px;
 		display:inline-block;
@@ -33,6 +34,7 @@
 .twirled {
 	background: url(../images/sprite_source.png) no-repeat 0 -98px;
 	display:inline-block; width:20px; height:21px;
+	margin-left:45px;
 	&:hover {
 		background: url(../images/sprite_source.png) no-repeat -41px -98px;
 		display:inline-block; width:20px; height:21px;
