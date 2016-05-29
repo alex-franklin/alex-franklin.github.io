@@ -9454,9 +9454,10 @@ footer {
 body {
   background-image: url(../images/white_leather_texture.jpg);
   background-repeat: repeat;
+  overflow-x: hidden;
 }
 
-/* line 7, ../../_sass/_alexanderdesign.scss */
+/* line 8, ../../_sass/_alexanderdesign.scss */
 .portfolio_samples {
   position: fixed;
   top: 0;
@@ -9468,25 +9469,25 @@ body {
   z-index: 1;
 }
 @media screen and (max-width: 991px) {
-  /* line 7, ../../_sass/_alexanderdesign.scss */
+  /* line 8, ../../_sass/_alexanderdesign.scss */
   .portfolio_samples {
     display: none;
   }
 }
 
-/* line 21, ../../_sass/_alexanderdesign.scss */
+/* line 22, ../../_sass/_alexanderdesign.scss */
 article {
   margin-left: 235px;
   color: #4C618B;
 }
 @media screen and (max-width: 991px) {
-  /* line 21, ../../_sass/_alexanderdesign.scss */
+  /* line 22, ../../_sass/_alexanderdesign.scss */
   article {
     margin: 20px;
   }
 }
 
-/* line 29, ../../_sass/_alexanderdesign.scss */
+/* line 30, ../../_sass/_alexanderdesign.scss */
 .copy_separator {
   width: 97%;
   height: 10px;
