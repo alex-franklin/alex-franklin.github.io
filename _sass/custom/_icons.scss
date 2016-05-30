@@ -20,7 +20,7 @@
 	height:46px;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right:15px;
+	margin:0 10px;
 	background: url(../images/sprite_source.png) no-repeat 0 -119px;
 	&:hover {
 		width:33px;
@@ -33,7 +33,6 @@
 	height:37px;
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 15px 0 30px;
 	background: url(../images/sprite_source.png) no-repeat -79px -119px;
 	top: 5px;
 	&:hover {

@@ -9250,7 +9250,7 @@ footer {
   height: 46px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 15px;
+  margin: 0 10px;
   background: url(../images/sprite_source.png) no-repeat 0 -119px;
 }
 /* line 25, ../../_sass/custom/_icons.scss */
@@ -9265,45 +9265,44 @@ footer {
   height: 37px;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 15px 0 30px;
   background: url(../images/sprite_source.png) no-repeat -79px -119px;
   top: 5px;
 }
-/* line 39, ../../_sass/custom/_icons.scss */
+/* line 38, ../../_sass/custom/_icons.scss */
 #email:hover {
   width: 50px;
   background: url(../images/sprite_source.png) no-repeat -79px -166px;
   top: 5px;
 }
 
-/* line 46, ../../_sass/custom/_icons.scss */
+/* line 45, ../../_sass/custom/_icons.scss */
 #facebook {
   width: 45px;
   background: url(../images/sprite_source.png) no-repeat -177px -119px;
 }
-/* line 49, ../../_sass/custom/_icons.scss */
+/* line 48, ../../_sass/custom/_icons.scss */
 #facebook:hover {
   width: 45px;
   background: url(../images/sprite_source.png) no-repeat -177px -166px;
 }
 
-/* line 55, ../../_sass/custom/_icons.scss */
+/* line 54, ../../_sass/custom/_icons.scss */
 #twitter {
   width: 47px;
   background: url(../images/sprite_source.png) no-repeat -33px -119px;
 }
-/* line 58, ../../_sass/custom/_icons.scss */
+/* line 57, ../../_sass/custom/_icons.scss */
 #twitter:hover {
   width: 47px;
   background: url(../images/sprite_source.png) no-repeat -33px -166px;
 }
 
-/* line 64, ../../_sass/custom/_icons.scss */
+/* line 63, ../../_sass/custom/_icons.scss */
 #linkedin {
   width: 48px;
   background: url(../images/sprite_source.png) no-repeat -129px -119px;
 }
-/* line 67, ../../_sass/custom/_icons.scss */
+/* line 66, ../../_sass/custom/_icons.scss */
 #linkedin:hover {
   width: 48px;
   background: url(../images/sprite_source.png) no-repeat -129px -166px;
@@ -9349,102 +9348,50 @@ footer {
 }
 
 /* line 1, ../../_sass/custom/_resume.scss */
-.resume p {
-  min-width: 600px;
-  max-width: 700px;
-}
-
-/* line 6, ../../_sass/custom/_resume.scss */
 .employer {
   font-weight: bold;
 }
 
-/* line 10, ../../_sass/custom/_resume.scss */
-.position {
+/* line 17, ../../_sass/custom/_resume.scss */
+.left-heading {
   font-weight: bold;
-  font-size: .8em;
+  color: #DD5928;
 }
 
-/* line 15, ../../_sass/custom/_resume.scss */
-.align_right {
-  position: absolute;
-  left: 850px;
-  right: 200px;
-  width: 225px;
-  text-align: right;
-}
-
-/* line 23, ../../_sass/custom/_resume.scss */
-.location {
-  font-weight: bold;
-  font-size: .8em;
-}
-
-/* line 28, ../../_sass/custom/_resume.scss */
-.dates {
-  font-style: italic;
-  font-size: .8em;
-}
-
-/* line 33, ../../_sass/custom/_resume.scss */
-#education,
-#skills,
-#ft_experience,
-#fl_experience {
-  margin-left: 100px;
-}
-
-/* line 40, ../../_sass/custom/_resume.scss */
-#ft_experience > h3,
-#fl_experience > h3 {
-  text-indent: -4em;
-}
-
-/* line 45, ../../_sass/custom/_resume.scss */
-.education,
-.highlights {
-  text-indent: -4.25em;
-}
-
-/* line 50, ../../_sass/custom/_resume.scss */
-.experience {
-  text-indent: -4.6em;
-}
-
-/* line 53, ../../_sass/custom/_resume.scss */
-.skills {
-  text-indent: -6em;
-}
-
-/* line 57, ../../_sass/custom/_resume.scss */
+/* line 22, ../../_sass/custom/_resume.scss */
 .text {
   font-size: .8em;
 }
 
-/* line 61, ../../_sass/custom/_resume.scss */
+/* line 26, ../../_sass/custom/_resume.scss */
 .ft_experience > .experience > .text br {
   margin-bottom: .5em;
 }
 
-/* line 65, ../../_sass/custom/_resume.scss */
+/* line 30, ../../_sass/custom/_resume.scss */
 .mw_clients {
   color: #DD5928;
   font-size: .8em;
   font-weight: bold;
 }
 
-/* line 71, ../../_sass/custom/_resume.scss */
-.content .contact_media a {
+/* line 37, ../../_sass/custom/_resume.scss */
+.contact_media > div {
+  margin-top: 10px;
+}
+/* line 40, ../../_sass/custom/_resume.scss */
+.contact_media a {
   color: #4C618B;
   text-decoration: none;
+  font-weight: bold;
 }
-/* line 74, ../../_sass/custom/_resume.scss */
-.content .contact_media a:hover {
+/* line 44, ../../_sass/custom/_resume.scss */
+.contact_media a:hover {
   color: #DD5928;
   text-decoration: underline;
 }
-/* line 78, ../../_sass/custom/_resume.scss */
-.content .contact_media a:visited {
+/* line 48, ../../_sass/custom/_resume.scss */
+.contact_media a:visited {
   color: #4C618B;
   text-decoration: none;
 }

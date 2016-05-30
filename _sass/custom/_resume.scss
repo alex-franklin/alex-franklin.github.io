@@ -1,57 +1,22 @@
-.resume p {
-	min-width:600px;
-	max-width:700px;
-}
-
 .employer {
 	font-weight:bold;
 }
 
-.position {
-	font-weight:bold;
-	font-size:.8em;
-}
+// #education,
+// #skills,
+// #ft_experience,
+// #fl_experience {
+// 	margin-left:100px;
+// }
 
-.align_right {
-	position:absolute;
-	left:850px;
-	right:200px;
-	width:225px;
-	text-align:right;
-}
+// #ft_experience>h3,
+// #fl_experience>h3 {
+// 	text-indent:-4em;
+// }
 
-.location {
-	font-weight:bold;
-	font-size:.8em;
-}
-
-.dates {
-	font-style:italic;
-	font-size:.8em;
-}
-
-#education,
-#skills,
-#ft_experience,
-#fl_experience {
-	margin-left:100px;
-}
-
-#ft_experience>h3,
-#fl_experience>h3 {
-	text-indent:-4em;
-}
-
-.education,
-.highlights {
-	text-indent:-4.25em;
-}
-
-.experience {
-	text-indent:-4.6em;
-}
-.skills{
-	text-indent:-6em;
+.left-heading {
+	font-weight: bold;
+	color: $brand-accent;
 }
 
 .text {
@@ -68,15 +33,21 @@
 	font-weight:bold;
 }
 
-.content .contact_media a {
-	color:$brand-primary;
-	text-decoration:none;
-	&:hover {
-		color:$brand-accent;
-		text-decoration:underline;
+.contact_media {
+	>div {
+		margin-top:10px;
 	}
-	&:visited {
+	a {
 		color:$brand-primary;
 		text-decoration:none;
+		font-weight:	bold;
+		&:hover {
+			color:$brand-accent;
+			text-decoration:underline;
+		}
+		&:visited {
+			color:$brand-primary;
+			text-decoration:none;
+		}
 	}
 }
