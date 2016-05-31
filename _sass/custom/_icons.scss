@@ -1,29 +1,25 @@
-.icon_tray	{
-	position:relative;
-	right:3%;
-	top:15%;
-	height:47px;
-	width:100%;
-	z-index:111px;
-	text-align:center;
-	div	{
-		margin-right:18px;
-		display:inline-block;
-		position:relative;
-		cursor:pointer;
-		height:47px;
-	}
-}
+// .icon_tray	{
+// 	position:relative;
+// 	right:3%;
+// 	top:15%;
+// 	height:47px;
+// 	width:100%;
+// 	z-index:111px;
+// 	text-align:center;
+// 	div	{
+// 		margin-right:18px;
+// 		display:inline-block;
+// 		position:relative;
+// 		cursor:pointer;
+// 		height:47px;
+// 	}
+// }
 
 #tele {
 	width:33px;
 	height:46px;
-	display: inline-block;
-	vertical-align: middle;
-	margin:0 10px;
 	background: url(../images/sprite_source.png) no-repeat 0 -119px;
 	&:hover {
-		width:33px;
 		background: url(../images/sprite_source.png) no-repeat 0 -166px;
 	}
 }
@@ -31,40 +27,32 @@
 #email {
 	width:50px;
 	height:37px;
-	display: inline-block;
-	vertical-align: middle;
 	background: url(../images/sprite_source.png) no-repeat -79px -119px;
-	top: 5px;
 	&:hover {
-		width:50px;
 		background: url(../images/sprite_source.png) no-repeat -79px -166px;
-		top: 5px;
 	}
 }
 
-#facebook {
-	width:45px;
-	background: url(../images/sprite_source.png) no-repeat -177px -119px ;
-	&:hover {
-		width:45px;
-		background: url(../images/sprite_source.png) no-repeat -177px -166px;
-	}
-}
+// #facebook {
+// 	width:45px;
+// 	background: url(../images/sprite_source.png) no-repeat -177px -119px ;
+// 	&:hover {
+// 		background: url(../images/sprite_source.png) no-repeat -177px -166px;
+// 	}
+// }
 
-#twitter {
-	width:47px;
-	background: url(../images/sprite_source.png) no-repeat -33px -119px;
-	&:hover {
-		width:47px;
-		background: url(../images/sprite_source.png) no-repeat -33px -166px;
-	}
-}
+// #twitter {
+// 	width:47px;
+// 	background: url(../images/sprite_source.png) no-repeat -33px -119px;
+// 	&:hover {
+// 		background: url(../images/sprite_source.png) no-repeat -33px -166px;
+// 	}
+// }
 
-#linkedin {
-	width:48px;
-	background: url(../images/sprite_source.png) no-repeat -129px -119px;
-	&:hover	{
-		width:48px;
-		background: url(../images/sprite_source.png) no-repeat -129px -166px;
-	}
-}
+// #linkedin {
+// 	width:48px;
+// 	background: url(../images/sprite_source.png) no-repeat -129px -119px;
+// 	&:hover	{
+// 		background: url(../images/sprite_source.png) no-repeat -129px -166px;
+// 	}
+// }

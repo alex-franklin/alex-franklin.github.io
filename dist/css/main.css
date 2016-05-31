@@ -1732,12 +1732,12 @@ textarea {
 
 /* line 48, ../../_sass/bootstrap/_scaffolding.scss */
 a {
-  color: #4C618B;
+  color: #365899;
   text-decoration: none;
 }
 /* line 52, ../../_sass/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
-  color: #313e5a;
+  color: #223760;
   text-decoration: underline;
 }
 /* line 58, ../../_sass/bootstrap/_scaffolding.scss */
@@ -2000,13 +2000,13 @@ mark,
 
 /* line 5, ../../_sass/bootstrap/mixins/_text-emphasis.scss */
 .text-primary {
-  color: #4C618B;
+  color: #365899;
 }
 
 /* line 8, ../../_sass/bootstrap/mixins/_text-emphasis.scss */
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #3a4a6a;
+  color: #294273;
 }
 
 /* line 5, ../../_sass/bootstrap/mixins/_text-emphasis.scss */
@@ -2060,13 +2060,13 @@ a.text-danger:focus {
 
 /* line 5, ../../_sass/bootstrap/mixins/_background-variant.scss */
 .bg-primary {
-  background-color: #4C618B;
+  background-color: #365899;
 }
 
 /* line 8, ../../_sass/bootstrap/mixins/_background-variant.scss */
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #3a4a6a;
+  background-color: #294273;
 }
 
 /* line 5, ../../_sass/bootstrap/mixins/_background-variant.scss */
@@ -4499,32 +4499,32 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 71, ../../_sass/bootstrap/_buttons.scss */
 .btn-primary {
   color: #fff;
-  background-color: #4C618B;
-  border-color: #43557b;
+  background-color: #365899;
+  border-color: #2f4d86;
 }
 /* line 11, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #3a4a6a;
-  border-color: #161c28;
+  background-color: #294273;
+  border-color: #0e1728;
 }
 /* line 17, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary:hover {
   color: #fff;
-  background-color: #3a4a6a;
-  border-color: #2d3a53;
+  background-color: #294273;
+  border-color: #1f3359;
 }
 /* line 22, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #3a4a6a;
-  border-color: #2d3a53;
+  background-color: #294273;
+  border-color: #1f3359;
 }
 /* line 29, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle.focus {
   color: #fff;
-  background-color: #2d3a53;
-  border-color: #161c28;
+  background-color: #1f3359;
+  border-color: #0e1728;
 }
 /* line 37, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
@@ -4532,12 +4532,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 /* line 45, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus {
-  background-color: #4C618B;
-  border-color: #43557b;
+  background-color: #365899;
+  border-color: #2f4d86;
 }
 /* line 53, ../../_sass/bootstrap/mixins/_buttons.scss */
 .btn-primary .badge {
-  color: #4C618B;
+  color: #365899;
   background-color: #fff;
 }
 
@@ -4723,7 +4723,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 /* line 96, ../../_sass/bootstrap/_buttons.scss */
 .btn-link {
-  color: #4C618B;
+  color: #365899;
   font-weight: normal;
   border-radius: 0;
 }
@@ -4738,7 +4738,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 /* line 115, ../../_sass/bootstrap/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #313e5a;
+  color: #223760;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4913,7 +4913,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #4C618B;
+  background-color: #365899;
 }
 
 /* line 103, ../../_sass/bootstrap/_dropdowns.scss */
@@ -5438,7 +5438,7 @@ tbody.collapse.in {
 /* line 46, ../../_sass/bootstrap/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #4C618B;
+  border-color: #365899;
 }
 /* line 59, ../../_sass/bootstrap/_navs.scss */
 .nav .nav-divider {
@@ -5496,7 +5496,7 @@ tbody.collapse.in {
 /* line 131, ../../_sass/bootstrap/_navs.scss */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #4C618B;
+  background-color: #365899;
 }
 
 /* line 144, ../../_sass/bootstrap/_navs.scss */
@@ -6266,7 +6266,7 @@ tbody.collapse.in {
   padding: 6px 12px;
   line-height: 1.42857;
   text-decoration: none;
-  color: #4C618B;
+  color: #365899;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -6289,7 +6289,7 @@ tbody.collapse.in {
 .pagination > li > span:hover,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #313e5a;
+  color: #223760;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -6300,8 +6300,8 @@ tbody.collapse.in {
 .pagination > .active > span:focus {
   z-index: 3;
   color: #fff;
-  background-color: #4C618B;
-  border-color: #4C618B;
+  background-color: #365899;
+  border-color: #365899;
   cursor: default;
 }
 /* line 64, ../../_sass/bootstrap/_pagination.scss */
@@ -6453,11 +6453,11 @@ a.label:hover, a.label:focus {
 
 /* line 48, ../../_sass/bootstrap/_labels.scss */
 .label-primary {
-  background-color: #4C618B;
+  background-color: #365899;
 }
 /* line 7, ../../_sass/bootstrap/mixins/_labels.scss */
 .label-primary[href]:hover, .label-primary[href]:focus {
-  background-color: #3a4a6a;
+  background-color: #294273;
 }
 
 /* line 52, ../../_sass/bootstrap/_labels.scss */
@@ -6527,7 +6527,7 @@ a.label:hover, a.label:focus {
 }
 /* line 41, ../../_sass/bootstrap/_badges.scss */
 .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
-  color: #4C618B;
+  color: #365899;
   background-color: #fff;
 }
 /* line 47, ../../_sass/bootstrap/_badges.scss */
@@ -6632,7 +6632,7 @@ a.badge:hover, a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #4C618B;
+  border-color: #365899;
 }
 
 /* line 9, ../../_sass/bootstrap/_alerts.scss */
@@ -6770,7 +6770,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #fff;
   text-align: center;
-  background-color: #4C618B;
+  background-color: #365899;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
@@ -6973,8 +6973,8 @@ button.list-group-item {
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #4C618B;
-  border-color: #4C618B;
+  background-color: #365899;
+  border-color: #365899;
 }
 /* line 96, ../../_sass/bootstrap/_list-group.scss */
 .list-group-item.active .list-group-item-heading,
@@ -6988,7 +6988,7 @@ button.list-group-item {
 }
 /* line 101, ../../_sass/bootstrap/_list-group.scss */
 .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-  color: #c4cddf;
+  color: #b6c6e5;
 }
 
 /* line 4, ../../_sass/bootstrap/mixins/_list-group.scss */
@@ -7453,26 +7453,26 @@ button.list-group-item-danger.active:focus {
 
 /* line 257, ../../_sass/bootstrap/_panels.scss */
 .panel-primary {
-  border-color: #4C618B;
+  border-color: #365899;
 }
 /* line 6, ../../_sass/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #4C618B;
-  border-color: #4C618B;
+  background-color: #365899;
+  border-color: #365899;
 }
 /* line 11, ../../_sass/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #4C618B;
+  border-top-color: #365899;
 }
 /* line 14, ../../_sass/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-heading .badge {
-  color: #4C618B;
+  color: #365899;
   background-color: #fff;
 }
 /* line 20, ../../_sass/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #4C618B;
+  border-bottom-color: #365899;
 }
 
 /* line 260, ../../_sass/bootstrap/_panels.scss */
@@ -8659,7 +8659,7 @@ button.close {
 
 @media (max-width: 767px) {
   /* line 18, ../../_sass/bootstrap/mixins/_responsive-visibility.scss */
-  .hidden-xs {
+  .hidden-xs, .copy_separator {
     display: none !important;
   }
 }
@@ -8984,7 +8984,7 @@ body.lb-disable-scrolling {
 
 /* line 53, ../../_sass/bootstrap-augments/_type.scss */
 .dark_blue {
-  color: #4C618B;
+  color: #365899;
   font-size: .9em;
 }
 
@@ -9054,7 +9054,7 @@ body.lb-disable-scrolling {
     margin-left: -64.5%;
     margin-top: 6px;
     background: #dce2e4;
-    box-shadow: 6px 6px 24px -4px #4C618B;
+    box-shadow: 6px 6px 24px -4px #365899;
   }
   /* line 47, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav {
@@ -9166,7 +9166,7 @@ header {
   padding-top: 6px;
   padding-bottom: 6px;
   z-index: 2;
-  box-shadow: 6px 6px 24px -4px #4C618B;
+  box-shadow: 6px 6px 24px -4px #365899;
 }
 /* line 40, ../../_sass/custom/_header.scss */
 header > .row {
@@ -9225,87 +9225,26 @@ footer {
   display: none;
 }
 
-/* line 1, ../../_sass/custom/_icons.scss */
-.icon_tray {
-  position: relative;
-  right: 3%;
-  top: 15%;
-  height: 47px;
-  width: 100%;
-  z-index: 111px;
-  text-align: center;
-}
-/* line 9, ../../_sass/custom/_icons.scss */
-.icon_tray div {
-  margin-right: 18px;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  height: 47px;
-}
-
 /* line 18, ../../_sass/custom/_icons.scss */
 #tele {
   width: 33px;
   height: 46px;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 10px;
   background: url(../images/sprite_source.png) no-repeat 0 -119px;
 }
-/* line 25, ../../_sass/custom/_icons.scss */
+/* line 22, ../../_sass/custom/_icons.scss */
 #tele:hover {
-  width: 33px;
   background: url(../images/sprite_source.png) no-repeat 0 -166px;
 }
 
-/* line 31, ../../_sass/custom/_icons.scss */
+/* line 27, ../../_sass/custom/_icons.scss */
 #email {
   width: 50px;
   height: 37px;
-  display: inline-block;
-  vertical-align: middle;
   background: url(../images/sprite_source.png) no-repeat -79px -119px;
-  top: 5px;
 }
-/* line 38, ../../_sass/custom/_icons.scss */
+/* line 31, ../../_sass/custom/_icons.scss */
 #email:hover {
-  width: 50px;
   background: url(../images/sprite_source.png) no-repeat -79px -166px;
-  top: 5px;
-}
-
-/* line 45, ../../_sass/custom/_icons.scss */
-#facebook {
-  width: 45px;
-  background: url(../images/sprite_source.png) no-repeat -177px -119px;
-}
-/* line 48, ../../_sass/custom/_icons.scss */
-#facebook:hover {
-  width: 45px;
-  background: url(../images/sprite_source.png) no-repeat -177px -166px;
-}
-
-/* line 54, ../../_sass/custom/_icons.scss */
-#twitter {
-  width: 47px;
-  background: url(../images/sprite_source.png) no-repeat -33px -119px;
-}
-/* line 57, ../../_sass/custom/_icons.scss */
-#twitter:hover {
-  width: 47px;
-  background: url(../images/sprite_source.png) no-repeat -33px -166px;
-}
-
-/* line 63, ../../_sass/custom/_icons.scss */
-#linkedin {
-  width: 48px;
-  background: url(../images/sprite_source.png) no-repeat -129px -119px;
-}
-/* line 66, ../../_sass/custom/_icons.scss */
-#linkedin:hover {
-  width: 48px;
-  background: url(../images/sprite_source.png) no-repeat -129px -166px;
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
@@ -9347,59 +9286,37 @@ footer {
   height: 21px;
 }
 
-/* line 1, ../../_sass/custom/_resume.scss */
-.employer {
-  font-weight: bold;
-}
-
-/* line 17, ../../_sass/custom/_resume.scss */
+/* line 3, ../../_sass/custom/_resume.scss */
 .left-heading {
   font-weight: bold;
+  text-align: right;
   color: #DD5928;
 }
-
-/* line 22, ../../_sass/custom/_resume.scss */
-.text {
-  font-size: .8em;
+@media screen and (max-width: 767px) {
+  /* line 3, ../../_sass/custom/_resume.scss */
+  .left-heading {
+    text-align: left;
+  }
 }
 
-/* line 26, ../../_sass/custom/_resume.scss */
-.ft_experience > .experience > .text br {
-  margin-bottom: .5em;
-}
-
-/* line 30, ../../_sass/custom/_resume.scss */
-.mw_clients {
-  color: #DD5928;
-  font-size: .8em;
-  font-weight: bold;
-}
-
-/* line 37, ../../_sass/custom/_resume.scss */
-.contact_media > div {
+/* line 13, ../../_sass/custom/_resume.scss */
+.contact_media > div.col-xs-12, .portfolio .row.contact_media > div {
   margin-top: 10px;
 }
-/* line 40, ../../_sass/custom/_resume.scss */
-.contact_media a {
-  color: #4C618B;
-  text-decoration: none;
-  font-weight: bold;
+/* line 17, ../../_sass/custom/_resume.scss */
+.contact_media .telephone p {
+  line-height: 41px;
 }
-/* line 44, ../../_sass/custom/_resume.scss */
-.contact_media a:hover {
-  color: #DD5928;
-  text-decoration: underline;
-}
-/* line 48, ../../_sass/custom/_resume.scss */
-.contact_media a:visited {
-  color: #4C618B;
-  text-decoration: none;
+/* line 20, ../../_sass/custom/_resume.scss */
+.contact_media .email p {
+  line-height: 32px;
 }
 
-/* line 2, ../../_sass/_alexanderdesign.scss */
+/* line 1, ../../_sass/_alexanderdesign.scss */
 body {
   background-image: url(../images/white_leather_texture.jpg);
   background-repeat: repeat;
+  background: #eeeeee;
   overflow-x: hidden;
 }
 
@@ -9424,12 +9341,12 @@ body {
 /* line 22, ../../_sass/_alexanderdesign.scss */
 article {
   margin-left: 235px;
-  color: #4C618B;
+  color: #365899;
 }
 @media screen and (max-width: 991px) {
   /* line 22, ../../_sass/_alexanderdesign.scss */
   article {
-    margin: 20px;
+    margin: 0;
   }
 }
 
@@ -9439,4 +9356,16 @@ article {
   height: 10px;
   margin: 20px auto;
   background-image: url(../images/copy_separator.png);
+}
+
+/* line 38, ../../_sass/_alexanderdesign.scss */
+.leather-panel, #ft_experience > div:nth-child(n+3),
+#fl_experience > div:nth-child(n+3) {
+  margin: 20px 0;
+  padding: 20px;
+  background-image: url(../images/white_leather_texture.jpg);
+  background-repeat: repeat;
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  box-shadow: 3px 3px 12px -2px #555555;
 }

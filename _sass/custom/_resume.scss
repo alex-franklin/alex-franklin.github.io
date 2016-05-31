@@ -1,53 +1,43 @@
-.employer {
-	font-weight:bold;
-}
 
-// #education,
-// #skills,
-// #ft_experience,
-// #fl_experience {
-// 	margin-left:100px;
-// }
-
-// #ft_experience>h3,
-// #fl_experience>h3 {
-// 	text-indent:-4em;
-// }
 
 .left-heading {
 	font-weight: bold;
+	text-align: right;
 	color: $brand-accent;
-}
-
-.text {
-	font-size:.8em;
-}
-
-.ft_experience>.experience>.text br {
-	margin-bottom:.5em;
-}
-
-.mw_clients {
-	color:$brand-accent;
-	font-size:.8em;
-	font-weight:bold;
+	@media screen and (max-width: $screen-xs-max) {
+		text-align: left;
+	}
 }
 
 .contact_media {
-	>div {
+	>div.col-xs-12 {
 		margin-top:10px;
 	}
-	a {
-		color:$brand-primary;
-		text-decoration:none;
-		font-weight:	bold;
-		&:hover {
-			color:$brand-accent;
-			text-decoration:underline;
-		}
-		&:visited {
-			color:$brand-primary;
-			text-decoration:none;
-		}
+	// these are magic numbers until icons are made responsive
+	.telephone p {
+		line-height:41px;
+	}
+	.email p {
+		line-height:32px;
+	}
+	// a {
+	// 	color:$brand-primary;
+	// 	text-decoration:none;
+	// 	font-weight:	bold;
+	// 	&:hover {
+	// 		color:$brand-accent;
+	// 		text-decoration:underline;
+	// 	}
+	// 	&:visited {
+	// 		color:$brand-primary;
+	// 		text-decoration:none;
+	// 	}
+	// }
+}
+
+#ft_experience,
+#fl_experience {
+	>div:nth-child(n+3) {
+		@extend .leather-panel;
 	}
 }
