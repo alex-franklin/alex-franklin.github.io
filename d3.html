@@ -26,6 +26,11 @@ description: Data Visualization Examples
 	</div>
 </div>
 
+<div id="tooltip" class="hidden text-center">
+	<img src="dist/images/d3-vehicles/RX7.jpg" class="tooltip-image" alt="Inspected Vehicle Image" />
+	<h3 class="tooltip-heading">Mazda RX-7</h3>
+</div>
+
 <script type="text/javascript">
 
 var dataset = {
@@ -105,7 +110,7 @@ var dataset = {
 			"1/4 Mile": 12.4,
 			"Weight": 1496,
 		},{
-			"Vehicle": "Ford Focus",
+			"Vehicle": "Ford Focus RS",
 			"Image": "Focus.jpg",
 			"Horsepower": 301,
 			"Torque": 325,
@@ -155,7 +160,22 @@ var sortBars = function() {
 	svg.selectAll("rect")
 		.sort(function(a, b) {
 			return d3.ascending(a[datum], b[datum]); // datum
-		})
+		}).on('mouseover', function(d, i) {
+		// var xPosition = parseInt(xScale(d[datum]))/2 + '%';
+		// var yPosition = parseInt(d3.select(this).attr("y")) + '%';
+		console.log(i);
+		d3.select("#tooltip")
+			.style("top", 200 + (i * (400/dataset.vehicles.length)) + 'px')
+			.select(".tooltip-heading")
+			.text(d.Vehicle);
+
+		d3.select(".tooltip-image")
+			.attr({'src': 'dist/images/d3-vehicles/' + d.Image});
+
+		d3.select("#tooltip").classed("hidden", false);
+	}).on('mouseout', function() {
+		d3.select("#tooltip").classed("hidden", true);
+	})
 		.transition()
 		.duration(1000)
 		.attr({
@@ -222,7 +242,7 @@ var updateData =  function(option) {
 	})
 	.attr({
 		y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + (50/dataset.vehicles.length) + 2.5 +'%';	},
-		x:		function(d) 	{	return xScale(d[datum]);															}, // datum
+		x:		function(d) 	{	return xScale(d[datum]);															},
 		dx: 	-15,
 		'font-family':	'Impact',
 		'font-size'  :	'28px',

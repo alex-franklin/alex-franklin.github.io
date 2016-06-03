@@ -9315,7 +9315,7 @@ footer {
 /* line 1, ../../_sass/custom/_d3.scss */
 .d3 {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 200px;
 }
 @media screen and (min-width: 768px) {
   /* line 4, ../../_sass/custom/_d3.scss */
@@ -9339,6 +9339,37 @@ footer {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0;
+}
+/* line 23, ../../_sass/custom/_d3.scss */
+.d3 rect {
+  -webkit-transition: .5s fill;
+  transition: .5s fill;
+}
+/* line 25, ../../_sass/custom/_d3.scss */
+.d3 rect:hover {
+  fill: #DD5928;
+}
+
+/* line 31, ../../_sass/custom/_d3.scss */
+#tooltip {
+  position: absolute;
+  overflow: hidden;
+  background: #eeeeee;
+  left: 5%;
+  width: 300px;
+  height: auto;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+/* line 42, ../../_sass/custom/_d3.scss */
+#tooltip h3 {
+  position: absolute;
+  top: 0;
+  padding-left: 20px;
+  text-shadow: 2px 2px 4px #000;
+  color: white;
 }
 
 /* line 1, ../../_sass/_alexanderdesign.scss */
