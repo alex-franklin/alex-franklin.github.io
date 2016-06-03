@@ -1,0 +1,87 @@
+{
+    	"title": "Sports Car Performance Comparisons",
+        "vehicles":
+    	[
+    		{
+    			"Vehicle": "Mazda RX-7",
+    			"Image": "RX7.jpg",
+    			"Horsepower": 265,
+    			"Torque": 222,
+    			"0-60": 4.9,
+    			"1/4 Mile": 14,
+    			"Weight": 1260,
+    		},{
+    			"Vehicle": "Honda S2000",
+    			"Image": "S2000.jpg",
+    			"Horsepower": 237,
+    			"Torque": 153,
+    			"0-60": 5.8,
+    			"1/4 Mile": 14.3,
+    			"Weight": 1286,
+    		},{
+    			"Vehicle": "Nissan 350Z",
+    			"Image": "350Z.jpg",
+    			"Horsepower": 276,
+    			"Torque": 268,
+    			"0-60": 5.9,
+    			"1/4 Mile": 14.2,
+    			"Weight": 1525,
+    		},{
+    			"Vehicle": "Dodge Challenger R/T",
+    			"Image": "Challenger.jpg",
+    			"Horsepower": 375,
+    			"Torque": 404,
+    			"0-60": 5.6,
+    			"1/4 Mile": 13.81,
+    			"Weight": 1841,
+    		},{
+    			"Vehicle": "Ford Mustang GT",
+    			"Image": "Mustang.jpg",
+    			"Horsepower": 300,
+    			"Torque": 320,
+    			"0-60": 5.2,
+    			"1/4 Mile": 14.02,
+    			"Weight": 1584,
+    		},{
+    			"Vehicle": "Lexus IS 350",
+    			"Image": "Lexus.jpg",
+    			"Horsepower": 306,
+    			"Torque": 277,
+    			"0-60": 4.9,
+    			"1/4 Mile": 13.5,
+    			"Weight": 1643,
+    		},{
+    			"Vehicle": "Subaru Impreza WRX",
+    			"Image": "Impreza.jpg",
+    			"Horsepower": 300,
+    			"Torque": 299,
+    			"0-60": 5.2,
+    			"1/4 Mile": 13.53,
+    			"Weight": 1470,
+    		},{
+    			"Vehicle": "Toyota Supra",
+    			"Image": "Supra.jpg",
+    			"Horsepower": 326,
+    			"Torque": 325,
+    			"0-60": 5.1,
+    			"1/4 Mile": 13.7,
+    			"Weight": 1565,
+    		},{
+    			"Vehicle": "Chevrolet Corvette",
+    			"Image": "Corvette.jpg",
+    			"Horsepower": 436,
+    			"Torque": 428,
+    			"0-60": 4,
+    			"1/4 Mile": 12.4,
+    			"Weight": 1496,
+    		},{
+    			"Vehicle": "Ford Focus",
+    			"Image": "S2000.jpg",
+    			"Horsepower": 301,
+    			"Torque": 325,
+    			"0-60": 5.7,
+    			"1/4 Mile": 13.77,
+    			"Weight": 1467,
+    		}
+    	]
+    }

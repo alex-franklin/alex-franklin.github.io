@@ -1,0 +1,242 @@
+---
+layout: default
+title: D3 Examples
+description: Data Visualization Examples
+---
+
+<div class="d3 container-fluid">
+	<div class="row">
+		<div class="d3-chart-title col-xs-12 col-sm-9 text-center"></div>
+		<div class="d3-select col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0">
+			<select onchange="updateData(this)" class="form-control">
+				<option value="Horsepower">Horsepower
+				<option value="Torque">Torque
+				<option value="0-60">0-60
+				<option value="1/4 Mile">1/4 Mile
+				<option value="Weight">Weight
+			</select>
+		</div>
+		<div class="d3-y-labels col-xs-5 col-sm-3"></div>
+		<div class="d3-bar-chart col-xs-7 col-sm-9"></div>
+		<div class="d3-x-labels col-xs-12 text-center"></div>
+	</div>
+
+	<div class="row">
+		<div class="d3-svg-chart col-xs-12"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+var dataset = {
+	"title": "Sports Car Performance Comparison",
+	"vehicles":
+	[
+		{
+			"Vehicle": "Mazda RX-7",
+			"Image": "RX7.jpg",
+			"Horsepower": 265,
+			"Torque": 222,
+			"0-60": 4.9,
+			"1/4 Mile": 14,
+			"Weight": 1260,
+		},{
+			"Vehicle": "Honda S2000",
+			"Image": "S2000.jpg",
+			"Horsepower": 237,
+			"Torque": 153,
+			"0-60": 5.8,
+			"1/4 Mile": 14.3,
+			"Weight": 1286,
+		},{
+			"Vehicle": "Nissan 350Z",
+			"Image": "350Z.jpg",
+			"Horsepower": 276,
+			"Torque": 268,
+			"0-60": 5.9,
+			"1/4 Mile": 14.2,
+			"Weight": 1525,
+		},{
+			"Vehicle": "Dodge Challenger R/T",
+			"Image": "Challenger.jpg",
+			"Horsepower": 375,
+			"Torque": 404,
+			"0-60": 5.6,
+			"1/4 Mile": 13.81,
+			"Weight": 1841,
+		},{
+			"Vehicle": "Ford Mustang GT",
+			"Image": "Mustang.jpg",
+			"Horsepower": 300,
+			"Torque": 320,
+			"0-60": 5.2,
+			"1/4 Mile": 14.02,
+			"Weight": 1584,
+		},{
+			"Vehicle": "Lexus IS 350",
+			"Image": "Lexus.jpg",
+			"Horsepower": 306,
+			"Torque": 277,
+			"0-60": 4.9,
+			"1/4 Mile": 13.5,
+			"Weight": 1643,
+		},{
+			"Vehicle": "Subaru Impreza WRX",
+			"Image": "Impreza.jpg",
+			"Horsepower": 300,
+			"Torque": 299,
+			"0-60": 5.2,
+			"1/4 Mile": 13.53,
+			"Weight": 1470,
+		},{
+			"Vehicle": "Toyota Supra",
+			"Image": "Supra.jpg",
+			"Horsepower": 326,
+			"Torque": 325,
+			"0-60": 5.1,
+			"1/4 Mile": 13.7,
+			"Weight": 1565,
+		},{
+			"Vehicle": "Chevrolet Corvette",
+			"Image": "Corvette.jpg",
+			"Horsepower": 436,
+			"Torque": 428,
+			"0-60": 4,
+			"1/4 Mile": 12.4,
+			"Weight": 1496,
+		},{
+			"Vehicle": "Ford Focus",
+			"Image": "Focus.jpg",
+			"Horsepower": 301,
+			"Torque": 325,
+			"0-60": 5.7,
+			"1/4 Mile": 13.77,
+			"Weight": 1467,
+		}
+	]
+}
+
+var datum = 'Horsepower';
+	h = 400;
+
+d3.select('.d3-chart-title')
+	.append('h3')
+	.text(dataset.title);
+
+d3.select('.d3-x-labels')
+	.append('h4')
+
+var svg = d3.select(".d3-bar-chart")
+	.append("svg")
+	.attr("width", '100%')
+	.attr("height", h);
+
+svg.selectAll("rect")
+	.data(dataset.vehicles)
+	.enter()
+	.append("rect");
+
+svg.selectAll("text")
+	.data(dataset.vehicles)
+	.enter()
+	.append("text");
+
+d3.select('.d3-y-labels').selectAll('h5')
+	.data(dataset.vehicles)
+	.enter()
+	.append('h5')
+	.style({
+		height:			function()	{	return (400/dataset.vehicles.length) + 'px';	},
+		'line-height':	function()	{	return (400/dataset.vehicles.length) + 'px';	}
+	});
+
+var sortBars = function() {
+
+	svg.selectAll("rect")
+		.sort(function(a, b) {
+			return d3.ascending(a[datum], b[datum]); // datum
+		})
+		.transition()
+		.duration(1000)
+		.attr({
+			y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + '%';		},
+		});
+
+	d3.selectAll('h5')
+		.sort(function(a, b) {
+			return d3.ascending(a[datum], b[datum]); // datum
+		})
+		.transition()
+		.duration(1000);
+
+	svg.selectAll('text')
+		.sort(function(a, b) {
+			return d3.ascending(a[datum], b[datum]); // datum
+		})
+		.transition()
+		.duration(1000)
+		.attr({
+			y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + (50/dataset.vehicles.length) + 2.5 +'%'; }
+		});
+};
+
+var updateData =  function(option) {
+	option ? datum = option.value : null;
+
+	var xScale = d3.scale.linear()
+		.domain([0, d3.max(dataset.vehicles, function(d) {
+			return d[datum];
+		}) ])
+		.range([5 + '%', 100 + '%'])
+		.nice();
+
+	d3.select('h5').text(datum);
+	d3.select('h4').text(datum);
+
+	d3.selectAll("rect").data(dataset.vehicles).attr({
+		x:		0,
+		y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + '%';		},
+		height:	function()		{	return (100/dataset.vehicles.length - .5) + '%';	},
+		width:  function(d)		{	return xScale(d[datum]);							},
+		fill:	function(d)		{	return "#365899"; 									}
+	});
+
+	d3.selectAll("text").data(dataset.vehicles)
+	.text(function(d) {
+		switch(datum) {
+			case 'Horsepower':
+				m = 'hp';
+				break;
+			case 'Torque':
+				m = 'lb/ft';
+				break;
+			case '0-60':
+			case '1/4 Mile':
+				m = 's';
+				break;
+			case 'Weight':
+				m = 'kg';
+				break;
+		}
+		return d[datum] + m;
+	})
+	.attr({
+		y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + (50/dataset.vehicles.length) + 2.5 +'%';	},
+		x:		function(d) 	{	return xScale(d[datum]);															}, // datum
+		dx: 	-15,
+		'font-family':	'Impact',
+		'font-size'  :	'28px',
+		'text-anchor':	'end',
+		fill:			'white',
+	});
+
+	d3.selectAll("h5").data(dataset.vehicles)
+	.text(function(d) {
+		return d.Vehicle;
+	});
+	sortBars();
+};
+
+updateData();
+
+</script>

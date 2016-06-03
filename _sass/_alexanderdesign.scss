@@ -1,8 +1,10 @@
 body {
 	background-image:url(../images/white_leather_texture.jpg);
 	background-repeat:repeat;
-	background: $gray-lighter;
 	overflow-x:hidden;
+	@media screen and (max-width:$screen-xs-max) {
+		background: $gray-lighter;
+	}
 }
 
 .portfolio_samples	{
@@ -36,11 +38,13 @@ article	{
 }
 
 .leather-panel {
-	margin:20px 0;
-	padding:20px;
-	background-image:url(../images/white_leather_texture.jpg);
-	background-repeat:repeat;
-	border-top:		1px solid $gray-light;
-	border-bottom:	1px solid $gray-light;
-	box-shadow: 3px 3px 12px -2px $gray;
+	@media screen and (max-width: $screen-xs-max) {
+		margin:20px 0;
+		padding:20px;
+		background-image:url(../images/white_leather_texture.jpg);
+		background-repeat:repeat;
+		border-top:		1px solid $gray-light;
+		border-bottom:	1px solid $gray-light;
+		box-shadow: 3px 3px 12px -2px $gray;
+	}
 }

@@ -1,0 +1,23 @@
+.d3 {
+	margin-top:20px;
+	margin-bottom:40px;
+	.d3-chart-title {
+		@media screen and (min-width:$screen-sm-min) {
+			float:right;
+		}
+	}
+	.d3-select {
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	.d3-y-labels {
+		clear:left;
+	}
+	h5 {
+		text-align: right;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin: 0;
+	}
+}

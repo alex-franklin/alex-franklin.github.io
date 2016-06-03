@@ -9312,15 +9312,49 @@ footer {
   line-height: 32px;
 }
 
+/* line 1, ../../_sass/custom/_d3.scss */
+.d3 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  /* line 4, ../../_sass/custom/_d3.scss */
+  .d3 .d3-chart-title {
+    float: right;
+  }
+}
+/* line 9, ../../_sass/custom/_d3.scss */
+.d3 .d3-select {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 13, ../../_sass/custom/_d3.scss */
+.d3 .d3-y-labels {
+  clear: left;
+}
+/* line 16, ../../_sass/custom/_d3.scss */
+.d3 h5 {
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
 /* line 1, ../../_sass/_alexanderdesign.scss */
 body {
   background-image: url(../images/white_leather_texture.jpg);
   background-repeat: repeat;
-  background: #eeeeee;
   overflow-x: hidden;
 }
+@media screen and (max-width: 767px) {
+  /* line 1, ../../_sass/_alexanderdesign.scss */
+  body {
+    background: #eeeeee;
+  }
+}
 
-/* line 8, ../../_sass/_alexanderdesign.scss */
+/* line 10, ../../_sass/_alexanderdesign.scss */
 .portfolio_samples {
   position: fixed;
   top: 0;
@@ -9332,25 +9366,25 @@ body {
   z-index: 1;
 }
 @media screen and (max-width: 991px) {
-  /* line 8, ../../_sass/_alexanderdesign.scss */
+  /* line 10, ../../_sass/_alexanderdesign.scss */
   .portfolio_samples {
     display: none;
   }
 }
 
-/* line 22, ../../_sass/_alexanderdesign.scss */
+/* line 24, ../../_sass/_alexanderdesign.scss */
 article {
   margin-left: 235px;
   color: #365899;
 }
 @media screen and (max-width: 991px) {
-  /* line 22, ../../_sass/_alexanderdesign.scss */
+  /* line 24, ../../_sass/_alexanderdesign.scss */
   article {
     margin: 0;
   }
 }
 
-/* line 30, ../../_sass/_alexanderdesign.scss */
+/* line 32, ../../_sass/_alexanderdesign.scss */
 .copy_separator {
   width: 97%;
   height: 10px;
@@ -9358,14 +9392,16 @@ article {
   background-image: url(../images/copy_separator.png);
 }
 
-/* line 38, ../../_sass/_alexanderdesign.scss */
-.leather-panel, #ft_experience > div:nth-child(n+3),
-#fl_experience > div:nth-child(n+3) {
-  margin: 20px 0;
-  padding: 20px;
-  background-image: url(../images/white_leather_texture.jpg);
-  background-repeat: repeat;
-  border-top: 1px solid #777777;
-  border-bottom: 1px solid #777777;
-  box-shadow: 3px 3px 12px -2px #555555;
+@media screen and (max-width: 767px) {
+  /* line 40, ../../_sass/_alexanderdesign.scss */
+  .leather-panel, #ft_experience > div:nth-child(n+3),
+  #fl_experience > div:nth-child(n+3) {
+    margin: 20px 0;
+    padding: 20px;
+    background-image: url(../images/white_leather_texture.jpg);
+    background-repeat: repeat;
+    border-top: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    box-shadow: 3px 3px 12px -2px #555555;
+  }
 }
