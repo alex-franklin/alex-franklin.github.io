@@ -1,3 +1,11 @@
+// var WebFont = require('webfontloader');
+
+WebFont.load({
+    google: {
+      families: ['Open Sans Condensed:300,700,300italic']
+    }
+  });
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;

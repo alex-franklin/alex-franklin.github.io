@@ -6,7 +6,15 @@
 	color: $brand-accent;
 	@media screen and (max-width: $screen-xs-max) {
 		text-align: left;
+		color: $brand-primary;
+		font-size: 24px;
+		margin: 20px 0 10px 0;
 	}
+}
+
+.position {
+	display: inline-block;
+	margin-bottom: 6px;
 }
 
 .contact_media {
