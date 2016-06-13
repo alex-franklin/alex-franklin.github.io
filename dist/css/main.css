@@ -1758,7 +1758,7 @@ img {
 }
 
 /* line 81, ../../_sass/bootstrap/_scaffolding.scss */
-.img-responsive {
+.img-responsive, .portfolio img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -9049,9 +9049,9 @@ body.lb-disable-scrolling {
   /* line 38, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-collapse {
     position: absolute;
-    width: 99.8vw;
+    width: 110vw;
     top: 100%;
-    margin-left: -64.5%;
+    margin-left: -40vw;
     margin-top: 6px;
     background: #dce2e4;
     box-shadow: 6px 6px 24px -4px #365899;
@@ -9247,10 +9247,23 @@ footer {
   background: url(../images/sprite_source.png) no-repeat -79px -166px;
 }
 
-@media screen and (max-width: 991px) and (min-width: 768px) {
-  /* line 16, ../../_sass/custom/_portfolio.scss */
-  .portfolio .row > div:nth-child(2n+3) {
-    clear: left;
+/* line 9, ../../_sass/custom/_portfolio.scss */
+.portfolio .row > div {
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+  /* line 9, ../../_sass/custom/_portfolio.scss */
+  .portfolio .row > div {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -9427,11 +9440,11 @@ article {
   /* line 40, ../../_sass/_alexanderdesign.scss */
   .leather-panel, #ft_experience > div:nth-child(n+3),
   #fl_experience > div:nth-child(n+3) {
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 20px;
     background-image: url(../images/white_leather_texture.jpg);
     background-repeat: repeat;
-    border-top: 1px solid #777777;
+    border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #777777;
     box-shadow: 3px 3px 12px -2px #555555;
   }

@@ -161,8 +161,6 @@ var sortBars = function() {
 		.sort(function(a, b) {
 			return d3.ascending(a[datum], b[datum]); // datum
 		}).on('mouseover', function(d, i) {
-		// var xPosition = parseInt(xScale(d[datum]))/2 + '%';
-		// var yPosition = parseInt(d3.select(this).attr("y")) + '%';
 		console.log(i);
 		d3.select("#tooltip")
 			.style("top", 200 + (i * (400/dataset.vehicles.length)) + 'px')

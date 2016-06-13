@@ -39,11 +39,11 @@ article	{
 
 .leather-panel {
 	@media screen and (max-width: $screen-xs-max) {
-		margin:20px 0;
+		margin:10px 0;
 		padding:20px;
 		background-image:url(../images/white_leather_texture.jpg);
 		background-repeat:repeat;
-		border-top:		1px solid $gray-light;
+		border-top:		1px solid $gray-lighter;
 		border-bottom:	1px solid $gray-light;
 		box-shadow: 3px 3px 12px -2px $gray;
 	}

@@ -39,3 +39,9 @@ _site
 .Trashes
 ehthumbs.db
 Thumbs.db
+/Hello World App/nbproject/private/
+/Hello World App/build/
+/Hello World App/dist/
+/helloWorldApp/nbproject/private/
+/helloWorldApp/dist/
+/helloWorldApp/build/

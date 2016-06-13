@@ -37,9 +37,9 @@
 	@media screen and (max-width:$screen-xs-max) {
 		.navbar-collapse {
 			position:absolute;
-			width:99.8vw;
+			width:110vw;
 			top: 100%;
-			margin-left:-64.5%;
+			margin-left:-40vw;
 			margin-top: $padding-base-vertical;
 			background: lighten($brand-secondary, 10%);
 			box-shadow: 6px 6px 24px -4px $brand-primary;

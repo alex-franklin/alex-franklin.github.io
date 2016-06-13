@@ -4,17 +4,17 @@
 	}
 	img {
 		@extend .center-block;
+		@extend .img-responsive;
 	}
 	.row>div {
 		@extend .col-xs-12;
 		@extend .col-sm-6;
 		@extend .col-md-4;
-	}
-	// this rule makes wrapping columns clear the previous row;
-	// remember: only columns are direct descendants of rows;
-	@media screen and (max-width:$screen-sm-max) and (min-width:$screen-sm-min) {
-		.row>div:nth-child(2n+3) {
-			clear:left;
+		height: 350px;
+		display: flex;
+		flex-direction: column;
+		@media screen and (max-width: $screen-xs-max) {
+			justify-content: center;
 		}
 	}
 }
