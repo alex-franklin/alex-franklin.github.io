@@ -9011,39 +9011,40 @@ body.lb-disable-scrolling {
 /* line 7, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-nav > li a {
   color: #BFCACE;
+  font-size: 1.5em;
 }
-/* line 9, ../../_sass/bootstrap-augments/_navbar.scss */
+/* line 10, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-nav > li a:hover {
   color: #a2b2b8;
 }
-/* line 15, ../../_sass/bootstrap-augments/_navbar.scss */
+/* line 16, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-toggle {
   border: none;
   margin: 0;
 }
-/* line 18, ../../_sass/bootstrap-augments/_navbar.scss */
+/* line 19, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #BFCACE;
   width: 30px;
   height: 5px;
   border-radius: 2px;
 }
-/* line 24, ../../_sass/bootstrap-augments/_navbar.scss */
+/* line 25, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background: none;
 }
-/* line 27, ../../_sass/bootstrap-augments/_navbar.scss */
+/* line 28, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
   background-color: #a2b2b8;
 }
-/* line 32, ../../_sass/bootstrap-augments/_navbar.scss */
+/* line 33, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default .navbar-collapse {
   border: none;
   box-shadow: none;
   clear: both;
 }
 @media screen and (max-width: 767px) {
-  /* line 38, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 39, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-collapse {
     position: absolute;
     width: 110vw;
@@ -9053,12 +9054,12 @@ body.lb-disable-scrolling {
     background: #dce2e4;
     box-shadow: 6px 6px 24px -4px #365899;
   }
-  /* line 47, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 48, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav {
     margin-top: 0;
     margin-bottom: 0;
   }
-  /* line 50, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 51, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav > li {
     display: inline-block;
     float: left;
@@ -9067,11 +9068,11 @@ body.lb-disable-scrolling {
     border: 1px solid #a2b2b8;
     border-right: none;
   }
-  /* line 57, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 58, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav > li > a {
     color: #a2b2b8;
   }
-  /* line 59, ../../_sass/bootstrap-augments/_navbar.scss */
+  /* line 60, ../../_sass/bootstrap-augments/_navbar.scss */
   .navbar-default .navbar-nav > li > a:hover {
     background: #a2b2b8;
     color: #dce2e4;
@@ -9097,16 +9098,6 @@ html.wf-loading body h1, html.wf-loading body h2, html.wf-loading body h3, html.
 }
 
 /* line 1, ../../_sass/custom/_header.scss */
-.header_dock {
-  display: none;
-}
-
-/* line 14, ../../_sass/custom/_header.scss */
-.header_bend {
-  display: none;
-}
-
-/* line 22, ../../_sass/custom/_header.scss */
 .header_options {
   position: relative;
   top: 94%;
@@ -9118,7 +9109,7 @@ html.wf-loading body h1, html.wf-loading body h2, html.wf-loading body h3, html.
   cursor: pointer;
 }
 
-/* line 33, ../../_sass/custom/_header.scss */
+/* line 12, ../../_sass/custom/_header.scss */
 header {
   position: relative;
   background-image: url(../images/dark_blue_texture.jpg);
@@ -9127,14 +9118,14 @@ header {
   z-index: 2;
   box-shadow: 6px 6px 24px -4px #365899;
 }
-/* line 40, ../../_sass/custom/_header.scss */
+/* line 19, ../../_sass/custom/_header.scss */
 header > .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 52, ../../_sass/custom/_header.scss */
+/* line 31, ../../_sass/custom/_header.scss */
 .nav-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9149,28 +9140,6 @@ header > .row {
 }
 
 /* line 1, ../../_sass/custom/_footer.scss */
-.footer_dock {
-  display: none;
-}
-
-/* line 12, ../../_sass/custom/_footer.scss */
-.footer_bend {
-  display: none;
-}
-
-/* line 21, ../../_sass/custom/_footer.scss */
-.footer_options {
-  position: relative;
-  top: 94%;
-  left: 3px;
-  height: 28px;
-  width: 26px;
-  z-index: 111;
-  background: url(../images/sprite_source.png) no-repeat -82px -91px;
-  cursor: pointer;
-}
-
-/* line 32, ../../_sass/custom/_footer.scss */
 footer {
   position: relative;
   background: url(../images/orange_texture.jpg) repeat;
@@ -9258,14 +9227,14 @@ footer {
   height: 21px;
 }
 
-/* line 3, ../../_sass/custom/_resume.scss */
+/* line 1, ../../_sass/custom/_resume.scss */
 .left-heading {
   font-weight: bold;
   text-align: right;
   color: #DD5928;
 }
 @media screen and (max-width: 767px) {
-  /* line 3, ../../_sass/custom/_resume.scss */
+  /* line 1, ../../_sass/custom/_resume.scss */
   .left-heading {
     text-align: left;
     color: #365899;
@@ -9274,23 +9243,31 @@ footer {
   }
 }
 
-/* line 15, ../../_sass/custom/_resume.scss */
+/* line 13, ../../_sass/custom/_resume.scss */
 .position {
   display: inline-block;
   margin-bottom: 6px;
 }
 
-/* line 21, ../../_sass/custom/_resume.scss */
+/* line 19, ../../_sass/custom/_resume.scss */
 .contact_media > div.col-xs-12, .portfolio .row.contact_media > div {
   margin-top: 10px;
 }
-/* line 25, ../../_sass/custom/_resume.scss */
+/* line 23, ../../_sass/custom/_resume.scss */
 .contact_media .telephone p {
   line-height: 41px;
+  font-size: 1.5em;
 }
-/* line 28, ../../_sass/custom/_resume.scss */
+/* line 27, ../../_sass/custom/_resume.scss */
 .contact_media .email p {
   line-height: 32px;
+  font-size: 1.5em;
+}
+
+/* line 48, ../../_sass/custom/_resume.scss */
+#ft_experience > div:nth-child(n+3),
+#fl_experience > div:nth-child(n+3) {
+  margin-bottom: 20px;
 }
 
 /* line 1, ../../_sass/custom/_d3.scss */
@@ -9396,7 +9373,19 @@ article {
   }
 }
 
-/* line 32, ../../_sass/_alexanderdesign.scss */
+@media screen and (max-width: 767px) {
+  /* line 34, ../../_sass/_alexanderdesign.scss */
+  header {
+    position: fixed;
+    width: 100%;
+  }
+
+  /* line 38, ../../_sass/_alexanderdesign.scss */
+  article > .container-fluid > *:first-child {
+    margin-top: 18vw;
+  }
+}
+/* line 43, ../../_sass/_alexanderdesign.scss */
 .copy_separator {
   width: 97%;
   height: 10px;
@@ -9405,7 +9394,7 @@ article {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 40, ../../_sass/_alexanderdesign.scss */
+  /* line 51, ../../_sass/_alexanderdesign.scss */
   .leather-panel, .portfolio .row > div, #ft_experience > div:nth-child(n+3),
   #fl_experience > div:nth-child(n+3) {
     margin: 10px 0;

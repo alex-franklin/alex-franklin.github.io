@@ -29,6 +29,17 @@ article	{
 	}
 }
 
+// this query keeps the page from scrolling right on mobile devices
+@media screen and (max-width: $screen-xs-max) {
+	header {
+		position: fixed;
+		width: 100%;
+	}
+	article>.container-fluid>*:first-child {
+		margin-top:18vw;
+	}
+}
+
 .copy_separator		{
 	@extend .hidden-xs;
 	width:97%;
