@@ -9177,7 +9177,7 @@ footer {
 
 /* line 1, ../../_sass/custom/_portfolio.scss */
 .portfolio_sample {
-  height: 320px;
+  height: 400px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9201,11 +9201,11 @@ footer {
   margin: 0 0 20px;
 }
 
+/* line 25, ../../_sass/custom/_portfolio.scss */
+.portfolio section > .row {
+  padding: 0 15px;
+}
 @media screen and (max-width: 480px) {
-  /* line 25, ../../_sass/custom/_portfolio.scss */
-  .portfolio section > .row {
-    padding: 0 15px;
-  }
   /* line 28, ../../_sass/custom/_portfolio.scss */
   .portfolio section > .row img {
     width: 100vw;
@@ -9219,16 +9219,29 @@ footer {
 .project_info {
   margin-top: 10px;
   overflow: hidden;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  /* line 44, ../../_sass/custom/_portfolio.scss */
+  .project_info:after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    width: 100%;
+    height: 100px;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #f5f6f8 50%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f5f6f8 50%);
+  }
 }
 @media screen and (max-width: 480px) {
-  /* line 41, ../../_sass/custom/_portfolio.scss */
+  /* line 53, ../../_sass/custom/_portfolio.scss */
   .project_info > div {
     width: 100%;
     margin-left: 0;
   }
 }
 
-/* line 50, ../../_sass/custom/_portfolio.scss */
+/* line 62, ../../_sass/custom/_portfolio.scss */
 .twirl_down {
   background: url(../images/sprite_source.png) no-repeat -20px -98px;
   display: inline-block;
@@ -9236,7 +9249,7 @@ footer {
   height: 21px;
   margin-left: 45px;
 }
-/* line 55, ../../_sass/custom/_portfolio.scss */
+/* line 67, ../../_sass/custom/_portfolio.scss */
 .twirl_down:hover {
   background: url(../images/sprite_source.png) no-repeat -61px -98px;
   display: inline-block;
@@ -9244,7 +9257,7 @@ footer {
   height: 21px;
 }
 
-/* line 62, ../../_sass/custom/_portfolio.scss */
+/* line 74, ../../_sass/custom/_portfolio.scss */
 .twirled {
   background: url(../images/sprite_source.png) no-repeat 0 -98px;
   display: inline-block;
@@ -9252,7 +9265,7 @@ footer {
   height: 21px;
   margin-left: 45px;
 }
-/* line 66, ../../_sass/custom/_portfolio.scss */
+/* line 78, ../../_sass/custom/_portfolio.scss */
 .twirled:hover {
   background: url(../images/sprite_source.png) no-repeat -41px -98px;
   display: inline-block;
@@ -9265,6 +9278,7 @@ footer {
   font-weight: bold;
   text-align: right;
   color: #DD5928;
+  margin-top: 30px;
 }
 @media screen and (max-width: 767px) {
   /* line 1, ../../_sass/custom/_resume.scss */
@@ -9276,28 +9290,28 @@ footer {
   }
 }
 
-/* line 13, ../../_sass/custom/_resume.scss */
+/* line 14, ../../_sass/custom/_resume.scss */
 .position {
   display: inline-block;
   margin-bottom: 6px;
 }
 
-/* line 19, ../../_sass/custom/_resume.scss */
+/* line 20, ../../_sass/custom/_resume.scss */
 .contact_media > div.col-xs-12, .contact_media > div.portfolio_sample {
   margin-top: 10px;
 }
-/* line 23, ../../_sass/custom/_resume.scss */
+/* line 24, ../../_sass/custom/_resume.scss */
 .contact_media .telephone p {
   line-height: 41px;
   font-size: 1.5em;
 }
-/* line 27, ../../_sass/custom/_resume.scss */
+/* line 28, ../../_sass/custom/_resume.scss */
 .contact_media .email p {
   line-height: 32px;
   font-size: 1.5em;
 }
 
-/* line 35, ../../_sass/custom/_resume.scss */
+/* line 36, ../../_sass/custom/_resume.scss */
 #ft_experience > div:nth-child(n+3),
 #fl_experience > div:nth-child(n+3) {
   margin-bottom: 20px;
@@ -9365,8 +9379,7 @@ footer {
 
 /* line 1, ../../_sass/_alexanderdesign.scss */
 body {
-  background-image: url(../images/white_leather_texture.jpg);
-  background-repeat: repeat;
+  background: #eeeeee;
   overflow-x: hidden;
 }
 @media screen and (max-width: 767px) {
@@ -9376,7 +9389,7 @@ body {
   }
 }
 
-/* line 10, ../../_sass/_alexanderdesign.scss */
+/* line 11, ../../_sass/_alexanderdesign.scss */
 .portfolio_samples {
   position: fixed;
   top: 0;
@@ -9388,37 +9401,37 @@ body {
   z-index: 1;
 }
 @media screen and (max-width: 991px) {
-  /* line 10, ../../_sass/_alexanderdesign.scss */
+  /* line 11, ../../_sass/_alexanderdesign.scss */
   .portfolio_samples {
     display: none;
   }
 }
 
-/* line 24, ../../_sass/_alexanderdesign.scss */
+/* line 25, ../../_sass/_alexanderdesign.scss */
 article {
   margin-left: 235px;
   color: #365899;
 }
 @media screen and (max-width: 991px) {
-  /* line 24, ../../_sass/_alexanderdesign.scss */
+  /* line 25, ../../_sass/_alexanderdesign.scss */
   article {
     margin: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 34, ../../_sass/_alexanderdesign.scss */
+  /* line 35, ../../_sass/_alexanderdesign.scss */
   header {
     position: fixed;
     width: 100%;
   }
 
-  /* line 38, ../../_sass/_alexanderdesign.scss */
+  /* line 39, ../../_sass/_alexanderdesign.scss */
   article > .container-fluid > *:first-child {
     margin-top: 22vw;
   }
 }
-/* line 43, ../../_sass/_alexanderdesign.scss */
+/* line 44, ../../_sass/_alexanderdesign.scss */
 .copy_separator {
   width: 97%;
   height: 10px;
@@ -9426,16 +9439,15 @@ article {
   background-image: url(../images/copy_separator.png);
 }
 
-@media screen and (max-width: 767px) {
-  /* line 51, ../../_sass/_alexanderdesign.scss */
-  .leather-panel, .portfolio_sample, #ft_experience > div:nth-child(n+3),
-  #fl_experience > div:nth-child(n+3) {
-    margin: 10px 0;
-    padding: 20px;
-    background-image: url(../images/white_leather_texture.jpg);
-    background-repeat: repeat;
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #777777;
-    box-shadow: 3px 3px 12px -2px #555555;
-  }
+/* line 52, ../../_sass/_alexanderdesign.scss */
+.leather-panel, .portfolio_sample, #ft_experience > div:nth-child(n+3),
+#fl_experience > div:nth-child(n+3) {
+  background-image: url(../images/white_leather_texture.jpg);
+  background-repeat: repeat;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #777777;
+  box-shadow: 3px 3px 12px -2px #555555;
 }

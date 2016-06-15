@@ -2,6 +2,7 @@
 	font-weight: bold;
 	text-align: right;
 	color: $brand-accent;
+	margin-top:30px;
 	@media screen and (max-width: $screen-xs-max) {
 		text-align: left;
 		color: $brand-primary;
