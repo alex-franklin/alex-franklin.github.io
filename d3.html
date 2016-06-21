@@ -8,12 +8,12 @@ description: Data Visualization Examples
 	<div class="row">
 		<div class="d3-chart-title col-xs-12 col-sm-9 text-center"></div>
 		<div class="d3-select col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0">
-			<select onchange="updateData(this)" class="form-control">
-				<option value="Horsepower">Horsepower
-				<option value="Torque">Torque
-				<option value="0-60">0-60
-				<option value="1/4 Mile">1/4 Mile
-				<option value="Weight">Weight
+			<select onchange="updateData(this)" class="form-control" id='perfComparator'>
+				<option value="Horsepower">Horsepower</option>
+				<option value="Torque">Torque</option>
+				<option value="0-60">0-60</option>
+				<option value="1/4 Mile">1/4 Mile</option>
+				<option value="Weight">Weight</option>
 			</select>
 		</div>
 		<div class="d3-y-labels col-xs-5 col-sm-3"></div>
@@ -24,6 +24,88 @@ description: Data Visualization Examples
 	<div class="row">
 		<div class="d3-svg-chart col-xs-12"></div>
 	</div>
+
+	<div class="form-horizontal">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 add_vehicle">
+			<div class="row form-group">
+				<div class="col-xs-12 text-center">
+					<h4>Add New Vehicle to Chart</h4>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4 text-right">
+					<label for="vehicleName">Vehicle Name</label>
+				</div>
+				<div class="col-xs-8">
+					<input type="text" class="form-control" placeholder="Vehicle Name" id="vehicleName" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4 text-right">
+					<label for="vehicleHorsepower">Horsepower</label>
+				</div>
+				<div class="col-xs-8">
+					<input type="number" class="form-control" placeholder="Horsepower" id="vehicleHorsepower" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4 text-right">
+					<label for="vehicleTorque">Torque</label>
+				</div>
+				<div class="col-xs-8">
+					<input type="number" class="form-control" placeholder="Torque" id="vehicleTorque" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4 text-right">
+					<label for="vehicleToSixty">0-60 Time</label>
+				</div>
+				<div class="col-xs-8">
+					<input type="number" class="form-control" placeholder="0-60 Time" id="vehicleToSixty" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4 text-right">
+					<label for="vehicleQuarterMile">1/4 Mile Time</label>
+				</div>
+				<div class="col-xs-8">
+					<input type="number" class="form-control" placeholder="1/4 Mile Time" id="vehicleQuarterMile" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4 text-right">
+					<label for="vehicleWeight">Weight</label>
+				</div>
+				<div class="col-xs-8">
+					<input type="number" class="form-control" placeholder="Weight(kgs)" id="vehicleWeight" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-8 col-xs-offset-2">
+					<button class="form-control btn btn-primary" onclick="addNewVehicle()">New Vehicle</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-horizontal">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 add_vehicle">
+			<div class="row form-group">
+				<div class="col-xs-12 text-center">
+					<h4>Garage</h4>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-xs-4">
+					<select class="form-control" id='newVehicleSelect'></select>
+				</div>
+				<div class="col-xs-8">
+					<button class="form-control btn btn-primary" onclick="addToChart()">Add to Comparison</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 <div id="tooltip" class="hidden text-center">
@@ -31,94 +113,121 @@ description: Data Visualization Examples
 	<h3 class="tooltip-heading">Mazda RX-7</h3>
 </div>
 
+<!--<div id="entryOptions" class="hidden">
+	<button type="button" class="btn btn-default" aria-label="Left Align" onclick="deleteElement()">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</button>
+</div>-->
+
 <script type="text/javascript">
 
-var dataset = {
-	"title": "Sports Car Performance Comparison",
-	"vehicles":
-	[
-		{
-			"Vehicle": "Mazda RX-7",
-			"Image": "RX7.jpg",
-			"Horsepower": 265,
-			"Torque": 222,
-			"0-60": 4.9,
-			"1/4 Mile": 14,
-			"Weight": 1260,
-		},{
-			"Vehicle": "Honda S2000",
-			"Image": "S2000.jpg",
-			"Horsepower": 237,
-			"Torque": 153,
-			"0-60": 5.8,
-			"1/4 Mile": 14.3,
-			"Weight": 1286,
-		},{
-			"Vehicle": "Nissan 350Z",
-			"Image": "350Z.jpg",
-			"Horsepower": 276,
-			"Torque": 268,
-			"0-60": 5.9,
-			"1/4 Mile": 14.2,
-			"Weight": 1525,
-		},{
-			"Vehicle": "Dodge Challenger R/T",
-			"Image": "Challenger.jpg",
-			"Horsepower": 375,
-			"Torque": 404,
-			"0-60": 5.6,
-			"1/4 Mile": 13.81,
-			"Weight": 1841,
-		},{
-			"Vehicle": "Ford Mustang GT",
-			"Image": "Mustang.jpg",
-			"Horsepower": 300,
-			"Torque": 320,
-			"0-60": 5.2,
-			"1/4 Mile": 14.02,
-			"Weight": 1584,
-		},{
-			"Vehicle": "Lexus IS 350",
-			"Image": "Lexus.jpg",
-			"Horsepower": 306,
-			"Torque": 277,
-			"0-60": 4.9,
-			"1/4 Mile": 13.5,
-			"Weight": 1643,
-		},{
-			"Vehicle": "Subaru Impreza WRX",
-			"Image": "Impreza.jpg",
-			"Horsepower": 300,
-			"Torque": 299,
-			"0-60": 5.2,
-			"1/4 Mile": 13.53,
-			"Weight": 1470,
-		},{
-			"Vehicle": "Toyota Supra",
-			"Image": "Supra.jpg",
-			"Horsepower": 326,
-			"Torque": 325,
-			"0-60": 5.1,
-			"1/4 Mile": 13.7,
-			"Weight": 1565,
-		},{
-			"Vehicle": "Chevrolet Corvette",
-			"Image": "Corvette.jpg",
-			"Horsepower": 436,
-			"Torque": 428,
-			"0-60": 4,
-			"1/4 Mile": 12.4,
-			"Weight": 1496,
-		},{
-			"Vehicle": "Ford Focus RS",
-			"Image": "Focus.jpg",
-			"Horsepower": 301,
-			"Torque": 325,
-			"0-60": 5.7,
-			"1/4 Mile": 13.77,
-			"Weight": 1467,
+function Vehicle (name, image, horsepower, torque, toSixty, quarterMile, weight) {
+    this.Vehicle = name;
+    this.Image = image;
+    this.Horsepower = horsepower;
+    this.Torque = torque;
+    this['0-60'] = toSixty;
+    this['1/4 Mile'] = quarterMile;
+    this.Weight = weight;
+}
+
+Vehicle.prototype = {
+	constructor: Vehicle,
+	addToChart: function() {
+		console.log(this);
+		dataset.vehicles.push(this);
+		console.log(dataset.vehicles);
+	}
+}
+
+function addNewVehicle() {
+	console.log('triggered addNewVehicle()');
+	NewCar = new Vehicle (
+		document.querySelector('#vehicleName').value,
+		'undefined.jpg',
+		document.querySelector('#vehicleHorsepower').value,
+		document.querySelector('#vehicleTorque').value,
+		document.querySelector('#vehicleToSixty').value,
+		document.querySelector('#vehicleQuarterMile').value,
+		document.querySelector('#vehicleWeight').value
+	)
+	NewCar.addToChart();
+	initialize();
+}
+
+function deleteElement(datum) {
+	for (i=0; i<dataset.vehicles.length; i++) {
+		if (datum.Vehicle == dataset.vehicles[i].Vehicle) {
+			dataset.vehicles.splice(i, 1);
+			optionalCars.vehicles.push(datum);
+			loadGarage();
+			cleanUp();
+			initialize();
+			return
 		}
-	]
+	}
+}
+
+function addToChart() {
+	var stagedVehicle = document.querySelector('#newVehicleSelect').value;
+	for (i=0; i<dataset.vehicles.length; i++) {
+		if (stagedVehicle == dataset.vehicles[i].Vehicle) {
+			console.log('vehicle is already charted');
+			return
+		}
+	}
+	for (i=0; i<optionalCars.vehicles.length; i++) {
+		if (stagedVehicle == optionalCars.vehicles[i].Vehicle) {
+			dataset.vehicles.push(optionalCars.vehicles[i]);
+			optionalCars.vehicles.splice(i, 1);
+			loadGarage();
+			initialize();
+			return
+		}
+	}
+}
+
+function loadGarage() {
+	var selectOptions = document.querySelector('#newVehicleSelect').options;
+	console.log(optionalCars.vehicles)
+	//remove all options
+
+	for (i=selectOptions.length-1; i>=0; i--) {
+		selectOptions.remove(i);
+	}
+
+	// then reload all from the optionalCars object
+	for (i=0; i<optionalCars.vehicles.length; i++) {
+		var optionElement = document.createElement('option');
+		optionElement.text = optionalCars.vehicles[i].Vehicle;
+		selectOptions.add(optionElement, [i]);
+	}
+}
+
+function loadDoc() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			// create global dataset variable
+			dataset = JSON.parse(xhttp.responseText);
+			initialize();
+		}
+	};
+	xhttp.open("GET", "js/d3-data/sports-cars.json", true);
+	xhttp.send();
+}
+
+function loadOptions() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			// create global variable
+			optionalCars = JSON.parse(xhttp.responseText);
+			loadGarage();
+		}
+	}
+	xhttp.open("GET", "js/d3-data/optional-cars.json", true);
+	xhttp.send();
 }
 
 var datum = 'Horsepower';
@@ -126,7 +235,7 @@ var datum = 'Horsepower';
 
 d3.select('.d3-chart-title')
 	.append('h3')
-	.text(dataset.title);
+	.text('Sports Car Performance Comparison');
 
 d3.select('.d3-x-labels')
 	.append('h4')
@@ -136,24 +245,49 @@ var svg = d3.select(".d3-bar-chart")
 	.attr("width", '100%')
 	.attr("height", h);
 
-svg.selectAll("rect")
-	.data(dataset.vehicles)
-	.enter()
-	.append("rect");
+function cleanUp() {
+	svg.selectAll("rect")
+		.data(dataset.vehicles)
+		.exit().remove()
 
-svg.selectAll("text")
-	.data(dataset.vehicles)
-	.enter()
-	.append("text");
+	svg.selectAll("text")
+		.data(dataset.vehicles)
+		.exit().remove()
 
-d3.select('.d3-y-labels').selectAll('h5')
-	.data(dataset.vehicles)
-	.enter()
-	.append('h5')
-	.style({
-		height:			function()	{	return (400/dataset.vehicles.length) + 'px';	},
-		'line-height':	function()	{	return (400/dataset.vehicles.length) + 'px';	}
-	});
+	d3.select('.d3-y-labels').selectAll('h5')
+		.data(dataset.vehicles)
+		.exit().remove()
+
+	d3.select('.d3-y-labels').selectAll('span')
+		.data(dataset.vehicles)
+		.exit().remove()
+}
+
+var initialize = function() {
+
+	svg.selectAll("rect")
+		.data(dataset.vehicles)
+		.enter()
+		.append("rect");
+
+	svg.selectAll("text")
+		.data(dataset.vehicles)
+		.enter()
+		.append("text");
+
+	d3.select('.d3-y-labels').selectAll('h5')
+		.data(dataset.vehicles)
+		.enter()
+		.append('h5');
+
+	d3.select('.d3-y-labels').selectAll('span')
+		.data(dataset.vehicles)
+		.enter()
+		.append('span')
+		.classed('glyphicon glyphicon-remove', true)
+
+	updateData();
+}
 
 var sortBars = function() {
 
@@ -161,7 +295,7 @@ var sortBars = function() {
 		.sort(function(a, b) {
 			return d3.ascending(a[datum], b[datum]); // datum
 		}).on('mouseover', function(d, i) {
-		console.log(i);
+		//console.log(i);
 		d3.select("#tooltip")
 			.style("top", 200 + (i * (400/dataset.vehicles.length)) + 'px')
 			.select(".tooltip-heading")
@@ -187,6 +321,18 @@ var sortBars = function() {
 		.transition()
 		.duration(1000);
 
+	d3.selectAll('.d3-y-labels span')
+		.sort(function(a, b) {
+			return d3.ascending(a[datum], b[datum]);
+		})
+		.on('click', function(d) {
+			deleteElement(d);
+		})
+		.transition()
+		.duration(1000)
+		.style({ 'top':  function(d, i) {	return i * (400/dataset.vehicles.length) + (150/dataset.vehicles.length) + 'px';	}});
+
+
 	svg.selectAll('text')
 		.sort(function(a, b) {
 			return d3.ascending(a[datum], b[datum]); // datum
@@ -194,7 +340,7 @@ var sortBars = function() {
 		.transition()
 		.duration(1000)
 		.attr({
-			y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + (50/dataset.vehicles.length) + 2.5 +'%'; }
+			y:		function(d, i)	{	return i * (400/dataset.vehicles.length) + (300/dataset.vehicles.length) + 'px'; }
 		});
 };
 
@@ -208,13 +354,19 @@ var updateData =  function(option) {
 		.range([5 + '%', 100 + '%'])
 		.nice();
 
-	d3.select('h5').text(datum);
+	d3.selectAll('h5')
+		.text(datum)
+		.style({
+			height:			function()	{	return (400/dataset.vehicles.length) + 'px';	},
+			'line-height':	function()	{	return (400/dataset.vehicles.length) + 'px';	}
+		});
+
 	d3.select('h4').text(datum);
 
 	d3.selectAll("rect").data(dataset.vehicles).attr({
 		x:		0,
-		y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + '%';		},
-		height:	function()		{	return (100/dataset.vehicles.length - .5) + '%';	},
+		y:		function(d, i)	{	return i * (400/dataset.vehicles.length) + 'px';	},
+		height:	function()		{	return (400/dataset.vehicles.length - 5) + 'px';	},
 		width:  function(d)		{	return xScale(d[datum]);							},
 		fill:	function(d)		{	return "#365899"; 									}
 	});
@@ -239,11 +391,11 @@ var updateData =  function(option) {
 		return d[datum] + m;
 	})
 	.attr({
-		y:		function(d, i)	{	return i * (100/dataset.vehicles.length) + (50/dataset.vehicles.length) + 2.5 +'%';	},
+		y:		function(d, i)	{	return i * (400/dataset.vehicles.length) + (300/dataset.vehicles.length) + 'px';	},
 		x:		function(d) 	{	return xScale(d[datum]);															},
-		dx: 	-15,
+		dx: 	-10,
 		'font-family':	'Impact',
-		'font-size'  :	'28px',
+		'font-size'  :	function() { return (400/dataset.vehicles.length)-12 + 'px'},
 		'text-anchor':	'end',
 		fill:			'white',
 	});
@@ -255,6 +407,7 @@ var updateData =  function(option) {
 	sortBars();
 };
 
-updateData();
+loadDoc();
+loadOptions();
 
 </script>

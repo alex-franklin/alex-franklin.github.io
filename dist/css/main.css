@@ -9186,13 +9186,13 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
   /* line 1, ../../_sass/custom/_portfolio.scss */
   .portfolio_sample {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     height: auto;
   }
 }
@@ -9337,7 +9337,16 @@ footer {
 .d3 .d3-y-labels {
   clear: left;
 }
-/* line 16, ../../_sass/custom/_d3.scss */
+/* line 15, ../../_sass/custom/_d3.scss */
+.d3 .d3-y-labels span {
+  position: absolute;
+  left: 30px;
+}
+/* line 18, ../../_sass/custom/_d3.scss */
+.d3 .d3-y-labels span:hover {
+  color: #DD5928;
+}
+/* line 23, ../../_sass/custom/_d3.scss */
 .d3 h5 {
   text-align: right;
   overflow: hidden;
@@ -9345,17 +9354,22 @@ footer {
   text-overflow: ellipsis;
   margin: 0;
 }
-/* line 23, ../../_sass/custom/_d3.scss */
+/* line 30, ../../_sass/custom/_d3.scss */
 .d3 rect {
   -webkit-transition: .5s fill;
   transition: .5s fill;
 }
-/* line 25, ../../_sass/custom/_d3.scss */
+/* line 32, ../../_sass/custom/_d3.scss */
 .d3 rect:hover {
   fill: #DD5928;
 }
 
-/* line 31, ../../_sass/custom/_d3.scss */
+/* line 40, ../../_sass/custom/_d3.scss */
+.add_vehicle label {
+  line-height: 34px;
+}
+
+/* line 45, ../../_sass/custom/_d3.scss */
 #tooltip {
   position: absolute;
   overflow: hidden;
@@ -9368,13 +9382,26 @@ footer {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
-/* line 42, ../../_sass/custom/_d3.scss */
+/* line 56, ../../_sass/custom/_d3.scss */
 #tooltip h3 {
   position: absolute;
   top: 0;
   padding-left: 20px;
   text-shadow: 2px 2px 4px #000;
   color: white;
+}
+
+/* line 65, ../../_sass/custom/_d3.scss */
+#entryOptions {
+  position: absolute;
+  background: #eeeeee;
+  width: auto;
+  height: auto;
+  padding: 0;
+  left: 30px;
+  border-radius: .5em;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }
 
 /* line 1, ../../_sass/_alexanderdesign.scss */
@@ -9424,14 +9451,15 @@ article {
   header {
     position: fixed;
     width: 100%;
+    top: 0;
   }
 
-  /* line 39, ../../_sass/_alexanderdesign.scss */
+  /* line 40, ../../_sass/_alexanderdesign.scss */
   article > .container-fluid > *:first-child {
-    margin-top: 22vw;
+    margin-top: 18vw;
   }
 }
-/* line 44, ../../_sass/_alexanderdesign.scss */
+/* line 45, ../../_sass/_alexanderdesign.scss */
 .copy_separator {
   width: 97%;
   height: 10px;
@@ -9439,9 +9467,9 @@ article {
   background-image: url(../images/copy_separator.png);
 }
 
-/* line 52, ../../_sass/_alexanderdesign.scss */
+/* line 53, ../../_sass/_alexanderdesign.scss */
 .leather-panel, .portfolio_sample, #ft_experience > div:nth-child(n+3),
-#fl_experience > div:nth-child(n+3) {
+#fl_experience > div:nth-child(n+3), .add_vehicle {
   background-image: url(../images/white_leather_texture.jpg);
   background-repeat: repeat;
   margin-top: 10px;

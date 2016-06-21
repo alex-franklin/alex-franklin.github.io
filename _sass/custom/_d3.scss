@@ -12,6 +12,13 @@
 	}
 	.d3-y-labels {
 		clear:left;
+		span {
+			position: absolute;
+			left: 30px;
+			&:hover {
+				color:$brand-accent;
+			}
+		}
 	}
 	h5 {
 		text-align: right;
@@ -25,6 +32,13 @@
 		&:hover {
 			fill: $brand-accent;
 		}
+	}
+}
+
+.add_vehicle {
+	@extend .leather-panel;
+	label {
+		line-height:34px;
 	}
 }
 
@@ -46,4 +60,16 @@
 		text-shadow: 2px 2px 4px #000;
 		color: white;
 	}
+}
+
+#entryOptions {
+	position: absolute;
+	background: $gray-lighter;
+	width:auto;
+	height: auto;
+	padding: 0;
+	left: 30px;
+	border-radius:.5em;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+	pointer-events: none;
 }
