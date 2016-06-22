@@ -9002,6 +9002,11 @@ body.lb-disable-scrolling {
   color: #FFF;
 }
 
+/* line 23, ../../_sass/bootstrap-augments/_type.scss */
+.form-group label {
+  line-height: 34px;
+}
+
 /* line 1, ../../_sass/bootstrap-augments/_navbar.scss */
 .navbar-default {
   background: none;
@@ -9364,12 +9369,7 @@ footer {
   fill: #DD5928;
 }
 
-/* line 40, ../../_sass/custom/_d3.scss */
-.add_vehicle label {
-  line-height: 34px;
-}
-
-/* line 45, ../../_sass/custom/_d3.scss */
+/* line 39, ../../_sass/custom/_d3.scss */
 #tooltip {
   position: absolute;
   overflow: hidden;
@@ -9382,7 +9382,7 @@ footer {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
-/* line 56, ../../_sass/custom/_d3.scss */
+/* line 50, ../../_sass/custom/_d3.scss */
 #tooltip h3 {
   position: absolute;
   top: 0;
@@ -9391,17 +9391,22 @@ footer {
   color: white;
 }
 
-/* line 65, ../../_sass/custom/_d3.scss */
-#entryOptions {
-  position: absolute;
-  background: #eeeeee;
-  width: auto;
-  height: auto;
-  padding: 0;
-  left: 30px;
-  border-radius: .5em;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
+/* line 59, ../../_sass/custom/_d3.scss */
+.edmunds-article {
+  display: none;
+}
+/* line 61, ../../_sass/custom/_d3.scss */
+.edmunds-article h5 {
+  line-height: 1.4;
+}
+/* line 64, ../../_sass/custom/_d3.scss */
+.edmunds-article ul {
+  padding-left: 20px;
+}
+/* line 67, ../../_sass/custom/_d3.scss */
+.edmunds-article .whats-new-row,
+.edmunds-article .edmunds-says-row {
+  display: none;
 }
 
 /* line 1, ../../_sass/_alexanderdesign.scss */
@@ -9469,7 +9474,7 @@ article {
 
 /* line 53, ../../_sass/_alexanderdesign.scss */
 .leather-panel, .portfolio_sample, #ft_experience > div:nth-child(n+3),
-#fl_experience > div:nth-child(n+3), .add_vehicle {
+#fl_experience > div:nth-child(n+3) {
   background-image: url(../images/white_leather_texture.jpg);
   background-repeat: repeat;
   margin-top: 10px;
