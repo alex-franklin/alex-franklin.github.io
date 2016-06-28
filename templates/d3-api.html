@@ -1,0 +1,88 @@
+<article>
+	<div class="d3 container-fluid">
+		<h1>Edmunds.com API showcase with Angular integration</h1>
+		<div class="form-horizontal">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 leather-panel">
+				<div class="row form-group">
+					<div class="col-xs-12 text-center">
+						<h4>Tell me about a vehicle</h4>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleMake">Make</label>
+					</div>
+					<div class="col-xs-6">
+						<select class="form-control" id='newMakeSelect' onchange="loadModels()"></select>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleModel">Model</label>
+					</div>
+					<div class="col-xs-6">
+						<select class="form-control" id='newModelSelect' onchange="loadYears()"></select>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleYear">Year</label>
+					</div>
+					<div class="col-xs-6">
+						<select class="form-control" id='newYearSelect'></select>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 col-xs-offset-2">
+						<button class="form-control btn btn-primary" onclick="getArticle()">Info</button>
+					</div>
+					<div class="col-xs-4">
+						<button class="form-control btn btn-primary" onclick="getVehicleData()">Log Vehicle Data</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="edmunds-article">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 leather-panel">
+				<a class="article-link" href="#" target="_blank">
+				<div class="col-xs-9 col-xs-offset-3 form-group">
+					<h3 class="article-title"></h3>
+				</div>
+				<div class="row whats-new-row form-group ">
+					<div class="col-xs-3 text-right">
+						<h5>What's New:</h5>
+					</div>
+					<div class="col-xs-9 whats-new">
+					</div>
+				</div>
+				<div class="row edmunds-says-row form-group">
+					<div class="col-xs-3 text-right">
+						<h5>Edmunds Says:</h5>
+					</div>
+					<div class="col-xs-9">
+						<p class="edmunds-says"></p>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-3 text-right">
+						<h5>Pros:</h5>
+					</div>
+					<div class="col-xs-9">
+						<ul class="pros"></ul>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-3 text-right">
+						<h5>Cons:</h5>
+					</div>
+					<div class="col-xs-9">
+						<ul class="cons"></ul>
+					</div>
+				</div>
+				</a>
+			</div>
+		</section>
+	</div>
+	<script src="../js/edmundsapi.js"></script>
+</article>

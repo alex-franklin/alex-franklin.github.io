@@ -25,7 +25,6 @@
         root.lightbox = factory(root.jQuery);
     }
 }(this, function ($) {
-
   function Lightbox(options) {
     this.album = [];
     this.currentImageIndex = void 0;
@@ -45,11 +44,11 @@
     fitImagesInViewport: true,
     // maxWidth: 800,
     // maxHeight: 600,
-    positionFromTop: 50,
+    positionFromTop: 40,
     resizeDuration: 700,
     showImageNumberLabel: true,
     wrapAround: false,
-    disableScrolling: false
+    disableScrolling: true
   };
 
   Lightbox.prototype.option = function(options) {
@@ -88,10 +87,10 @@
     this.$container      = this.$lightbox.find('.lb-container');
 
     // Store css values for future lookup
-    this.containerTopPadding = parseInt(this.$container.css('padding-top'), 10);
-    this.containerRightPadding = parseInt(this.$container.css('padding-right'), 10);
-    this.containerBottomPadding = parseInt(this.$container.css('padding-bottom'), 10);
-    this.containerLeftPadding = parseInt(this.$container.css('padding-left'), 10);
+    this.containerTopPadding = parseInt(this.$container.css('padding-top'), 0);
+    this.containerRightPadding = parseInt(this.$container.css('padding-right'), 0);
+    this.containerBottomPadding = parseInt(this.$container.css('padding-bottom'), 0);
+    this.containerLeftPadding = parseInt(this.$container.css('padding-left'), 0);
 
     // Attach event handlers to the newly minted DOM elements
     this.$overlay.hide().on('click', function() {
@@ -123,6 +122,7 @@
     });
 
     this.$lightbox.find('.lb-next').on('click', function() {
+      console.log(self);
       if (self.currentImageIndex === self.album.length - 1) {
         self.changeImage(0);
       } else {
@@ -242,7 +242,8 @@
 
         windowWidth    = $(window).width();
         windowHeight   = $(window).height();
-        maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 20;
+        // maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 20;
+        maxImageWidth  = windowWidth - 0;
         maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 120;
 
         // Check if image size is larger then maxWidth|maxHeight in settings
@@ -280,6 +281,7 @@
     this.$overlay
       .width($(document).width())
       .height($(document).height());
+    console.log(this.$overlay);
   };
 
   // Animate the size of the lightbox to fit the image we are showing

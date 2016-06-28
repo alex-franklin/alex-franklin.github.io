@@ -1,0 +1,329 @@
+<article>
+    <div class="portfolio container-fluid">
+        <h1>Portfolio Samples</h1>
+
+        <section ng-repeat="obj in categories" id="{{obj.category}}">
+            <a class="fade_out" title="toggle show/hide">
+                <h2 class="inline-block">{{obj.categoryDisplay}}</h2>
+                <div class="twirl_down"></div>
+            </a>
+            <div class="copy_separator"></div>
+            <div class="row" id="recent_row_1">
+                <div class="portfolio_sample" ng-repeat="sample in obj.samples">
+                    <h3>{{sample.heading}}</h3>
+
+                    <a class="lightbox-directive"
+                       href="{{sample.thumb.target}}"
+                       title="<h3>{{sample.thumb.title}}</h3><p>{{sample.thumb.desc}}</p>">
+                        <img class="b-lazy" src="" data-blazy="dist/images/portfolio/{{sample.thumb.src}}" alt="{{sample.heading}} thumbnail">
+                    </a>
+
+                    <a ng-repeat="item in sample.lightbox"
+                       href="dist/images/portfolio/{{item.target}}"
+                       data-lightbox="lightbox[{{obj.category}}]"
+                       title="<h3>{{item.title}}</h3><p>{{item.desc}}</p>">
+                    </a>
+
+                    <div class="row project_info">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <p><strong>Project:</strong> {{sample.project}}</p>
+                            <p><strong>Tools:</strong> {{sample.tools}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+<!--
+<section id="print">
+    <a title="toggle show/hide" class="fade_out">
+        <h2 class="inline-block" id="gah">Print Design</h2>
+        <div class="twirl_down"></div>
+    </a>
+    <div class="copy_separator"></div>
+    <div id="print_row_1" class="row">
+        <div class="portfolio_sample">
+            <h3>Magazine Ad</h3>
+
+            <a href="dist/images/portfolio/stout_jeans.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Stout Jeans</h3><p>This ad was created to feature a custom typeface.</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/stout_thumb.jpg" alt="Stout Jeans Ad"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Newsletter</h3>
+
+            <a href="dist/images/portfolio/foxtales_cover_winter.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Newsletters</h3>
+              <p>Newsletter designed for Fox Valley Girl Scouts Council</p>">
+              <img class="b-lazy" src="" data-blazy="dist/images/portfolio/foxtales_thumb.jpg" alt="Newsletter designed for Fox Valley Girl Scouts Council"></a>
+            <a href="dist/images/portfolio/foxtales_indy_spread.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Girl Scouts of Fox Valley Council</h3>
+              <p>Layout created to report a council trip to Indianapolis</p>"></a>
+            <a href="dist/images/portfolio/foxtales_cover_summer.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Girl Scouts of Fox Valley Council</h3>
+              <p>This design represents the four seasons and scoutings involvement year-round</p>"></a>
+            <a href="dist/images/portfolio/foxtales_pageant_spread.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Girl Scouts of Fox Valley Council</h3>
+              <p>Layout created to report a fundraising event in the form of a fashion show</p>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Magazine Layout</h3>
+
+            <a href="dist/images/portfolio/konig_layout.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Magazine Layout</h3><p>Created using Adobe InDesign, Illustrator and Photoshop.</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/konig_thumb.jpg" alt="Magazine Layout"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Video Game Packaging</h3>
+
+            <a href="dist/images/portfolio/Nintechno_Cover.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Nintechno</h3><p>This cover layout was created for a fictitious (albeit conceivable) video game title using Adobe Illustrator and Photoshop.</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Nintechno_Thumb.jpg" alt="Video Game Packaging"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>T-Shirt Printing</h3>
+
+            <a href="dist/images/portfolio/flyware_shirt.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Flyware</h3>
+            <p>Illustration created for a startup finshing appadata-lightbox company.</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/flyware_thumb.jpg" alt="Flyware Fishing Appadata-lightbox"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Hot Sauce Label</h3>
+
+            <a href="dist/images/portfolio/hot_sauce_label.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Holy Hell Hot Sauce</h3><p>&nbsp;</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/hot_sauce_thumb.jpg" alt="Holy Hell Hot Sauce"></a>
+            <a href="dist/images/portfolio/Hot_Sauce_Label.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Holy Hell Hot Sauce</h3>
+            <p>This sketch displays some research performed in preparation of designing a bottle label</p>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Newspaper Inserts</h3>
+
+            <a href="dist/images/portfolio/newspaper_insert_2.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Newspaper Inserts</h3>
+            <p>Created under specifications and with files provided by local newspapers.</p>"></a>
+            <a href="dist/images/portfolio/newspaper_insert_2.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Newspaper Inserts</h3>
+            <p>Created under specifications and with files provided by local newspapers.</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/newspaper_insert_thumb.jpg" alt="Newspaper Inserts"></a>
+            <a href="dist/images/portfolio/newspaper_insert_1.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Newspaper Inserts</h3>
+            <p>Created under specifications and with files provided by local newspapers.</p>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Billboard Design</h3>
+
+            <a href="dist/images/portfolio/billboard.jpg" data-lightbox="lightbox[print_portfolio]" title="<h3>Billboard Design</h3>
+            <p>Created for the Girl Scouts of Northern Illinois, this billboard was displayed on nine billboards in Rockford, Illinois from January through March of 2012.</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/billboard_thumb.jpg" alt="Billboard Sample"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="industrial">
+    <a class="fade_out" title="toggle show/hide">
+        <h2 class="inline-block">Industrial Design</h2>
+        <div class="twirl_down"></div>
+    </a>
+    <div class="copy_separator"></div>
+    <div id="industrial_row" class="row">
+        <div class="portfolio_sample">
+            <h3>Usability Research</h3>
+
+            <a href="dist/images/portfolio/Screwdriver_Hand.jpg" data-lightbox="lightbox[industrial_portfolio]" title="<h3>Product Usability Sketches</h3>
+            <p>In researching usability of products, sketches define the designer's intended interactions with the product</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Screwdriver_Hand_Thumb.jpg" alt="Usability Sketch"></a>
+            <a href="dist/images/portfolio/Pointing_Hand.jpg" data-lightbox="lightbox[industrial_portfolio]" title="<h3>Product Usability Sketches</h3>
+            <p>In researching usability of products, sketches define the designer's intended interactions with the product</p>"></a>
+            <a href="dist/images/portfolio/Video_Games_Hands.jpg" data-lightbox="lightbox[industrial_portfolio]" title="<h3>Product Usability Sketches</h3>
+            <p>In researching usability of products, sketches define the designer's intended interactions with the product</p>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Orthographic Sketch</h3>
+
+            <a href="dist/images/portfolio/Chair_Orthographic.jpg" data-lightbox="lightbox[industrial_portfolio]" title="<h3>Orthographic Sketch</h3>
+            <p>Modelers are provided exacting specifications from the designer in part based on orhtographic drawings</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Chair_Orthographic_Thumb.jpg" alt="Orthographic Sketch"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Exploded View</h3>
+
+            <a href="dist/images/portfolio/Chair_Exploded.jpg" data-lightbox="lightbox[industrial_portfolio]" title="<h3>Exploded View Sketch</h3>
+            <p>Exploded views show how parts come together to create the final product</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Exploded_Chair_Thumb.jpg" alt="Exploded View Sketch"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="transportation">
+    <a class="fade_out" title="toggle show/hide">
+        <h2 class="inline-block">Transportation Design</h2>
+        <div class="twirl_down"></div>
+    </a>
+    <div class="copy_separator"></div>
+    <div id="transportation_row" class="row">
+        <div class="portfolio_sample">
+            <h3>Surface Studies</h3>
+
+            <a href="dist/images/portfolio/Ferrarri_Pullouts.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Surface studies help designers understand the reflective properties of forms</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Ferrarri_Thumb.jpg" alt="Transportation Design Sketch"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Form Studies</h3>
+
+            <a href="dist/images/portfolio/Form_Study.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Small variations are made on similar forms to dissect differences and advantages</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Form_Study_Thumb.jpg" alt="Transportation Design Sketch"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Section Lining</h3>
+
+            <a href="dist/images/portfolio/Mazda_Concept.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Lateral lines more directly convey the forms of the vehicle surface</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Mazda_Concept_Thumb.jpg" alt="Transportation Design Sketch"></a>
+            <a href="dist/images/portfolio/Nismo_Turismo.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Lateral lines more directly convey the forms of the vehicle surface</p>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Marker Sketches</h3>
+
+            <a href="dist/images/portfolio/Marker_Render.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Marker sketches more literally convey the way the vehicle form reflects light</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Markar_Thumb.jpg" alt="Transportation Design Sketch"></a>
+            <a href="dist/images/portfolio/Side_Truck.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Marker sketches more literally convey the way the vehicle form reflects light</p>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Pen Sketches</h3>
+
+            <a href="dist/images/portfolio/Side_View_Pen_Sketch.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>
+            <p>Eagle Pilot pen has a smooth continous flow which is great for sweeping strokes</p>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/pen_car_thumb.jpg" alt="Transportation Design Sketch"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_sample">
+            <h3>Various Sketches</h3>
+
+            <a href="dist/images/portfolio/Danger_Ranger.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>">
+            <img class="b-lazy" src="" data-blazy="dist/images/portfolio/Ranger_Thumb.jpg" alt="Transportation Design Sketch"></a>
+            <a href="dist/images/portfolio/Big_Truck.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>"></a>
+            <a href="dist/images/portfolio/Concept_Car.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>"></a>
+            <a href="dist/images/portfolio/Drift-R.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>"></a>
+            <a href="dist/images/portfolio/Purple_Truck.jpg" data-lightbox="lightbox[transportation_portfolio]" title="<h3>Transportation Design</h3>"></a>
+
+            <div class="row project_info">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>Project:</strong> A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js</p>
+                    <p><strong>Tools:</strong> D3 JS, JSON, SVG<p>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->

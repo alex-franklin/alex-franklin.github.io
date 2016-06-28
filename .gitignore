@@ -11,7 +11,7 @@ _site
 *.o
 *.so
 
-# Packages #
+# Packages
 ############
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
@@ -39,9 +39,3 @@ _site
 .Trashes
 ehthumbs.db
 Thumbs.db
-/Hello World App/nbproject/private/
-/Hello World App/build/
-/Hello World App/dist/
-/helloWorldApp/nbproject/private/
-/helloWorldApp/dist/
-/helloWorldApp/build/

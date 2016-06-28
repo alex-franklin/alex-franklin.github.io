@@ -1,0 +1,218 @@
+[
+    {
+        "category" : "recent",
+        "categoryDisplay": "Recent Works",
+        "samples" : [
+            {
+                "heading": "State Farm Agent Services Dashboards",
+                "project": "Part of the MySFDomain restructure launched under the guidance of one Don Spaulding",
+                "tools": "Material UI, React JS, d3 JS, HighCharts JS, Foundation SASS (slides 2-3)",
+                "thumb": {
+                    "src": "agent_dashboard_thumb.jpg",
+                    "target": "dist/images/portfolio/agent_dashboard.jpg",
+                    "title": "Material UI Dashboard",
+                    "desc": "Highcharts.js used for charting in conjuction with React component lifecycles"
+                },
+                "lightbox": [
+                    {
+                        "target": "old_dashboard.jpg",
+                        "title": "Foundation UI Framework Dashboard",
+                        "desc": "Zurb's Foundation framework in use alongside a darker palette and different typography stack"
+                    }
+                ]
+            },{
+                "heading": "MICU Loan Application Mockups",
+                "project": "Mockups for an inviting, responsive new loan application with Midwest Illinois Credit Union (MICU).",
+                "tools": "Adobe InDesign, Adobe Photoshop",
+                "thumb": {
+                    "src": "micu_thumb.jpg",
+                    "target": "dist/images/portfolio/micu_intro.jpg",
+                    "title": "MICU Responsive Loan Application Hub",
+                    "desc": "The first screen post login serves as a navigational and informational hub. Sporting MICU brand colors, Optima typeface and assisted with other sandy earth tones. The navigation is terse and clearly separated from important pre-requisite information."
+                },
+                "lightbox": [
+                    {
+                        "target": "micu_rates.jpg",
+                        "title": "MICU Gesture Indication",
+                        "desc": "Gesture indication reveals how users will interact with the interface to display additional information from twirl-downs."
+                    },{
+                        "target": "micu_personal.jpg",
+                        "title": "MICU Personal Information Step",
+                        "desc": "SSL information is in the header to remind applicants their sensitive information is secure. This slide is an example of the responsive nature of the app as it is being planned."
+                    }
+                ]
+            },{
+                "heading": "LeaseRates.com Landing Page Mockups",
+                "project": "Prototypes for landing pages from Google paid advertising search results.",
+                "tools": "HTML5, CSS3, Rapid sketch prototyping",
+                "thumb": {
+                    "src": "lease_rates_thumb.jpg",
+                    "target": "../projects/LeaseRateImages/index.html",
+                    "new_window": true
+                }
+            },{
+                "heading": "Knockout & Foundation Demo",
+                "project": "Workplace Incident Reporting App working prototype built for the Multiple Cause Incident Analysis database of Hile Group. The project was cancelled before being implemented as a working solution.",
+                "tools": "Knockout JS, Foundation SASS",
+                "thumb": {
+                    "src": "knockout_thumb.jpg",
+                    "target": "../projects/mcia/static/html/index.html",
+                    "new_window": true
+                }
+            },{
+                "heading": "Data Visualization Demo",
+                "project": "A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js",
+                "tools": "D3 JS, JSON, SVG",
+                "thumb": {
+                    "src": "d3_thumb.jpg",
+                    "target": "#/d3",
+                    "new_window": true
+                }
+            }
+        ]
+    },
+    {
+        "category" : "web",
+        "categoryDisplay": "Web Design",
+        "samples" : [
+            {
+                "heading": "Citizen's Equity First Credit Union (CEFCU)",
+                "project": "Compilation of samples of static and interactive extranet promotions for credit and loan promotions",
+                "tools": "Adobe InDesign, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
+                "thumb": {
+                    "src": "cefcu_thumb.jpg",
+                    "target": "dist/images/portfolio/cefcu_dtmcu.jpg",
+                    "title": "Don't Tax My Credit Union Promotion",
+                    "desc": "Sketched using online services, mocked up in Photoshop with assets created in Illustrator, built in Dreamweaver and tested in a development environment."
+                },
+                "lightbox": [
+                    {
+                        "target": "cefcu_rewards.jpg",
+                        "title": "Platinum Credit Card Promotion",
+                        "desc": "Static HTML page with interactive Javascript element below the fold."
+                    },{
+                        "target": "cefcu_perks.jpg",
+                        "title": "Expanded Customer Interaction Portal",
+                        "desc": "A short, single page application collecting data about credit card use and suggesting a product to customer based on that data."
+                    }
+                ]
+            },{
+                "heading": "Baitmaker",
+                "project": "E-commerce site with pure native Javascript product customization module",
+                "tools": "PHP, Paypal API, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator",
+                "thumb": {
+                    "src": "baitmaker_thumb.jpg",
+                    "target": "dist/images/portfolio/baitmaker_home.jpg",
+                    "title": "Baitmaker Home Page",
+                    "desc": "This colorful interactive site was ahead of it's time in offering fully customizable tackle in over 64,000 combinations"
+                },
+                "lightbox": [
+                    {
+                        "target": "baitmaker_product.jpg",
+                        "title": "Interactive Customization Module",
+                        "desc": "Javascript replaces alpha transparent PNGs on separate z-index layers to preview fully customized products"
+                    },{
+                        "target": "baitmaker_contact.jpg",
+                        "title": "Baitmaker Contact Page",
+                        "desc": "A simple PHP script allows customers to send emails to the owner directly from the site."
+                    }
+                ]
+            },{
+                "heading": "Johnny K's Hot Dogs",
+                "project": "Local business website comprised of basic HTML with a Facebook API and Google Maps API integrated.",
+                "tools": "Adobe InDesign, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator",
+                "thumb": {
+                    "src": "johnny_ks_thumb.jpg",
+                    "target": "dist/images/portfolio/johnny_ks.jpg",
+                    "title": "Johnny K's Home Page",
+                    "desc": "Beyond Facebook and Google APIs, custom photography was taken and edited, responsibilities included updating menus and Cruise Night schedules."
+                }
+            },{
+                "heading": "Girl Scouts of Northern Illinois",
+                "project": "Various samples of council website designs and offsite advertisements",
+                "tools": "Adobe InDesign, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery, Facebook API, YouTube API",
+                "thumb": {
+                    "src": "gsni_thumb.jpg",
+                    "target": "dist/images/portfolio/gsni_2011_home.jpg",
+                    "title": "Girlscoutsni.org Home Page",
+                    "desc": "This design was in service at <a href=&quot;http://www.girlscoutsni.org&quot; target=&quot;_blank&quot;>girlscoutsni.org"
+                },
+                "lightbox": [
+                    {
+                        "target": "gsni_2011.jpg",
+                        "title": "GSNI Events Page (2011-2013)",
+                        "desc": "This non-scrolling design was in service at <a href=&quot;http://www.girlscoutsni.org&quot; target=&quot;_blank&quot;>girlscoutsni.org</a> from July 2011 to January of 2013"
+                    },{
+                        "target": "gsni_2009.jpg",
+                        "title": "GSNI Home Page (2009-2011)",
+                        "desc": "This design was in service at girlscoutsni.org from October 2009 to July of 2011."
+                    },{
+                        "target": "offsite_ad.jpg",
+                        "title": "GSNI Offsite Ad",
+                        "desc": "Offsite advertisements were produced for community chamber websites."
+                    }
+                ]
+            },{
+                "heading": "JLG Brickpaving",
+                "project": "Local business website with image gallery plugin and lightbox script",
+                "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
+                "thumb": {
+                    "src": "jlg_brickpaving_thumb.jpg",
+                    "target": "dist/images/portfolio/jlg_brickpaving.jpg",
+                    "title": "JLG Brickpaving",
+                    "desc": "Local business website with image gallery plugin and lightbox script."
+                }
+            },{
+                "heading": "Yingling Landscaping",
+                "project": "Local business website with image gallery plugin and lightbox script",
+                "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
+                "thumb": {
+                    "src": "yingling_thumb.jpg",
+                    "target": "dist/images/portfolio/yingling_landscaping.jpg",
+                    "title": "Yinglinglandscaping.com",
+                    "desc": "Local business website with image gallery plugin and lightbox script."
+                }
+            },{
+                "heading": "Taste Lounge and Bar",
+                "project": "Circa 2006, this sister lounge to the News Room, located in downtown Minneapolis, commissioned a simple drink list assorted over a few pages.",
+                "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
+                "thumb": {
+                    "src": "taste_thumb.jpg",
+                    "target": "dist/images/portfolio/taste.jpg",
+                    "title": "Taste Lounge and Bar Home Page",
+                    "desc": "Circa 2006, this sister lounge to the News Room, located in downtown Minneapolis, commissioned a simple drink list assorted over a few pages."
+                }
+            },{
+                "heading": "The News Room",
+                "project": "Circa 2006, this restaurant located in downtown Minneapolis had a unique vision for the style of their website to match their interior theme of historical newspapers on the walls.",
+                "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
+                "thumb": {
+                    "src": "news_room_thumb.jpg",
+                    "target": "dist/images/portfolio/news_room.jpg",
+                    "title": "The News Room Home Page",
+                    "desc": "Circa 2006, this restaurant located in downtown Minneapolis had a unique vision for the style of their website to match their interior theme of historical newspapers on the walls."
+                }
+            },{
+                "heading": "Urban Influence Magazine",
+                "project": "Updated site event schedule and created promotional ads and graphics.",
+                "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
+                "thumb": {
+                    "src": "urban_influence_thumb.jpg",
+                    "target": "dist/images/portfolio/urban_influence.jpg",
+                    "title": "Urban Influence Events Page",
+                    "desc": "Updated site event schedule and created promotional ads and graphics."
+                }
+            },{
+                "heading": "Midwest Environmental Consulting",
+                "project": "An informational and promotional site emphasizing OSHA compliance in accordance with building codes.",
+                "tools": "Adobe Photoshop, Adobe Dreamweaver",
+                "thumb": {
+                    "src": "mec_thumb.jpg",
+                    "target": "dist/images/portfolio/midwest_environmental.jpg",
+                    "title": "Urban Influence Events Page",
+                    "desc": "An informational and promotional site emphasizing OSHA compliance in accordance with building codes."
+                }
+            }
+        ]
+    }
+]

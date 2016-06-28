@@ -1,17 +1,18 @@
 {
-    "name" : "SampleGrunt",
-    "version" : "0.1.0",
-    "author" : "Brandon Random",
-    "private" : true,
-
-    "devDependencies" : {
-        "grunt" :                       "~0.4.0",
-        "grunt-contrib-cssmin":         "*",
-        "grunt-contrib-sass":           "*",
-        "grunt-contrib-uglify":         "*",
-        "grunt-contrib-watch":          "*",
-        "grunt-cssc":                   "*",
-        "grunt-htmlhint":               "*",
-        "matchdep":                     "*"
-    }
+  "name": "Grunt",
+  "version": "0.1.0",
+  "author": "Alex Franklin",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*"
+  }
 }

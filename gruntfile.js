@@ -2,8 +2,18 @@ module.exports = function(grunt){
 	" use strict ";
 	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        connect: {
+        	server: {
+        		options: {
+        			'port': 8000,
+        			'keepalive': true
+        		}
+        	}
+        },
 
         htmlhint: {
 		    build: {
@@ -15,35 +25,51 @@ module.exports = function(grunt){
 		            'doctype-first': false,
 		            'spec-char-escape': true,
 		            'id-unique': true,
-		            'head-script-disabled': true,
+		            // 'head-script-disabled': true,
 		            'style-disabled': true,
 
-		            'id-class-value': 'underline'
+		            // 'id-class-value': 'underline'
 		        },
 		        src: ['index.html']
 		    }
 		},
 
+		// specify prettified js files currently being developed
 		uglify: {
 		    build: {
-		        files: {
-		            'js/main.min.js': ['js/main.js']
-		        }
+		        files: [{
+		            'js/main.min.js': ['js/main.js'],
+		        },{
+		            'js/lightbox.min.js': ['js/lightbox.js']
+		        },{
+		        	'js/router.min.js': ['js/router.js']
+		        }]
 		    }
 		},
 
-		cssc: {
-		    build: {
-		        options: {
-		            consolidateViaDeclarations: true,
-		            consolidateViaSelectors:    true,
-		            consolidateMediaQueries:    true
-		        },
-		        files: {
-		            'dist/css/main.css': 'dist/css/main.css'
-		        }
-		    }
-		},
+		concat: {
+		    options: {
+		    	separator: ';',
+		    },
+		    dist: {
+		    	src: ['js/angular.min.js',
+		    		  'js/angular-route.min.js',
+		    		  'js/angular-touch.min.js',
+		    		  'js/angular-animate.min.js',
+		    		  'js/router.js',
+		    		  'js/webfontloader.js',
+		    		  'js/jquery-2.0.0.min.js',
+		    		  'js/blazy.js',
+		    		  'js/modernizer-2.6.2.min.js',
+		    		  'js/webfontloader.js',
+		    		  'js/bootstrap.min.js',
+		    		  'js/lightbox.min.js',
+		    		  'js/main.min.js',
+
+		    		 ],
+		    	dest: 'dist/js/built.js',
+		    },
+		  },
 
 		cssmin: {
 		    build: {
@@ -55,7 +81,7 @@ module.exports = function(grunt){
 		sass: {
 		    build: {
 		        files: {
-		            'dist/css/main.css': '_sass/main.scss'
+		            'dist/css/main.css': 'sass/main.scss'
 		        }
 		    }
 		},
@@ -77,7 +103,13 @@ module.exports = function(grunt){
 
     });
 
-    grunt.registerTask('default', []);
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+
+  // Register the default tasks.
+	grunt.registerTask('default', ['connect', 'watch']);
     grunt.registerTask('buildcss',  ['sass', 'cssmin']);
+    grunt.registerTask('buildjs', ['uglify', 'concat']);
 
 };

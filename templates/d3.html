@@ -1,0 +1,118 @@
+<article>
+	<div class="d3 container-fluid">
+		<div class="row">
+			<div class="d3-chart-title col-xs-12 col-sm-9 text-center"></div>
+			<div class="d3-select col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0">
+				<select onchange="updateData(this)" class="form-control" id='perfComparator'>
+					<option value="Horsepower">Horsepower</option>
+					<option value="Torque">Torque</option>
+					<option value="0-60">0-60</option>
+					<option value="1/4 Mile">1/4 Mile</option>
+					<option value="Weight">Weight</option>
+				</select>
+			</div>
+			<div class="d3-y-labels col-xs-5 col-sm-3"></div>
+			<div class="d3-bar-chart col-xs-7 col-sm-9"></div>
+			<div class="d3-x-labels col-xs-12 text-center"></div>
+		</div>
+
+		<div class="row">
+			<div class="d3-svg-chart col-xs-12"></div>
+		</div>
+
+		<div class="form-horizontal">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 leather-panel">
+				<div class="row form-group">
+					<div class="col-xs-12 text-center">
+						<h4>Garage</h4>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleMake">Make</label>
+					</div>
+					<div class="col-xs-6">
+						<select class="form-control" id='newMakeSelect'></select>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-8 col-xs-offset-2">
+						<button class="form-control btn btn-primary" onclick="addToChart()">Add to Comparison</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-horizontal">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 leather-panel">
+				<div class="row form-group">
+					<div class="col-xs-12 text-center">
+						<h4>Add New Vehicle to Chart</h4>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleName">Vehicle Name</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="text" class="form-control" placeholder="Vehicle Name" id="vehicleName" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleHorsepower">Horsepower</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="number" class="form-control" placeholder="Horsepower" id="vehicleHorsepower" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleTorque">Torque</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="number" class="form-control" placeholder="Torque" id="vehicleTorque" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleToSixty">0-60 Time</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="number" class="form-control" placeholder="0-60 Time" id="vehicleToSixty" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleQuarterMile">1/4 Mile Time</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="number" class="form-control" placeholder="1/4 Mile Time" id="vehicleQuarterMile" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-4 text-right">
+						<label for="vehicleWeight">Weight</label>
+					</div>
+					<div class="col-xs-6">
+						<input type="number" class="form-control" placeholder="Weight(kgs)" id="vehicleWeight" />
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-8 col-xs-offset-2">
+						<button class="form-control btn btn-primary" onclick="addNewVehicle()">New Vehicle</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="tooltip" class="hidden text-center">
+		<img src="dist/images/d3-vehicles/RX7.jpg" class="tooltip-image" alt="Inspected Vehicle Image" />
+		<h3 class="tooltip-heading">Mazda RX-7</h3>
+	</div>
+
+	<script src="../js/d3.min.js"></script>
+	<script src="../js/d3-vehicle-chart.js"></script>
+</article>

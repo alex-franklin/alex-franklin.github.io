@@ -1,0 +1,27 @@
+<article>
+	<div class="d3 container-fluid">
+		<h1>Angular Tutorials</h1>
+
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 leather-panel" ng-controller="TodoListController as todoList">
+			<h2 class="text-center">To-Do List</h2>
+			<h4>{{todoList.remaining()}} of {{todoList.todos.length}} tasks remaining</h4>
+			<ul class="list-unstyled">
+				<li ng-repeat="todo in todoList.todos">
+					<input type="checkbox" ng-model="todo.done">
+					<span class="done-{{todo.done}}">{{todo.text}}</span>
+				</li>
+			</ul>
+			<form class="form-inline form-group" ng-submit="todoList.addTodo()">
+					<div class="input-group">
+						<input type="text" class="form-control" ng-model="todoList.todoText" placeholder="add new todo here">
+						<span class="input-group-btn">
+							<input class="btn btn-primary" type="submit" value="Add">
+						</span>
+					</div>
+			</form>
+			<button class="btn btn-default" ng-click="todoList.archive()"><i class="glyphicon glyphicon-trash"></i>Clear Completed</button>
+		</div>
+
+<script src="../js/todo.js"></script>
+
+</article>
