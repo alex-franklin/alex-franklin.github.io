@@ -17,6 +17,7 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: none;
+
 }
 
 .lightbox {
@@ -26,7 +27,11 @@ body.lb-disable-scrolling {
   z-index: 10000;
   text-align: center;
   line-height: 0;
-  font-weight: normal;
+  font-weight: normal;// multi-box bug temp fix
+  ~ .lightbox *,
+  ~ .lightboxOverlay {
+    display:none;
+  }
 }
 
 .lightbox {
