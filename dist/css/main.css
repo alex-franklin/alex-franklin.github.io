@@ -6086,16 +6086,6 @@ html body {
             background: #a2b2b8;
             color: #dce2e4; } }
 
-.header_options {
-  position: relative;
-  top: 94%;
-  left: 3px;
-  height: 28px;
-  width: 26px;
-  z-index: 101;
-  background: url(../images/sprite_source.png) no-repeat -108px -91px;
-  cursor: pointer; }
-
 header {
   position: relative;
   background-image: url(../images/dark_blue_texture.jpg);
@@ -6110,6 +6100,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
+
+@media (max-width: 767px) {
+  .nav-brand img {
+    height: 60px;
+    width: 95px;
+    max-width: initial; } }
 
 footer {
   position: relative;
@@ -6239,7 +6235,7 @@ footer {
     clear: left; }
     .d3 .d3-y-labels span {
       position: absolute;
-      left: 30px; }
+      left: 1vw; }
       .d3 .d3-y-labels span:hover {
         color: #DD5928; }
   .d3 h5 {
@@ -6324,7 +6320,7 @@ article {
     top: 0; }
 
   article > .container-fluid > *:first-child {
-    margin-top: 18vw; } }
+    margin-top: 92px; } }
 .copy_separator {
   width: 97%;
   height: 10px;

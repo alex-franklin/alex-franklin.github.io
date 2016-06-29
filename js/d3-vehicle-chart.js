@@ -208,7 +208,7 @@ var sortBars = function() {
 		})
 		.transition()
 		.duration(1000)
-		.style({ 'top':  function(d, i) {	return i * (400/dataset.vehicles.length) + (150/dataset.vehicles.length) + 'px';	}});
+		.style({ 'top':  function(d, i) {	return i * (400/dataset.vehicles.length) + (135/dataset.vehicles.length) + 'px';	}});
 
 
 	svg.selectAll('text')
