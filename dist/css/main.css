@@ -5841,6 +5841,13 @@ body.lb-disable-scrolling {
   line-height: 0;
   font-weight: normal; }
 
+.lightbox {
+  position: fixed;
+  top: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center; }
+
 .lightbox .lb-image {
   display: block;
   height: auto;
@@ -5978,6 +5985,7 @@ body.lb-disable-scrolling {
   width: 30px;
   height: 30px;
   margin-right: 30px;
+  margin-top: 20px;
   background: url(../images/close.png) top right no-repeat;
   text-align: right;
   outline: none;
@@ -5999,15 +6007,16 @@ html body {
     font-family: oswald, sans-serif; }
 
 .b-lazy {
-  -webkit-transition: opacity 5000ms ease-in-out;
-  -moz-transition: opacity 5000ms ease-in-out;
-  -o-transition: opacity 5000ms ease-in-out;
-  transition: opacity 5000ms ease-in-out;
+  -webkit-transition: opacity 2500ms ease-in-out;
+  -moz-transition: opacity 2500ms ease-in-out;
+  -o-transition: opacity 2500ms ease-in-out;
+  transition: opacity 2500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
 
 .b-lazy.b-loaded {
-  opacity: 1; }
+  opacity: 1;
+  transition: opacity 2500ms ease-in-out; }
 
 .inline-block {
   display: inline-block; }

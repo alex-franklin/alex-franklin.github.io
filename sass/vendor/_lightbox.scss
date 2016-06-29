@@ -29,6 +29,14 @@ body.lb-disable-scrolling {
   font-weight: normal;
 }
 
+.lightbox {
+  position: fixed;
+  top:0 !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .lightbox .lb-image {
   display: block;
@@ -192,6 +200,7 @@ body.lb-disable-scrolling {
   width: 30px;
   height: 30px;
   margin-right: 30px;
+  margin-top: 20px;
   background: url(../images/close.png) top right no-repeat;
   text-align: right;
   outline: none;

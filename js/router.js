@@ -3,7 +3,7 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate'])
 		$routeProvider
 			.when('/', {
 				templateUrl:'../templates/portfolio.html',
-				controller:'mainCtrl'
+				controller:'portfolioCtrl'
 			})
 			.when('/resume', {
 				templateUrl:'../templates/resume.html',
@@ -22,7 +22,8 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate'])
 				controller:''
 			})
 			.otherwise({
-				redirectTo: '/'
+				redirectTo: '/templates/portfolio.html',
+				controller: 'portfolioCtrl'
 			})
 	})
 	.factory('portfolio', function($http) {

@@ -39,7 +39,7 @@
   // http://lokeshdhakar.com/projects/lightbox2/index.html#options
   Lightbox.defaults = {
     albumLabel: 'Image %1 of %2',
-    alwaysShowNavOnTouchDevices: false,
+    alwaysShowNavOnTouchDevices: true,
     fadeDuration: 500,
     fitImagesInViewport: true,
     // maxWidth: 800,
@@ -85,6 +85,8 @@
     this.$overlay        = $('#lightboxOverlay');
     this.$outerContainer = this.$lightbox.find('.lb-outerContainer');
     this.$container      = this.$lightbox.find('.lb-container');
+
+    $('.lb-outerContainer, .lb-dataContainer').addClass('hidden');
 
     // Store css values for future lookup
     this.containerTopPadding = parseInt(this.$container.css('padding-top'), 0);
@@ -144,6 +146,8 @@
 
     $window.on('resize', $.proxy(this.sizeOverlay, this));
 
+    this.$lightbox.css('height', '100vh');
+    $('.lb-outerContainer, .lb-dataContainer').removeClass('hidden');
     $('select, object, embed').css({
       visibility: 'hidden'
     });
@@ -281,7 +285,6 @@
     this.$overlay
       .width($(document).width())
       .height($(document).height());
-    console.log(this.$overlay);
   };
 
   // Animate the size of the lightbox to fit the image we are showing
@@ -441,11 +444,12 @@
   Lightbox.prototype.end = function() {
     this.disableKeyboardNav();
     $(window).off('resize', this.sizeOverlay);
-    this.$lightbox.fadeOut(this.options.fadeDuration);
+    this.$lightbox.fadeOut(this.options.fadeDuration).css('height', 0);
     this.$overlay.fadeOut(this.options.fadeDuration);
     $('select, object, embed').css({
       visibility: 'visible'
     });
+    $('.lb-outerContainer, .lb-dataContainer').addClass('hidden');
     if (this.options.disableScrolling) {
       $('body').removeClass('lb-disable-scrolling');
     }
