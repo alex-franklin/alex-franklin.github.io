@@ -1,5 +1,30 @@
 [
     {
+        "category": "ongoing",
+        "categoryDisplay": "Ongoing Projects",
+        "samples" : [
+            {
+                "heading": "Data Visualization Demo",
+                "project": "A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js",
+                "tools": "D3 JS, JSON, SVG",
+                "thumb": {
+                    "src": "d3_thumb.jpg",
+                    "target": "#/d3",
+                    "new_window": true
+                }
+            },{
+                "heading": "Edmunds.com API showcase",
+                "project": "Making RESTful API calls with API key and outputting digestible data into angular templates and directives. Data visualization and image integration are planned.",
+                "tools": "Angular JS, RESTful API, BrowserCaching, AJAX, D3 JS, JSON",
+                "thumb": {
+                    "src": "edmunds_api_thumb.jpg",
+                    "target": "#/d3-api",
+                    "new_window": true
+                }
+            }
+        ]
+    },
+    {
         "category" : "recent",
         "categoryDisplay": "Recent Works",
         "samples" : [
@@ -57,15 +82,6 @@
                 "thumb": {
                     "src": "knockout_thumb.jpg",
                     "target": "../projects/mcia/static/html/index.html",
-                    "new_window": true
-                }
-            },{
-                "heading": "Data Visualization Demo",
-                "project": "A quick demonstration of dynamic visualization of data, scraping the surface of the capabilities of D3.js",
-                "tools": "D3 JS, JSON, SVG",
-                "thumb": {
-                    "src": "d3_thumb.jpg",
-                    "target": "#/d3",
                     "new_window": true
                 }
             }

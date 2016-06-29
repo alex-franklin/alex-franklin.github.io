@@ -6271,14 +6271,19 @@ footer {
     text-shadow: 2px 2px 4px #000;
     color: white; }
 
-.edmunds-article {
+.edmunds-article,
+.edmunds-vData {
   display: none; }
-  .edmunds-article h5 {
+  .edmunds-article h5,
+  .edmunds-vData h5 {
     line-height: 1.4; }
-  .edmunds-article ul {
+  .edmunds-article ul,
+  .edmunds-vData ul {
     padding-left: 20px; }
   .edmunds-article .whats-new-row,
-  .edmunds-article .edmunds-says-row {
+  .edmunds-article .edmunds-says-row,
+  .edmunds-vData .whats-new-row,
+  .edmunds-vData .edmunds-says-row {
     display: none; }
 
 .done-true {

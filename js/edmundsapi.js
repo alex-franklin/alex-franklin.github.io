@@ -24,6 +24,7 @@ function getVehicleData() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			data = JSON.parse(xhttp.responseText);
 			console.log(data);
+			populateData(data);
 		}
 	};
 	xhttp.open("GET", "http://api.edmunds.com/api/vehicle/v2/" +
@@ -95,6 +96,31 @@ function clearOptions(element) {
 function removeEntities(string) {
 	var substr = string.replace("&lt;p&gt;", "");
 	return substr.replace("&lt;/p&gt;", "")
+}
+
+function populateData(data) {
+	var data = data.styles[0],
+		section = document.querySelector('.edmunds-vData'),
+		title = document.querySelector('.vData-title'),
+		mpg = document.querySelector('.vData-mpg'),
+		horsepower = document.querySelector('.vData-horsepower'),
+		torque = document.querySelector('.vData-torque');
+
+	$(section).fadeIn();
+	title.innerHTML = vehicleYear.value + ' ' + vehicleMake.value.capFirst() + ' ' + vehicleModel.value.capFirst() + ' Specs';
+
+	if (data.MPG) {
+		mpg.innerHTML = data.MPG.city + '/' + data.MPG.highway
+	};
+
+	if (data.engine.horsepower) {
+		horsepower.innerHTML = data.engine.horsepower + 'bhp@' + data.engine.rpm.horsepower + 'RPM'
+	}
+
+	if (data.engine.torque) {
+		torque.innerHTML = data.engine.torque + 'lb/ft@' + data.engine.rpm.torque + 'RPM'
+	}
+
 }
 
 function populateArticle(data) {

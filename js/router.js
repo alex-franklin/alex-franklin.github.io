@@ -22,7 +22,7 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate'])
 				controller:''
 			})
 			.otherwise({
-				redirectTo: '/templates/portfolio.html',
+				redirectTo: '../templates/portfolio.html',
 				controller: 'portfolioCtrl'
 			})
 	})

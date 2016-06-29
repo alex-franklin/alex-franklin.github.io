@@ -6,9 +6,14 @@ WebFont.load({
     }
 });
 
+// Initialize image lazy loading
 $(window).load(function() {
-    // Initialize image lazy loading
     var bLazy = new Blazy({
         src: 'data-blazy'
     });
 });
+
+// extend JS functionality. Method now chainable on string typed data
+String.prototype.capFirst = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}

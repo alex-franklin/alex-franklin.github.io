@@ -52,20 +52,20 @@ module.exports = function(grunt){
 		    	separator: ';',
 		    },
 		    dist: {
-		    	src: ['js/angular.min.js',
+		    	src: [
+		    		  'js/jquery-2.0.0.min.js',
+		    		  'js/angular.min.js',
 		    		  'js/angular-route.min.js',
 		    		  'js/angular-touch.min.js',
 		    		  'js/angular-animate.min.js',
 		    		  'js/router.js',
 		    		  'js/webfontloader.js',
-		    		  'js/jquery-2.0.0.min.js',
 		    		  'js/blazy.js',
 		    		  'js/modernizer-2.6.2.min.js',
 		    		  'js/webfontloader.js',
 		    		  'js/bootstrap.min.js',
 		    		  'js/lightbox.min.js',
-		    		  'js/main.min.js',
-
+		    		  'js/main.min.js'
 		    		 ],
 		    	dest: 'dist/js/built.js',
 		    },
