@@ -429,8 +429,8 @@ c.event,c.classes,c.options)}return function(a){if(a.from&&a.to){var b=d(a.from)
 				controller:''
 			})
 			.otherwise({
-				redirectTo: '../templates/portfolio.html',
-				controller: 'portfolioCtrl'
+				redirectTo: '../templates/resume.html',
+				controller: ''
 			})
 	})
 	.factory('portfolio', function($http) {

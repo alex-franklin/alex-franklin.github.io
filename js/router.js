@@ -22,8 +22,8 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate'])
 				controller:''
 			})
 			.otherwise({
-				redirectTo: '../templates/portfolio.html',
-				controller: 'portfolioCtrl'
+				redirectTo: '../templates/resume.html',
+				controller: ''
 			})
 	})
 	.factory('portfolio', function($http) {
