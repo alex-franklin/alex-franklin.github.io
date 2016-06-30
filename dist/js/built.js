@@ -409,7 +409,7 @@ c.event,c.classes,c.options)}return function(a){if(a.from&&a.to){var b=d(a.from)
 	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl:'../templates/portfolio.html',
+				templateUrl:'../templates/resume.html',
 				controller:'portfolioCtrl'
 			})
 			.when('/resume', {

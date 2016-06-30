@@ -2,7 +2,7 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate'])
 	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl:'../templates/portfolio.html',
+				templateUrl:'../templates/resume.html',
 				controller:'portfolioCtrl'
 			})
 			.when('/resume', {
