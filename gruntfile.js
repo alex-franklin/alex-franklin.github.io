@@ -60,7 +60,7 @@ module.exports = function(grunt){
 		    		  'js/angular-animate.min.js',
 		    		  'js/router.js',
 		    		  'js/webfontloader.js',
-		    		  'js/blazy.js',
+		    		  // 'js/blazy.js',
 		    		  'js/modernizer-2.6.2.min.js',
 		    		  'js/webfontloader.js',
 		    		  'js/bootstrap.min.js',

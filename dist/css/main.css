@@ -6150,7 +6150,6 @@ footer {
   padding: 0 15px; }
   @media screen and (max-width: 480px) {
     .portfolio section > .row img {
-      width: 100vw;
       max-width: initial;
       margin-left: -35px;
       box-shadow: 2px 2px 10px; } }

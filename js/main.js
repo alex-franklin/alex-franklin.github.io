@@ -7,10 +7,10 @@ WebFont.load({
 });
 
 // Initialize image lazy loading
-$(window).load(function() {
-    var bLazy = new Blazy({
-        src: 'data-blazy'
-    });
+$(document).ready(function() {
+    // var bLazy = new Blazy({
+    //     src: 'data-blazy'
+    // });
 });
 
 // extend JS functionality. Method now chainable on string typed data

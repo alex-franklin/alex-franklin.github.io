@@ -15,7 +15,12 @@
                     <a class="lightbox-directive"
                        href="{{sample.thumb.target}}"
                        title="<h3>{{sample.thumb.title}}</h3><p>{{sample.thumb.desc}}</p>">
-                        <img class="b-lazy" src="" data-blazy="dist/images/portfolio/{{sample.thumb.src}}" alt="{{sample.heading}} thumbnail">
+                        <img
+                        ng-srcset="dist/images/portfolio/{{sample.thumb.src_2x}} 560w,
+                                dist/images/portfolio/{{sample.thumb.src}} 280w"
+                        sizes="(max-width:480px) 100vw, 280px"
+                        ng-src="dist/images/portfolio/{{sample.thumb.src}}"
+                        alt="{{sample.heading}} thumbnail">
                     </a>
 
                     <a ng-repeat="item in sample.lightbox"

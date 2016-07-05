@@ -9,6 +9,7 @@
                 "tools": "D3 JS, JSON, SVG",
                 "thumb": {
                     "src": "d3_thumb.jpg",
+                    "src_2x": "d3_thumb_2x.jpg",
                     "target": "#/d3",
                     "new_window": true
                 }
@@ -18,6 +19,7 @@
                 "tools": "Angular JS, RESTful API, BrowserCaching, AJAX, D3 JS, JSON",
                 "thumb": {
                     "src": "edmunds_api_thumb.jpg",
+                    "src_2x": "edmunds_api_thumb_2x.jpg",
                     "target": "#/d3-api",
                     "new_window": true
                 }
@@ -34,6 +36,7 @@
                 "tools": "Material UI, React JS, d3 JS, HighCharts JS, Foundation SASS (slides 2-3)",
                 "thumb": {
                     "src": "agent_dashboard_thumb.jpg",
+                    "src_2x": "agent_dashboard_thumb_2x.jpg",
                     "target": "dist/images/portfolio/agent_dashboard.jpg",
                     "title": "Material UI Dashboard",
                     "desc": "Highcharts.js used for charting in conjuction with React component lifecycles"
@@ -51,6 +54,7 @@
                 "tools": "Adobe InDesign, Adobe Photoshop",
                 "thumb": {
                     "src": "micu_thumb.jpg",
+                    "src_2x": "micu_thumb_2x.jpg",
                     "target": "dist/images/portfolio/micu_intro.jpg",
                     "title": "MICU Responsive Loan Application Hub",
                     "desc": "The first screen post login serves as a navigational and informational hub. Sporting MICU brand colors, Optima typeface and assisted with other sandy earth tones. The navigation is terse and clearly separated from important pre-requisite information."
@@ -72,6 +76,7 @@
                 "tools": "HTML5, CSS3, Rapid sketch prototyping",
                 "thumb": {
                     "src": "lease_rates_thumb.jpg",
+                    "src_2x": "lease_rates_thumb_2x.jpg",
                     "target": "../projects/LeaseRateImages/index.html",
                     "new_window": true
                 }
@@ -81,6 +86,7 @@
                 "tools": "Knockout JS, Foundation SASS",
                 "thumb": {
                     "src": "knockout_thumb.jpg",
+                    "src_2x": "knockout_thumb_2x.jpg",
                     "target": "../projects/mcia/static/html/index.html",
                     "new_window": true
                 }
@@ -97,6 +103,7 @@
                 "tools": "Adobe InDesign, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
                 "thumb": {
                     "src": "cefcu_thumb.jpg",
+                    "src_2x": "cefcu_thumb_2x.jpg",
                     "target": "dist/images/portfolio/cefcu_dtmcu.jpg",
                     "title": "Don't Tax My Credit Union Promotion",
                     "desc": "Sketched using online services, mocked up in Photoshop with assets created in Illustrator, built in Dreamweaver and tested in a development environment."
@@ -118,6 +125,7 @@
                 "tools": "PHP, Paypal API, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator",
                 "thumb": {
                     "src": "baitmaker_thumb.jpg",
+                    "src_2x": "baitmaker_thumb_2x.jpg",
                     "target": "dist/images/portfolio/baitmaker_home.jpg",
                     "title": "Baitmaker Home Page",
                     "desc": "This colorful interactive site was ahead of it's time in offering fully customizable tackle in over 64,000 combinations"
@@ -139,6 +147,7 @@
                 "tools": "Adobe InDesign, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator",
                 "thumb": {
                     "src": "johnny_ks_thumb.jpg",
+                    "src_2x": "johnny_ks_thumb_2x.jpg",
                     "target": "dist/images/portfolio/johnny_ks.jpg",
                     "title": "Johnny K's Home Page",
                     "desc": "Beyond Facebook and Google APIs, custom photography was taken and edited, responsibilities included updating menus and Cruise Night schedules."
@@ -149,9 +158,10 @@
                 "tools": "Adobe InDesign, Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery, Facebook API, YouTube API",
                 "thumb": {
                     "src": "gsni_thumb.jpg",
+                    "src_2x": "gsni_thumb_2x.jpg",
                     "target": "dist/images/portfolio/gsni_2011_home.jpg",
                     "title": "Girlscoutsni.org Home Page",
-                    "desc": "This design was in service at <a href=&quot;http://www.girlscoutsni.org&quot; target=&quot;_blank&quot;>girlscoutsni.org"
+                    "desc": "This design was in service at <a href=&quot;http://www.girlscoutsni.org&quot; target=&quot;_blank&quot;>girlscoutsni.org</a> from July 2011 to January of 2013"
                 },
                 "lightbox": [
                     {
@@ -174,6 +184,7 @@
                 "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
                 "thumb": {
                     "src": "jlg_brickpaving_thumb.jpg",
+                    "src_2x": "jlg_brickpaving_thumb_2x.jpg",
                     "target": "dist/images/portfolio/jlg_brickpaving.jpg",
                     "title": "JLG Brickpaving",
                     "desc": "Local business website with image gallery plugin and lightbox script."
@@ -184,6 +195,7 @@
                 "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
                 "thumb": {
                     "src": "yingling_thumb.jpg",
+                    "src_2x": "yingling_thumb_2x.jpg",
                     "target": "dist/images/portfolio/yingling_landscaping.jpg",
                     "title": "Yinglinglandscaping.com",
                     "desc": "Local business website with image gallery plugin and lightbox script."
@@ -194,6 +206,7 @@
                 "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
                 "thumb": {
                     "src": "taste_thumb.jpg",
+                    "src_2x": "taste_thumb_2x.jpg",
                     "target": "dist/images/portfolio/taste.jpg",
                     "title": "Taste Lounge and Bar Home Page",
                     "desc": "Circa 2006, this sister lounge to the News Room, located in downtown Minneapolis, commissioned a simple drink list assorted over a few pages."
@@ -204,6 +217,7 @@
                 "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
                 "thumb": {
                     "src": "news_room_thumb.jpg",
+                    "src_2x": "news_room_thumb_2x.jpg",
                     "target": "dist/images/portfolio/news_room.jpg",
                     "title": "The News Room Home Page",
                     "desc": "Circa 2006, this restaurant located in downtown Minneapolis had a unique vision for the style of their website to match their interior theme of historical newspapers on the walls."
@@ -214,6 +228,7 @@
                 "tools": "Adobe Photoshop, Adobe Dreamweaver, Adobe Illustrator, jQuery",
                 "thumb": {
                     "src": "urban_influence_thumb.jpg",
+                    "src_2x": "urban_influence_thumb_2x.jpg",
                     "target": "dist/images/portfolio/urban_influence.jpg",
                     "title": "Urban Influence Events Page",
                     "desc": "Updated site event schedule and created promotional ads and graphics."
@@ -223,9 +238,10 @@
                 "project": "An informational and promotional site emphasizing OSHA compliance in accordance with building codes.",
                 "tools": "Adobe Photoshop, Adobe Dreamweaver",
                 "thumb": {
-                    "src": "mec_thumb.jpg",
+                    "src": "midwest_environmental_thumb.jpg",
+                    "src_2x": "midwest_environmental_thumb_2x.jpg",
                     "target": "dist/images/portfolio/midwest_environmental.jpg",
-                    "title": "Urban Influence Events Page",
+                    "title": "Midwest Environmental Consulting",
                     "desc": "An informational and promotional site emphasizing OSHA compliance in accordance with building codes."
                 }
             }

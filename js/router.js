@@ -67,9 +67,9 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate'])
 		return {
 			restrict: 'C',
 			link: function() {
-				bLazy = new Blazy({
-					src: 'data-blazy'
-				});
+				// bLazy = new Blazy({
+				// 	src: 'data-blazy'
+				// });
 				lightbox.init();
 			}
 		}
