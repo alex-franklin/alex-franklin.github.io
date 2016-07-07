@@ -56,17 +56,27 @@
 	}
 }
 
-.edmunds-article,
-.edmunds-vData {
-	display:none;
+.form-group {
 	h5 {
 		line-height:1.4;
 	}
+	.form-control {
+		transition: none;
+	}
+	.btn-inline {
+		margin-top:-7px;
+	}
+}
+
+.edmunds-article,
+.edmunds-vData {
+	//display:none;
+
 	ul {
 		padding-left:20px;
 	}
 	.whats-new-row,
 	.edmunds-says-row {
-		display:none;
+		//display:none;
 	}
 }

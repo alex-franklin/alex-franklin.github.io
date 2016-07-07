@@ -58,6 +58,7 @@ module.exports = function(grunt){
 		    		  'js/angular-route.min.js',
 		    		  'js/angular-touch.min.js',
 		    		  'js/angular-animate.min.js',
+		    		  'js/angular-sanitize.min.js',
 		    		  'js/router.js',
 		    		  'js/webfontloader.js',
 		    		  // 'js/blazy.js',

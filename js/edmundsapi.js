@@ -1,69 +1,136 @@
 // edmunds api key
 var api_key = "wmawhp2cm7m83tff2vtn7bh9",
+	api_url = "https://api.edmunds.com/api/",
 	vehicleMake = document.querySelector('#newMakeSelect'),
 	vehicleModel = document.querySelector('#newModelSelect'),
 	vehicleYear = document.querySelector('#newYearSelect');
 
+function getJSON(url) {
+
+  return new Promise(function(resolve, reject) {
+    var req = new XMLHttpRequest();
+    req.open('GET', url);
+    req.responseType = "json";
+    req.onload = function() {
+      if (req.status == 200) {
+        resolve(req.response);
+      }
+      else {
+        reject(Error(req.statusText));
+      }
+    };
+    req.onerror = function() {
+      reject(Error("Network Error"));
+    };
+    req.send();
+  });
+}
+
 function getArticle() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			article = JSON.parse(xhttp.responseText);
-			console.log(article);
-			populateArticle(article);
-		}
-	};
-	xhttp.open("GET", "https://api.edmunds.com/api/editorial/v2/" +
-		vehicleMake.value + "/" + vehicleModel.value + "/" + vehicleYear.value + "?api_key=" + api_key + "&fmt=json", true);
-	xhttp.send();
+	getJSON(api_url + "editorial/v2/" + vehicleMake.value + "/" + vehicleModel.value + "/" + vehicleYear.value + "?api_key=" + api_key + "&fmt=json")
+		.then(function(response) {
+		  articleData = response;
+		  populateArticle(response);
+		}, function(error) {
+		  console.error("Failed!", error);
+		});
 }
 
 function getVehicleData() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			data = JSON.parse(xhttp.responseText);
-			console.log(data);
-			populateData(data);
-		}
-	};
-	xhttp.open("GET", "http://api.edmunds.com/api/vehicle/v2/" +
-		vehicleMake.value + "/" + vehicleModel.value + "/" + vehicleYear.value + "/styles?fmt=json&api_key=" + api_key + "&view=full", true);
-	xhttp.send();
+	getJSON(api_url + "vehicle/v2/" + vehicleMake.value + "/" + vehicleModel.value + "/" + vehicleYear.value + "/styles?fmt=json&api_key=" + api_key + "&view=full")
+		.then(function(response) {
+		  vehicleData = response;
+		  populateData(vehicleData);
+		  loadCompSearch(vehicleData);
+		}, function(error) {
+		  console.error("Failed!", error);
+		});
 }
 
 function testData() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			// create global dataset variable
-			edmunds = JSON.parse(xhttp.responseText);
-			console.log(edmunds);
-			loadGarage();
-		}
-	};
-	xhttp.open("GET", "https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=" + api_key, true);
-	xhttp.send();
+	getJSON(api_url + "vehicle/v2/makes?fmt=json&api_key=" + api_key)
+		.then(function(response) {
+			vehicleList = response;
+			loadGarage(response);
+		});
 }
 
-function loadGarage() {
+function loadCompSearch(data) {
+	var selElem = document.querySelector("#compareSelect");
+
+	clearOptions(selElem.options);
+
+	model_line = [];
+	var make = vehicleList.makes.filter(function(value) {
+		return value.name == data.styles[0].make.name
+	});
+	for (i=0; i<make[0].models.length; i++) {
+		for (j=0; j<make[0].models[i].years.length; j++) {
+			if (make[0].models[i].years[j].year == data.styles[0].year.year) {
+			   model_line.push({'vehicleMake': data.styles[0].make.niceName,
+								 'vehicleModel': make[0].models[i].niceName,
+								 'vehicleYear': data.styles[0].year.year
+								});
+			}
+		}
+	}
+
+	if (model_line.length > 1) {
+		var optEl = document.createElement('option');
+		optEl.text = 'Compare ' + data.styles[0].year.year + ' ' + data.styles[0].make.name + ' lineup';
+		optEl.value = 'model_line';
+		selElem.options.add(optEl);
+	}
+
+	if (data.stylesCount > 1) {
+		var optEl = document.createElement('option');
+		optEl.text = 'Compare ' + data.styles[0].year.year + ' ' + data.styles[0].model.name + ' styles';
+		optEl.value = 'styles';
+		selElem.options.add(optEl);
+	}
+}
+
+function compareSearch() {
+	model_line_detail=[];
+	console.log(model_line);
+	var i=0;
+
+	function recurCall(i) {
+		if (i<model_line.length) {
+			getJSON(api_url + "vehicle/v2/" +	model_line[i].vehicleMake + "/" + model_line[i].vehicleModel + "/" + model_line[i].vehicleYear + "/styles?fmt=json&api_key=" + api_key + "&view=full")
+			.then(function(response) {
+				console.log(response, i);
+				model_line_detail.push(response);
+				i++;
+				// throttle API calls to 2/sec
+				setTimeout(function() {
+					recurCall(i)
+				}, 500);
+			})
+		}
+	};
+
+	recurCall(i);
+}
+
+function loadGarage(data) {
 	clearOptions(vehicleMake.options);
-	for (i=0; i<edmunds.makes.length; i++) {
+	for (i=0; i<data.makes.length; i++) {
 		var optionElement = document.createElement('option');
-		optionElement.text = edmunds.makes[i].name;
-		optionElement.value = edmunds.makes[i].niceName;
+		optionElement.text = data.makes[i].name;
+		optionElement.value = data.makes[i].niceName;
 		vehicleMake.options.add(optionElement, [i]);
 	}
 }
 
 function loadModels() {
 	clearOptions(vehicleModel.options);
-	for (i=0; i<edmunds.makes.length; i++) {
-		if (vehicleMake.value == edmunds.makes[i].niceName) {
-			for (j=0; j<edmunds.makes[i].models.length; j++) {
+	for (i=0; i<vehicleList.makes.length; i++) {
+		if (vehicleMake.value == vehicleList.makes[i].niceName) {
+			for (j=0; j<vehicleList.makes[i].models.length; j++) {
 				var optionElement = document.createElement('option');
-				optionElement.text = edmunds.makes[i].models[j].name;
-				optionElement.value = edmunds.makes[i].models[j].niceName;
+				optionElement.text = vehicleList.makes[i].models[j].name;
+				optionElement.value = vehicleList.makes[i].models[j].niceName;
 				vehicleModel.options.add(optionElement, [j]);
 			}
 		}
@@ -72,13 +139,13 @@ function loadModels() {
 
 function loadYears() {
 	clearOptions(vehicleYear.options);
-	for (i=0; i<edmunds.makes.length; i++) {
-		if (vehicleMake.value == edmunds.makes[i].niceName) {
-			for (j=0; j<edmunds.makes[i].models.length; j++) {
-				if (vehicleModel.value == edmunds.makes[i].models[j].niceName) {
-					for (k=0; k<edmunds.makes[i].models[j].years.length; k++) {
+	for (i=0; i<vehicleList.makes.length; i++) {
+		if (vehicleMake.value == vehicleList.makes[i].niceName) {
+			for (j=0; j<vehicleList.makes[i].models.length; j++) {
+				if (vehicleModel.value == vehicleList.makes[i].models[j].niceName) {
+					for (k=0; k<vehicleList.makes[i].models[j].years.length; k++) {
 						var optionElement = document.createElement('option');
-						optionElement.text = edmunds.makes[i].models[j].years[k].year;
+						optionElement.text = vehicleList.makes[i].models[j].years[k].year;
 						vehicleYear.options.add(optionElement, [k]);
 					}
 				}
@@ -99,6 +166,7 @@ function removeEntities(string) {
 }
 
 function populateData(data) {
+	console.log(data);
 	var data = data.styles[0],
 		section = document.querySelector('.edmunds-vData'),
 		title = document.querySelector('.vData-title'),

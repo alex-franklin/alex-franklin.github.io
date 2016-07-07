@@ -17,3 +17,8 @@ $(document).ready(function() {
 String.prototype.capFirst = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
+
+String.prototype.formatHtmlEntity = function() {
+	console.log(this);
+	return this.replace("&lt;p&gt;", "").replace("&lt;/p&gt;", "").replace("&#39;", "'").replace("&quot;", '"');
+}
