@@ -8,33 +8,33 @@
 						<h4>Tell me about a vehicle</h4>
 					</div>
 				</div>
-				<div class="row form-group">
-					<div class="col-xs-4 text-right">
+				<div class="row form-group col-lg-4">
+					<div class="col-xs-4 col-lg-4 text-right">
 						<label for="vehicleMake">Make</label>
 					</div>
-					<div class="col-xs-6" >
+					<div class="col-xs-6 col-lg-8">
 						<select class="form-control" id='newMakeSelect' ng-change="loadModels(selMake)" ng-model="selMake">
 							<option value="" selected="selected">Select Make</option>
 							<option ng-repeat="option in makeOptions" value="{{option.value}}">{{option.name}}</option>
 						</select>
 					</div>
 				</div>
-				<div class="row form-group">
-					<div class="col-xs-4 text-right">
+				<div class="row form-group col-lg-4">
+					<div class="col-xs-4 col-lg-4 text-right">
 						<label for="vehicleModel">Model</label>
 					</div>
-					<div class="col-xs-6">
+					<div class="col-xs-6 col-lg-8">
 						<select class="form-control" id='newModelSelect' ng-model="selModel" ng-change="loadYears(selModel)">
 							<option value="" selected="selected">Select Model</option>
 							<option ng-repeat="option in modelOptions" value="{{option.niceName}}">{{option.name}}</option>
 						</select>
 					</div>
 				</div>
-				<div class="row form-group">
-					<div class="col-xs-4 text-right">
+				<div class="row form-group col-lg-3">
+					<div class="col-xs-4 col-lg-4 text-right">
 						<label for="vehicleYear">Year</label>
 					</div>
-					<div class="col-xs-6">
+					<div class="col-xs-6 col-lg-8">
 						<select class="form-control" id='newYearSelect' ng-model="selYear">
 							<option value="" selected="selected">Select Year</option>
 							<option ng-repeat="option in yearOptions" value="{{option.year}}">{{option.year}}</option>
@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-4 col-xs-offset-5">
+					<div class="col-xs-4 col-xs-offset-5 col-lg-2 col-lg-offset-0">
 						<button class="form-control btn btn-primary" ng-click="getArticle(selMake, selModel, selYear)">Info</button>
 					</div>
 					<!--<div class="col-xs-4">
@@ -75,59 +75,79 @@
 
 
 		<section class="edmunds-article" ng-show="articleData">
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 leather-panel">
-				<div class="col-xs-9 col-lg-8 col-xs-offset-3 form-group">
-					<h3 class="article-title">{{articleData.title}}</h3>
+			<div class="row article-header">
+				<div class="col-xs-8 col-sm-7 col-xs-offset-1">
+					<h2>{{articleData.title}}</h2>
 				</div>
-				<div class="row form-group" ng-show="articleData.edmundsSays">
+				<div class="col-xs-6 col-xs-offset-1 col-sm-2 col-sm-offset-0" ng-show="articleView">
+					<select class="form-control" ng-init="articleSegment[0]" ng-model="articleSegment" ng-change="changeSegment(articleSegment)">
+						<option value="" selected="selected" disabled="disabled">Article Segment</option>
+						<option value="introduction" ng-show="articleData.introduction">Intro</option>
+						<option value="body" ng-show="articleData.body">Body &amp; Styling</option>
+						<option value="interior" ng-show="articleData.interior">Interior</option>
+						<option value="driving" ng-show="articleData.driving">Driving Impressions</option>
+						<option value="safety" ng-show="articleData.safety">Safety</option>
+						<option value="powertrain" ng-show="articleData.powertrain">Powertrain</option>
+						<option value="summary">TL;DR</option>
+						<option value="full">Full Article</option>
+					</select>
+				</div>
+				<div class="col-xs-2 col-sm-1 text-right">
+					<button class="btn btn-primary" ng-click="toggleArticle()"><i class="glyphicon glyphicon-{{articleView?'minus':'plus'}}"/></button>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 sep-bottom" ng-hide="articleView">
+			</div>
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 leather-panel" ng-show="articleView">
+				<div class="row form-group" ng-show="showSegment(['introduction', 'summary'], 'edmundsSays')">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Edmunds Says:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.edmundsSays"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.whatsNew">
+				<div class="row form-group" ng-show="showSegment(['introduction', 'summary'], 'whatsNew')">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>What's New:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.whatsNew"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.introduction">
+				<div class="row form-group" ng-show="showSegment(['introduction'])">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Introduction:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.introduction"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.body">
+				<div class="row form-group" ng-show="showSegment(['body'])">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Body:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.body"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.interior">
+				<div class="row form-group" ng-show="showSegment(['interior'])">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Interior:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.interior"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.driving">
+				<div class="row form-group" ng-show="showSegment(['driving'])">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Driving:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.driving"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.safety">
+				<div class="row form-group" ng-show="showSegment(['safety'])">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Safety:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.safety"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.powertrain">
+				<div class="row form-group" ng-show="showSegment(['powertrain'])">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Powertrain:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8" ng-bind-html="articleData.powertrain"></div>
 				</div>
-				<div class="row form-group" ng-show="articleData.pros">
+				<div class="row form-group" ng-show="showSegment(['introduction', 'summary'], 'pros')">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Pros:</h5>
 					</div>
@@ -137,8 +157,8 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row form-group">
-					<div class="col-xs-3 col-lg-2 text-right" ng-show="articleData.cons">
+				<div class="row form-group" ng-show="showSegment(['introduction', 'summary'], 'cons')">
+					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>Cons:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8">
@@ -147,75 +167,82 @@
 						</ul>
 					</div>
 				</div>
-				<!--<div class="row form-group" ng-show="vehicleData">
+				<div class="row form-group" ng-show="vehicleData">
 					<div class="col-xs-3 col-lg-2 text-right">
 						<h5>{{vehicleData.styles.length}} styles available:</h5>
 					</div>
 					<div class="col-xs-9 col-lg-8">
-						<button class="btn btn-primary btn-inline" ng-click="displayStyles(vehicleData)">Compare Styles</button>
+						<button class="btn btn-primary btn-inline" ng-click="displayStyles()">
+							{{styleList?'Hide':'Compare'}} Styles</button>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</section>
 
-		<section class="edmunds-vData" ng-show="vehicleData">
+		<section class="edmunds-vData" ng-show="styleList">
 			<div class="col-xs-10 col-xs-offset-1">
 				<h2>{{articleData.year.year}} {{articleData.make.name}} {{articleData.model.name}} Styles ({{vehicleData.styles.length}})</h2>
 			</div>
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 leather-panel" ng-repeat="style in vehicleData.styles">
-				<div class="col-xs-12 text-center form-group">
-					<h3>{{style.name}}</h3>
-				</div>
-				<div class="row form-group ">
-					<div class="col-xs-12 col-sm-3">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+				<div class="row form-group">
+					<div class="col-xs-12 leather-panel {{vehicleData.styles.length>1?'col-sm-6':''}}"
+						 ng-repeat="style in vehicleData.styles">
+						<div class="col-xs-12 text-center form-group">
+							<h3 class="car-style-name">{{style.name}}</h3>
+						</div>
 						<div class="row">
-							<div class="col-xs-4 col-sm-7 text-right">
-								<h5>MSRP:</h5>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-4 text-right">
+										<h5>{{style.price.baseMSRP?'MSRP':'Used Value'}}:</h5>
+									</div>
+									<div class="col-xs-8">
+										<p class="vData-msrp">${{style.price.baseMSRP | number}}{{style.price.baseMSRP?'': style.price.usedPrivateParty}}</p>
+									</div>
+								</div>
 							</div>
-							<div class="col-xs-8 col-sm-5">
-								<p class="vData-msrp">{{style.price.baseMSRP}}</p>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-4 text-right">
+										<h5>MPG City/Highway:</h5>
+									</div>
+									<div class="col-xs-8">
+										<p class="vData-mpg">{{style.MPG.city}} / {{style.MPG.highway}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-4 text-right">
+										<h5>Doors:</h5>
+									</div>
+									<div class="col-xs-8">
+										<p class="vData-mpg">{{style.numOfDoors}}</p>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-xs-12 col-sm-5">
-						<div class="row">
-							<div class="col-xs-4 col-sm-8 text-right">
-								<h5>MPG City/Highway:</h5>
+						<div class="row form-group ">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-4 text-right">
+										<h5>Drivetrain:</h5>
+									</div>
+									<div class="col-xs-8">
+										<p class="vData-drivetrain">{{style.drivenWheels.capFirst()}} / {{style.transmission.numberOfSpeeds}}-speed {{style.transmission.transmissionType.toLowerCase()}}</p>
+									</div>
+								</div>
 							</div>
-							<div class="col-xs-8 col-sm-4">
-								<p class="vData-mpg">{{style.MPG.city}} / {{style.MPG.highway}}</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-4">
-						<div class="row">
-							<div class="col-xs-4 col-sm-6 text-right">
-								<h5>Doors:</h5>
-							</div>
-							<div class="col-xs-8 col-sm-6">
-								<p class="vData-mpg">{{style.numOfDoors}}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row form-group ">
-					<div class="col-xs-12 col-sm-6">
-						<div class="row">
-							<div class="col-xs-4 text-right">
-								<h5>Drivetrain:</h5>
-							</div>
-							<div class="col-xs-8">
-								<p class="vData-drivetrain">{{style.drivenWheels}} / {{style.transmission.numberOfSpeeds}}-speed {{style.transmission.transmissionType}}</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-6">
-						<div class="row">
-							<div class="col-xs-4 text-right">
-								<h5>Engine:</h5>
-							</div>
-							<div class="col-xs-8">
-								<p class="vData-engine">{{style.engine.size}}L V{{style.engine.cylinder}} {{style.engine.horsepower}}bhp@{{style.engine.rpm.horsepower}}RPM {{style.engine.torque}}lb/ft@{{style.engine.rpm.torque}}RPM</p>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-4 text-right">
+										<h5>Engine:</h5>
+									</div>
+									<div class="col-xs-8">
+										<p class="vData-engine">{{style.engine.size}}L V{{style.engine.cylinder}}<br />
+											{{style.engine.horsepower}}bhp@{{style.engine.rpm.horsepower}}RPM<br />{{style.engine.torque}}lb/ft@{{style.engine.rpm.torque}}RPM</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

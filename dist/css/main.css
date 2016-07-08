@@ -6276,6 +6276,19 @@ footer {
 .form-group .btn-inline {
   margin-top: -7px; }
 
+.article-header h2,
+.article-header select,
+.article-header button {
+  margin-top: 10px; }
+
+.sep-bottom {
+  border-bottom: 1px dashed #DD5928;
+  padding-top: 10px; }
+
+.car-style-name {
+  height: 2em;
+  margin-bottom: 0; }
+
 .edmunds-article ul,
 .edmunds-vData ul {
   padding-left: 20px; }

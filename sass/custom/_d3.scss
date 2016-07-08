@@ -68,15 +68,27 @@
 	}
 }
 
+.article-header {
+	h2,
+	select,
+	button {
+		margin-top:10px;
+	}
+}
+
+.sep-bottom {
+	border-bottom: 1px dashed $brand-accent;
+	padding-top:10px;
+}
+
+.car-style-name {
+	height:2em;
+	margin-bottom:0;
+}
+
 .edmunds-article,
 .edmunds-vData {
-	//display:none;
-
 	ul {
 		padding-left:20px;
-	}
-	.whats-new-row,
-	.edmunds-says-row {
-		//display:none;
 	}
 }

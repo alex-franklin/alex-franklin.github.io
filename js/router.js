@@ -143,11 +143,12 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate', 'ngSanitize']
 			}
 		}
 	})
-	.controller('edmundsApiCtrl', function($scope, edmundsAPI) {
-		edmundsAPI.makeList(function (makes) {
-			$scope.makes = makes;
-			$scope.loadMakes($scope.makes);
-		}),
+	.controller('edmundsApiCtrl',
+		function($scope, edmundsAPI) {
+			edmundsAPI.makeList(function (makes) {
+				$scope.makes = makes;
+				$scope.loadMakes($scope.makes);
+			}),
 
 		$scope.loadMakes = function(arr) {
 			var makeOpts = [];
@@ -191,23 +192,52 @@ angular.module('portfolioApp', ['ngRoute', 'ngTouch', 'ngAnimate', 'ngSanitize']
 				$scope.articleData = article;
 				console.log($scope.articleData);
 			}, make, model, year);
+			$scope.articleView = true;
+			$scope.changeSegment('introduction');
 			$scope.getVehicle(make, model, year);
 		},
 
 		$scope.getVehicle = function(make, model, year) {
 			edmundsAPI.getVehicle(function(vehicle) {
 				$scope.vehicleData = vehicle;
-				//$scope.vehicleData.title =
+				$scope.displayStyles(false);
 				console.log($scope.vehicleData);
 			}, make, model, year)
 		},
 
-		$scope.displayStyles = function(vehicle) {
-			$scope.displayStyles = true;
+		$scope.toggleArticle = function() {
+			$scope.articleView = $scope.articleView ? false : true;
+		}
+
+		$scope.displayStyles = function(bool) {
+			if (bool === false) {
+				$scope.styleList = false;
+			} else {
+				$scope.styleList = $scope.styleList ? false : true;
+			}
 		}
 
 		$scope.parseHtml = function($sce, value) {
 			return $sce.trustAsHtml(value);
+		}
+
+		$scope.changeSegment = function(value) {
+			$scope.segment = value;
+		}
+
+		$scope.showSegment = function(segArray, sect) {
+			var section = sect ? sect : segArray[0];
+			if (!$scope.articleData) {
+				return false
+			}
+			if ($scope.articleData[section]) {
+				if ($scope.articleData[section].length && $scope.articleData[section].length > 0) {
+					if (segArray.indexOf($scope.segment) != -1 || $scope.segment == 'full') {
+						return true
+					}
+				}
+			}
+			return false
 		}
 
 	})
